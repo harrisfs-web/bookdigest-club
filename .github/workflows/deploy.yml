@@ -1,0 +1,36 @@
+name: Deploy Astro site to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read      # to checkout the code
+  pages: write        # to deploy to Pages
+  id-token: write     # to use OIDC authentication
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - run: npm ci
+      - run: npm run build        # produces the dist/ folder
+
+      - uses: actions/upload-pages-artifact@v2
+        with:
+          path: dist              # tell Pages where the static files are
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - uses: actions/deploy-pages@v2
