@@ -2,13 +2,18 @@ name: Deploy Astro site to GitHub Pages
 
 on:
   push:
-    branches: [main]
-  workflow_dispatch:
+    branches: [main]   # run on every push to main
+  workflow_dispatch:    # allow manual runs from the Actions tab
 
+# Pages needs these three scopes:
 permissions:
-  contents: read      # to checkout the code
-  pages: write        # to deploy to Pages
-  id-token: write     # to use OIDC authentication
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -18,19 +23,24 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20          # current LTS
 
       - run: npm ci
-      - run: npm run build        # produces the dist/ folder
+      - run: npm run build          # creates dist/
 
-      - uses: actions/upload-pages-artifact@v2
+      # NEW: upload-pages-artifact@v3 (depends on upload-artifact v4)
+      - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist              # tell Pages where the static files are
+          path: ./dist
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+      # NEW: deploy-pages@v4
     steps:
-      - uses: actions/deploy-pages@v2
+      - uses: actions/deploy-pages@v4
+        id: deployment
