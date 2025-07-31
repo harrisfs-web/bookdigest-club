@@ -1,0 +1,38 @@
+---
+import { getCollection, getEntryBySlug } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+/* 1. Build-time list of paths */
+export async function getStaticPaths() {
+  const books = await getCollection("books");
+  return books.map((b) => ({ params: { slug: b.slug } }));
+}
+
+/* 2. Load the specific book by slug */
+const { slug } = Astro.params;
+const book = await getEntryBySlug("books", slug);
+if (!book) throw new Error(`Book not found: ${slug}`);
+
+const {
+  data: { title, author, summary, tags, rating, cover, date },
+  render,
+} = book;
+
+const { Content } = await render();
+---
+
+<Layout title={title}>
+  <article class="prose mx-auto px-4">
+    <h1 class="mt-0">{title}</h1>
+    <p><strong>Author:</strong> {author}</p>
+    <p><strong>Rating:</strong> {rating} / 5</p>
+    <img src={cover} alt={`Cover of ${title}`} class="w-48 mb-4" loading="lazy" />
+
+    <!-- Render the markdown body -->
+    <Content />
+
+    <p class="mt-6 text-sm text-gray-500">
+      Tags: {tags.join(", ")} · Published: {date.toLocaleDateString()}
+    </p>
+  </article>
+</Layout>
