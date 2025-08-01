@@ -1,4 +1,7 @@
 ---
+/*  ADD THIS import so Astro bundles the file  */
+import "../styles/global.css";
+
 const { title = "BookDigest" } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -6,9 +9,27 @@ const { title = "BookDigest" } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <title>{title}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google Fonts -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Basic Open Graph -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:site_name"   content="BookDigest" />
+    <meta property="og:title"       content={title} />
+    <meta property="og:description" content="AI-powered concise book summaries & recommendations." />
+    <meta property="og:image"       content="https://bookdigest.club/og-default.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content={title} />
+    <meta name="twitter:description" content="AI-powered concise book summaries & recommendations." />
+    <meta name="twitter:image"       content="https://bookdigest.club/og-default.jpg" />
+    
   </head>
   <body class="max-w-screen-md mx-auto py-8 font-sans">
-    <slot />   <!-- page content gets injected here -->
+    <slot />
   </body>
 </html>
