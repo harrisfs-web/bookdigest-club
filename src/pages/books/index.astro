@@ -1,0 +1,27 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+const books = await getCollection("books");
+---
+
+<Layout title="Book Digest – All Summaries">
+  <main class="max-w-screen-md mx-auto px-4">
+    <h1 class="text-3xl font-bold mb-6">All Book Summaries</h1>
+
+    <ul class="space-y-4">
+      {books.map(({ slug, data: { title, author, summary, cover } }) => (
+        <li>
+          <a href={`/books/${slug}/`} class="flex space-x-4 items-start no-underline hover:underline">
+            <img src={cover} alt={`Cover of ${title}`} class="w-16 flex-shrink-0" loading="lazy" />
+            <div>
+              <h2 class="text-xl m-0">{title}</h2>
+              <p class="m-0 text-sm text-gray-600">by {author}</p>
+              <p class="m-0 text-gray-700">{summary}</p>
+            </div>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </main>
+</Layout>
