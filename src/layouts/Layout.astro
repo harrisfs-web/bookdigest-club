@@ -39,11 +39,42 @@ const { title = "BookDigest" } = Astro.props;
     <meta name="twitter:image"       content="https://bookdigest.club/og-default.jpg" />
     
   </head>
-  <body class="max-w-screen-md mx-auto py-8 font-sans">
+  <body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen font-sans">
   <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K87VK2MC"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <slot />
+    
+    <!-- Navigation Header -->
+    <header class="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
+      <nav class="max-w-6xl mx-auto px-4 py-4">
+        <div class="flex items-center justify-between">
+          <a href="/" class="flex items-center space-x-2 text-2xl font-bold text-primary-700 hover:text-primary-800 transition-colors">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+            </svg>
+            <span>BookDigest</span>
+          </a>
+          <div class="flex items-center space-x-6">
+            <a href="/books" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">All Books</a>
+            <a href="/about" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">About</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 mt-20">
+      <div class="max-w-6xl mx-auto px-4 py-8">
+        <div class="text-center">
+          <p class="text-sm">&copy; 2025 BookDigest. AI-powered book summaries for busy readers.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

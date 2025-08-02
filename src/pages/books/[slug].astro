@@ -1,6 +1,7 @@
 ---
 import { getCollection, getEntryBySlug } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import Newsletter from "../../components/Newsletter.astro";
 
 /* 1. Build-time list of paths */
 export async function getStaticPaths() {
@@ -19,20 +20,146 @@ const {
 } = book;
 
 const { Content } = await render();
+
+// Get other books for recommendations
+const allBooks = await getCollection("books");
+const otherBooks = allBooks.filter(b => b.slug !== slug).slice(0, 3);
 ---
 
-<Layout title={title}>
-  <article class="prose mx-auto px-4">
-    <h1 class="mt-0">{title}</h1>
-    <p><strong>Author:</strong> {author}</p>
-    <p><strong>Rating:</strong> {rating} / 5</p>
-    <img src={cover} alt={`Cover of ${title}`} class="w-48 mb-4" loading="lazy" />
+<Layout title={`${title} – Book Summary`}>
+  <!-- Hero Section with Book Info -->
+  <section class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid lg:grid-cols-3 gap-12 items-start">
+        <!-- Book Cover -->
+        <div class="lg:col-span-1">
+          <div class="relative group">
+            <img 
+              src={cover} 
+              alt={`Cover of ${title}`} 
+              class="w-full max-w-sm mx-auto rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-300" 
+              loading="lazy" 
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+        </div>
+        
+        <!-- Book Details -->
+        <div class="lg:col-span-2 space-y-6">
+          <div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+              {title}
+            </h1>
+            <p class="text-xl text-primary-300 font-medium mb-2">by {author}</p>
+            
+            <!-- Rating -->
+            <div class="flex items-center space-x-2 mb-4">
+              <div class="flex items-center">
+                {Array.from({ length: 5 }, (_, i) => (
+                  <svg 
+                    class={`w-5 h-5 ${i < rating ? 'text-accent-400' : 'text-gray-600'}`} 
+                    fill="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                ))}
+              </div>
+              <span class="text-gray-300 font-medium">{rating}/5</span>
+            </div>
+            
+            <!-- Summary -->
+            <p class="text-lg text-gray-300 leading-relaxed mb-6">{summary}</p>
+            
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 mb-6">
+              {tags.map(tag => (
+                <span class="bg-primary-600/30 text-primary-200 px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm">
+                  {tag}
+                </span>
+              ))}
+            </div>
+            
+            <!-- Meta Info -->
+            <div class="flex items-center space-x-6 text-sm text-gray-400">
+              <span>📅 {date.toLocaleDateString()}</span>
+              <span>⏱️ 8-10 min read</span>
+              <span>🎯 Key insights</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Render the markdown body -->
-    <Content />
+  <!-- Main Content -->
+  <article class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <!-- Content with enhanced typography -->
+      <div class="prose prose-lg prose-primary max-w-none">
+        <Content />
+      </div>
+      
+      <!-- Action Buttons -->
+      <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+        <button class="btn-primary px-8 py-3 rounded-xl font-semibold text-lg bg-primary-600 hover:bg-primary-700 transition-colors">
+          💾 Save Summary
+        </button>
+        <button class="btn-secondary px-8 py-3 rounded-xl font-semibold text-lg bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors">
+          📤 Share
+        </button>
+        <a href="/books" class="btn-secondary px-8 py-3 rounded-xl font-semibold text-lg bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors text-center">
+          📚 More Summaries
+        </a>
+      </div>
 
-    <p class="mt-6 text-sm text-gray-500">
-      Tags: {tags.join(", ")} · Published: {date.toLocaleDateString()}
-    </p>
+      <!-- Inline Newsletter -->
+      <div class="mt-16 p-8 bg-gradient-to-r from-primary-50 to-accent-50 rounded-2xl border border-primary-100">
+        <Newsletter 
+          variant="inline"
+          title="Loved this summary?"
+          subtitle="Get more great book summaries delivered to your inbox weekly."
+          placeholder="Your email address"
+          buttonText="Get Updates"
+        />
+      </div>
+    </div>
   </article>
+
+  <!-- Recommendations Section -->
+  {otherBooks.length > 0 && (
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">You Might Also Like</h2>
+          <p class="text-lg text-gray-600">More great book summaries to expand your knowledge</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          {otherBooks.map(({ slug: otherSlug, data: { title: otherTitle, author: otherAuthor, summary: otherSummary, cover: otherCover } }) => (
+            <article class="book-card group">
+              <a href={`/books/${otherSlug}/`} class="block">
+                <div class="relative overflow-hidden">
+                  <img 
+                    src={otherCover} 
+                    alt={`Cover of ${otherTitle}`} 
+                    class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" 
+                    loading="lazy" 
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="p-6">
+                  <h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                    {otherTitle}
+                  </h3>
+                  <p class="text-sm text-primary-600 font-medium mb-3">by {otherAuthor}</p>
+                  <p class="text-gray-600 text-sm line-clamp-3">{otherSummary}</p>
+                </div>
+              </a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 </Layout>

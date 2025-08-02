@@ -1,27 +1,284 @@
-/* src/styles/global.css */
+@import "tailwindcss";
+
+/* Custom styles for book digest - using direct CSS instead of @apply */
 html {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   line-height: 1.6;
-  color: #222;
+  scroll-behavior: smooth;
 }
-h1, h2, h3, h4 {
-  line-height: 1.3;
+
+/* Book Card Component */
+.book-card {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border: 1px solid rgb(243 244 246);
+}
+
+.book-card:hover {
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  border-color: rgb(186 230 253);
+}
+
+/* Button Components */
+.btn-primary {
+  background-color: rgb(2 132 199);
+  color: white;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:hover {
+  background-color: rgb(3 105 161);
+  transform: scale(1.05);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+.btn-secondary {
+  background-color: rgb(243 244 246);
+  color: rgb(55 65 81);
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+  border: 1px solid rgb(229 231 235);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-secondary:hover {
+  background-color: rgb(229 231 235);
+  border-color: rgb(209 213 219);
+  transform: scale(1.05);
+}
+
+.btn-secondary:active {
+  transform: scale(0.95);
+}
+
+/* Text truncation utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Enhanced Prose Styles for Markdown Content */
+.prose {
+  color: rgb(55 65 81);
+  line-height: 1.75;
+  max-width: none;
+}
+
+.prose h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: rgb(17 24 39);
+  margin-bottom: 1.5rem;
   margin-top: 2rem;
-  margin-bottom: 1rem;
 }
-img {
+
+.prose h1:first-child {
+  margin-top: 0;
+}
+
+.prose h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(17 24 39);
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  border-bottom: 1px solid rgb(229 231 235);
+  padding-bottom: 0.5rem;
+}
+
+.prose h2:first-child {
+  margin-top: 0;
+}
+
+.prose h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgb(17 24 39);
+  margin-bottom: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.prose h3:first-child {
+  margin-top: 0;
+}
+
+.prose h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: rgb(17 24 39);
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.prose h4:first-child {
+  margin-top: 0;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+  color: rgb(55 65 81);
+  line-height: 1.75;
+}
+
+.prose ul {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.prose ul li {
+  margin-bottom: 0.5rem;
+  color: rgb(55 65 81);
+  line-height: 1.75;
+  position: relative;
+}
+
+.prose ul li::before {
+  content: "•";
+  position: absolute;
+  left: -1rem;
+  color: rgb(14 165 233);
+  font-weight: 700;
+}
+
+.prose ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.prose ol li {
+  margin-bottom: 0.5rem;
+  color: rgb(55 65 81);
+  line-height: 1.75;
+  list-style-type: decimal;
+}
+
+.prose blockquote {
+  border-left: 4px solid rgb(125 211 252);
+  padding-left: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin: 1.5rem 0;
+  background-color: rgb(240 249 255);
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-style: italic;
+  color: rgb(31 41 55);
+}
+
+.prose blockquote p {
+  margin-bottom: 0;
+}
+
+.prose strong {
+  font-weight: 600;
+  color: rgb(17 24 39);
+}
+
+.prose em {
+  font-style: italic;
+  color: rgb(31 41 55);
+}
+
+.prose code {
+  background-color: rgb(243 244 246);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-family: ui-monospace, monospace;
+  color: rgb(31 41 55);
+}
+
+.prose pre {
+  background-color: rgb(17 24 39);
+  color: rgb(243 244 246);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.prose pre code {
+  background-color: transparent;
+  padding: 0;
+  color: rgb(243 244 246);
+}
+
+.prose a {
+  color: rgb(2 132 199);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: rgb(186 230 253);
+}
+
+.prose a:hover {
+  color: rgb(3 105 161);
+  text-decoration-color: rgb(56 189 248);
+}
+
+.prose img {
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  margin: 1.5rem 0;
   max-width: 100%;
   height: auto;
 }
-a {
-  color: #1e40af;          /* blue-600 */
-  text-decoration: underline;
+
+.prose hr {
+  border-top: 1px solid rgb(229 231 235);
+  margin: 2rem 0;
 }
-a:hover {
-  text-decoration: none;
+
+/* Animation utilities */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
 }
-body {
-  margin: 0;
-  padding: 0;
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -1,0 +1,186 @@
+---
+// Newsletter component for Kit integration
+const { 
+  title = "Stay Updated with New Book Summaries",
+  subtitle = "Get notified when we publish new AI-powered book summaries. Join thousands of readers saving time with our insights.",
+  placeholder = "Enter your email address",
+  buttonText = "Subscribe Now",
+  variant = "default" // "default", "compact", "inline"
+} = Astro.props;
+---
+
+<!-- Newsletter Section -->
+<section class={`newsletter-section ${variant === 'compact' ? 'py-8' : 'py-16'} ${variant === 'inline' ? 'bg-transparent' : 'bg-gradient-to-br from-primary-50 to-accent-50'}`}>
+  <div class={`max-w-4xl mx-auto px-4 ${variant === 'compact' ? 'text-center' : ''}`}>
+    <div class={`${variant === 'inline' ? 'flex flex-col md:flex-row items-center gap-6' : 'text-center'}`}>
+      <!-- Content -->
+      <div class={`${variant === 'inline' ? 'flex-1' : 'mb-8'}`}>
+        <h3 class={`${variant === 'compact' ? 'text-xl' : 'text-2xl md:text-3xl'} font-bold text-gray-900 mb-4`}>
+          {title}
+        </h3>
+        <p class={`${variant === 'compact' ? 'text-sm' : 'text-lg'} text-gray-600 ${variant === 'inline' ? 'mb-0' : 'mb-6'} max-w-2xl ${variant === 'inline' ? '' : 'mx-auto'}`}>
+          {subtitle}
+        </p>
+      </div>
+      
+      <!-- Newsletter Form -->
+      <div class={`${variant === 'inline' ? 'flex-shrink-0' : ''}`}>
+        <form 
+          id="newsletter-form" 
+          class={`flex ${variant === 'compact' || variant === 'inline' ? 'flex-col sm:flex-row' : 'flex-col md:flex-row'} gap-3 ${variant === 'inline' ? 'max-w-md' : 'max-w-lg mx-auto'}`}
+          data-kit-form="newsletter"
+        >
+          <div class="flex-1">
+            <input
+              type="email"
+              name="email"
+              placeholder={placeholder}
+              required
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors text-gray-900 placeholder-gray-500"
+            />
+          </div>
+          <button
+            type="submit"
+            class={`btn-primary px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 whitespace-nowrap ${variant === 'compact' ? 'text-sm' : 'text-base'}`}
+          >
+            {buttonText}
+          </button>
+        </form>
+        
+        <!-- Success/Error Messages -->
+        <div id="newsletter-status" class="mt-4 text-center hidden">
+          <p id="newsletter-success" class="text-green-600 font-medium hidden">
+            🎉 Thanks for subscribing! Check your email to confirm.
+          </p>
+          <p id="newsletter-error" class="text-red-600 font-medium hidden">
+            ❌ Oops! Something went wrong. Please try again.
+          </p>
+        </div>
+        
+        <!-- Privacy Notice -->
+        <p class={`${variant === 'compact' ? 'text-xs' : 'text-sm'} text-gray-500 mt-3 ${variant === 'inline' ? 'text-left' : 'text-center'}`}>
+          📧 No spam, ever. Unsubscribe anytime with one click.
+        </p>
+      </div>
+    </div>
+    
+    <!-- Features for default variant -->
+    {variant === 'default' && (
+      <div class="grid md:grid-cols-3 gap-6 mt-12">
+        <div class="text-center">
+          <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+            <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-900 mb-2">Weekly Summaries</h4>
+          <p class="text-sm text-gray-600">Get 2-3 new book summaries every week</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-12 h-12 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-3">
+            <svg class="w-6 h-6 text-accent-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-900 mb-2">Curated Content</h4>
+          <p class="text-sm text-gray-600">Handpicked bestsellers and trending books</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+            <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-900 mb-2">Exclusive Insights</h4>
+          <p class="text-sm text-gray-600">Bonus content and author interviews</p>
+        </div>
+      </div>
+    )}
+  </div>
+</section>
+
+<!-- Newsletter JavaScript for Kit Integration -->
+<script>
+  // Newsletter form handling - ready for Kit integration
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('newsletter-form');
+    const statusDiv = document.getElementById('newsletter-status');
+    const successMsg = document.getElementById('newsletter-success');
+    const errorMsg = document.getElementById('newsletter-error');
+    
+    if (form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const email = form.querySelector('input[name="email"]').value;
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        
+        // Show loading state
+        submitBtn.textContent = 'Subscribing...';
+        submitBtn.disabled = true;
+        
+        try {
+          // TODO: Replace this with your Kit integration
+          // Example Kit integration:
+          /*
+          const response = await fetch('YOUR_KIT_FORM_ENDPOINT', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email: email })
+          });
+          
+          if (response.ok) {
+            // Show success message
+            statusDiv.classList.remove('hidden');
+            successMsg.classList.remove('hidden');
+            errorMsg.classList.add('hidden');
+            form.reset();
+          } else {
+            throw new Error('Subscription failed');
+          }
+          */
+          
+          // Temporary simulation - remove when integrating with Kit
+          await new Promise(resolve => setTimeout(resolve, 1000));
+          statusDiv.classList.remove('hidden');
+          successMsg.classList.remove('hidden');
+          errorMsg.classList.add('hidden');
+          form.reset();
+          
+        } catch (error) {
+          console.error('Newsletter subscription error:', error);
+          statusDiv.classList.remove('hidden');
+          errorMsg.classList.remove('hidden');
+          successMsg.classList.add('hidden');
+        } finally {
+          // Reset button
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        }
+      });
+    }
+  });
+</script>
+
+<style>
+  /* Custom styles for newsletter component */
+  .newsletter-section input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+  }
+  
+  .newsletter-section .btn-primary:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  .newsletter-section .btn-primary:disabled:hover {
+    transform: none;
+  }
+</style>
