@@ -28,12 +28,12 @@ const otherBooks = allBooks.filter(b => b.slug !== slug).slice(0, 3);
 
 <Layout title={`${title} – Book Summary`}>
   <!-- Hero Section with Book Info -->
-  <section class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16">
-    <div class="max-w-6xl mx-auto px-4">
+  <section class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16 book-hero-section">
+    <div class="max-w-6xl mx-auto px-4 page-container">
       <div class="grid lg:grid-cols-3 gap-12 items-start">
         <!-- Book Cover -->
-        <div class="lg:col-span-1">
-          <div class="relative group">
+        <div class="lg:col-span-1 flex justify-center">
+          <div class="relative group book-cover-container">
             <img 
               src={cover} 
               alt={`Cover of ${title}`} 
@@ -45,12 +45,12 @@ const otherBooks = allBooks.filter(b => b.slug !== slug).slice(0, 3);
         </div>
         
         <!-- Book Details -->
-        <div class="lg:col-span-2 space-y-6">
+        <div class="lg:col-span-2 space-y-6 book-details">
           <div>
             <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
               {title}
             </h1>
-            <p class="text-xl text-primary-300 font-medium mb-2">by {author}</p>
+            <p class="text-xl text-primary-300 font-medium mb-2 author">by {author}</p>
             
             <!-- Rating -->
             <div class="flex items-center space-x-2 mb-4">
@@ -69,10 +69,10 @@ const otherBooks = allBooks.filter(b => b.slug !== slug).slice(0, 3);
             </div>
             
             <!-- Summary -->
-            <p class="text-lg text-gray-300 leading-relaxed mb-6">{summary}</p>
+            <p class="text-lg text-gray-300 leading-relaxed mb-6 summary">{summary}</p>
             
             <!-- Tags -->
-            <div class="flex flex-wrap gap-2 mb-6">
+            <div class="flex flex-wrap gap-2 mb-6 book-tags">
               {tags.map(tag => (
                 <span class="bg-primary-600/30 text-primary-200 px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm">
                   {tag}
@@ -81,7 +81,7 @@ const otherBooks = allBooks.filter(b => b.slug !== slug).slice(0, 3);
             </div>
             
             <!-- Meta Info -->
-            <div class="flex items-center space-x-6 text-sm text-gray-400">
+            <div class="flex items-center space-x-6 text-sm text-gray-400 book-meta">
               <span>📅 {date.toLocaleDateString()}</span>
               <span>⏱️ 8-10 min read</span>
               <span>🎯 Key insights</span>
@@ -94,14 +94,14 @@ const otherBooks = allBooks.filter(b => b.slug !== slug).slice(0, 3);
 
   <!-- Main Content -->
   <article class="py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-4">
+    <div class="max-w-4xl mx-auto px-4 page-container">
       <!-- Content with enhanced typography -->
-      <div class="prose prose-lg prose-primary max-w-none">
+      <div class="prose prose-lg prose-primary max-w-none book-content">
         <Content />
       </div>
       
       <!-- Action Buttons -->
-      <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+      <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center action-buttons">
         <button class="btn-primary px-8 py-3 rounded-xl font-semibold text-lg bg-primary-600 hover:bg-primary-700 transition-colors">
           💾 Save Summary
         </button>
@@ -114,7 +114,7 @@ const otherBooks = allBooks.filter(b => b.slug !== slug).slice(0, 3);
       </div>
 
       <!-- Inline Newsletter -->
-      <div class="mt-16 p-8 bg-gradient-to-r from-primary-50 to-accent-50 rounded-2xl border border-primary-100">
+      <div class="mt-16 p-8 bg-gradient-to-r from-primary-50 to-accent-50 rounded-2xl border border-primary-100 newsletter-form">
         <Newsletter 
           variant="inline"
           title="Loved this summary?"
@@ -129,13 +129,13 @@ const otherBooks = allBooks.filter(b => b.slug !== slug).slice(0, 3);
   <!-- Recommendations Section -->
   {otherBooks.length > 0 && (
     <section class="py-16 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-4">
-        <div class="text-center mb-12">
+      <div class="max-w-6xl mx-auto px-4 page-container">
+        <div class="text-center mb-8 md:mb-12">
           <h2 class="text-3xl font-bold text-gray-900 mb-4">You Might Also Like</h2>
           <p class="text-lg text-gray-600">More great book summaries to expand your knowledge</p>
         </div>
         
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid md:grid-cols-3 gap-8 recommendations-grid">
           {otherBooks.map(({ slug: otherSlug, data: { title: otherTitle, author: otherAuthor, summary: otherSummary, cover: otherCover } }) => (
             <article class="book-card group">
               <a href={`/books/${otherSlug}/`} class="block">

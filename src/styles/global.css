@@ -1,10 +1,12 @@
 @import "tailwindcss";
+@import "./mobile.css";
 
 /* Custom styles for book digest - using direct CSS instead of @apply */
 html {
   font-family: "Inter", system-ui, sans-serif;
   line-height: 1.6;
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 /* Book Card Component */

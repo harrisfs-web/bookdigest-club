@@ -24,10 +24,10 @@ const {
       </div>
       
       <!-- Newsletter Form -->
-      <div class={`${variant === 'inline' ? 'flex-shrink-0' : ''} mobile-form`}>
+      <div class={`${variant === 'inline' ? 'flex-shrink-0 w-full' : ''} mobile-form`}>
         <form 
           id="newsletter-form" 
-          class={`flex ${variant === 'compact' || variant === 'inline' ? 'flex-col sm:flex-row' : 'flex-col md:flex-row'} gap-3 ${variant === 'inline' ? 'max-w-md' : 'max-w-lg mx-auto'}`}
+          class={`flex ${variant === 'compact' || variant === 'inline' ? 'flex-col sm:flex-row' : 'flex-col md:flex-row'} gap-3 ${variant === 'inline' ? 'max-w-md w-full' : 'max-w-lg mx-auto'}`}
           data-kit-form="newsletter"
         >
           <div class="flex-1">
