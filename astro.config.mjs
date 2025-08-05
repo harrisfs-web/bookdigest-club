@@ -1,5 +1,4 @@
 import { defineConfig } from "astro/config";
-import sitemap from "@astrojs/sitemap";
 
 import tailwindcss from "@tailwindcss/vite";
 
@@ -8,7 +7,7 @@ export default defineConfig({
 
   // …other config
   integrations: [
-    sitemap(),
+    // Removed automatic sitemap - using manual sitemap.xml in public folder
   ],
 
   vite: {
