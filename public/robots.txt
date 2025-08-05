@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bookdigest.club/sitemap-index.xml
+Sitemap: https://bookdigest.club/sitemap.xml
