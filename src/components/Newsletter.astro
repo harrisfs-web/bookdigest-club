@@ -15,16 +15,16 @@ const {
     <div class={`${variant === 'inline' ? 'flex flex-col md:flex-row items-center gap-4 sm:gap-6' : 'text-center'}`}>
       <!-- Content -->
       <div class={`${variant === 'inline' ? 'flex-1' : 'mb-6 sm:mb-8'}`}>
-        <h3 class={`${variant === 'compact' ? 'text-lg sm:text-xl' : 'text-xl sm:text-2xl md:text-3xl'} font-bold text-gray-900 mb-3 sm:mb-4`}>
+        <h3 class={`${variant === 'compact' ? 'text-lg sm:text-xl' : 'text-xl sm:text-2xl md:text-3xl'} font-bold text-gray-900 mb-3 sm:mb-4 mobile-large-heading`}>
           {title}
         </h3>
-        <p class={`${variant === 'compact' ? 'text-sm sm:text-base' : 'text-base sm:text-lg'} text-gray-600 ${variant === 'inline' ? 'mb-0' : 'mb-4 sm:mb-6'} max-w-2xl ${variant === 'inline' ? '' : 'mx-auto'} px-4 sm:px-0`}>
+        <p class={`${variant === 'compact' ? 'text-sm sm:text-base' : 'text-base sm:text-lg'} text-gray-600 ${variant === 'inline' ? 'mb-0' : 'mb-4 sm:mb-6'} max-w-2xl ${variant === 'inline' ? '' : 'mx-auto'} px-4 sm:px-0 mobile-large-text`}>
           {subtitle}
         </p>
       </div>
       
       <!-- Newsletter Form -->
-      <div class={`${variant === 'inline' ? 'flex-shrink-0' : ''}`}>
+      <div class={`${variant === 'inline' ? 'flex-shrink-0' : ''} mobile-form`}>
         <form 
           id="newsletter-form" 
           class={`flex ${variant === 'compact' || variant === 'inline' ? 'flex-col sm:flex-row' : 'flex-col md:flex-row'} gap-3 ${variant === 'inline' ? 'max-w-md' : 'max-w-lg mx-auto'}`}
@@ -41,7 +41,7 @@ const {
           </div>
           <button
             type="submit"
-            class={`btn-primary px-4 py-2.5 sm:px-6 sm:py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 whitespace-nowrap ${variant === 'compact' ? 'text-xs sm:text-sm' : 'text-sm sm:text-base'}`}
+            class={`btn-primary px-4 py-2.5 sm:px-6 sm:py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 whitespace-nowrap ${variant === 'compact' ? 'text-xs sm:text-sm' : 'text-sm sm:text-base'} mobile-button`}
           >
             {buttonText}
           </button>

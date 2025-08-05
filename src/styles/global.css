@@ -282,3 +282,103 @@ html {
     transform: translateY(0);
   }
 }
+
+/* Mobile-first typography with larger fonts for readability */
+@media (max-width: 640px) {
+  /* Homepage hero section - much larger fonts */
+  .hero-mobile h1 {
+    font-size: 3.5rem !important;
+    line-height: 1.1 !important;
+    font-weight: 800 !important;
+  }
+  
+  .hero-mobile p {
+    font-size: 1.375rem !important;
+    line-height: 1.5 !important;
+    font-weight: 400 !important;
+  }
+  
+  /* Section headings - significantly larger */
+  .mobile-large-heading {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+    font-weight: 700 !important;
+  }
+  
+  .mobile-medium-heading {
+    font-size: 1.5rem !important;
+    line-height: 1.3 !important;
+    font-weight: 600 !important;
+  }
+  
+  /* Body text - much more readable */
+  .mobile-large-text {
+    font-size: 1.125rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  .mobile-medium-text {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+  }
+  
+  /* Card content - larger and more spacious */
+  .mobile-card {
+    padding: 1.5rem !important;
+  }
+  
+  .mobile-card h3 {
+    font-size: 1.375rem !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .mobile-card p {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+  }
+  
+  /* Button text - larger for better touch targets */
+  .mobile-button {
+    font-size: 1.125rem !important;
+    padding: 1rem 1.5rem !important;
+    font-weight: 600 !important;
+  }
+  
+  /* Newsletter forms - larger inputs */
+  .mobile-form input {
+    font-size: 1.125rem !important;
+    padding: 1rem !important;
+  }
+  
+  .mobile-form button {
+    font-size: 1.125rem !important;
+    padding: 1rem 1.5rem !important;
+    font-weight: 600 !important;
+  }
+  
+  /* About page content - readable paragraphs */
+  .mobile-content p {
+    font-size: 1.125rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* Book listing - larger titles and descriptions */
+  .mobile-book-card h2 {
+    font-size: 1.25rem !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+  }
+  
+  .mobile-book-card .author {
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+  }
+  
+  .mobile-book-card .description {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+  }
+}
