@@ -7,7 +7,7 @@ isbn: "9780062316097"
 rating: 4.4
 cover: "/covers/sapiens.jpg"
 date: 2015-02-10
-readMinutes: { min: 20, max: 25 }
+readMinutes: { min: 8, max: 12 }
 ---
 
 ## Why this book matters

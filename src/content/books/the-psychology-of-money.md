@@ -7,7 +7,7 @@ isbn: "9780857197689"
 rating: 4.5
 cover: "/covers/the-psychology-of-money.jpg"
 date: 2020-09-08
-readMinutes: { min: 15, max: 20 }
+readMinutes: { min: 8, max: 10 }
 ---
 
 ## Why this book matters
