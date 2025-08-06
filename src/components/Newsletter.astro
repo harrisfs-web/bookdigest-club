@@ -23,45 +23,90 @@ const {
         </p>
       </div>
       
-      <!-- Newsletter Form -->
-      <div class={`${variant === 'inline' ? 'flex-shrink-0 w-full' : ''} mobile-form`}>
-        <form 
-          id="newsletter-form" 
-          class={`flex ${variant === 'compact' || variant === 'inline' ? 'flex-col sm:flex-row' : 'flex-col md:flex-row'} gap-3 ${variant === 'inline' ? 'max-w-md w-full' : 'max-w-lg mx-auto'}`}
-          data-kit-form="newsletter"
-        >
-          <div class="flex-1">
-            <input
-              type="email"
-              name="email"
-              placeholder={placeholder}
-              required
-              class="w-full px-3 py-2.5 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors text-gray-900 placeholder-gray-500 text-sm sm:text-base"
-            />
+      <!-- ConvertKit HTML Embed -->
+      <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+      <form action="https://app.kit.com/forms/8405196/subscriptions" 
+            class="seva-form formkit-form" 
+            method="post" 
+            data-sv-form="8405196" 
+            data-uid="be4036594b" 
+            data-format="inline" 
+            data-version="5" 
+            data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;}},&quot;version&quot;:&quot;5&quot;}" 
+            min-width="400 500 600 700 800">
+        <!-- ConvertKit generated markup -->
+        <div data-style="clean">
+          <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+          <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
+            <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required type="email">
+            <button data-element="submit" class="formkit-submit formkit-submit">
+              <div class="formkit-spinner"><div></div><div></div><div></div></div>
+              <span>Subscribe</span>
+            </button>
           </div>
-          <button
-            type="submit"
-            class={`btn-primary px-4 py-2.5 sm:px-6 sm:py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 whitespace-nowrap ${variant === 'compact' ? 'text-xs sm:text-sm' : 'text-sm sm:text-base'} mobile-button`}
-          >
-            {buttonText}
-          </button>
-        </form>
-        
-        <!-- Success/Error Messages -->
-        <div id="newsletter-status" class="mt-3 sm:mt-4 text-center hidden">
-          <p id="newsletter-success" class="text-green-600 font-medium hidden text-sm sm:text-base">
-            🎉 Thanks for subscribing!
-          </p>
-          <p id="newsletter-error" class="text-red-600 font-medium hidden text-sm sm:text-base">
-            ❌ Oops! Something went wrong. Please try again.
-          </p>
+          <div class="formkit-powered-by-convertkit-container">
+            <a href="https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic" data-element="powered-by" class="formkit-powered-by-convertkit" target="_blank" rel="nofollow">Built with Kit</a>
+          </div>
         </div>
-        
-        <!-- Privacy Notice -->
-        <p class={`${variant === 'compact' ? 'text-xs sm:text-sm' : 'text-xs sm:text-sm'} text-gray-500 mt-2 sm:mt-3 ${variant === 'inline' ? 'text-left' : 'text-center'} px-4 sm:px-0`}>
-          📧 No spam, ever. Unsubscribe anytime with one click.
-        </p>
-      </div>
+        <style>
+          /* Begin ConvertKit form styling */
+          .formkit-form[data-uid="be4036594b"] *{box-sizing:border-box;} 
+          .formkit-form[data-uid="be4036594b"]{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;} 
+          .formkit-form[data-uid="be4036594b"] legend{border:none;font-size:inherit;margin-bottom:10px;padding:0;position:relative;display:table;} 
+          .formkit-form[data-uid="be4036594b"] fieldset{border:0;padding:0.01em 0 0 0;margin:0;min-width:0;} 
+          .formkit-form[data-uid="be4036594b"] body:not(:-moz-handler-blocked) fieldset{display:table-cell;} 
+          .formkit-form[data-uid="be4036594b"] h1,.formkit-form[data-uid="be4036594b"] h2,.formkit-form[data-uid="be4036594b"] h3,.formkit-form[data-uid="be4036594b"] h4,.formkit-form[data-uid="be4036594b"] h5,.formkit-form[data-uid="be4036594b"] h6{color:inherit;font-size:inherit;font-weight:inherit;} 
+          .formkit-form[data-uid="be4036594b"] p{color:inherit;font-size:inherit;font-weight:inherit;} 
+          .formkit-form[data-uid="be4036594b"] fieldset{padding:0;margin:0;border:none;} 
+          .formkit-form[data-uid="be4036594b"] .formkit-input{background:#fff;padding:12px;border:1px solid #e3e3e3;border-radius:4px;flex:1 0 auto;line-height:1.4;margin:0;font-size:15px;transition:border-color ease-out 300ms;} 
+          .formkit-form[data-uid="be4036594b"] .formkit-input:focus{outline:none;border-color:#1677be;} 
+          .formkit-form[data-uid="be4036594b"] .formkit-submit{display:inline-block;padding:12px 24px;font-size:15px;font-weight:700;color:#fff;background-color:#1677be;border:none;border-radius:4px;cursor:pointer;position:relative;transition:background 200ms ease-in-out;} 
+          .formkit-form[data-uid="be4036594b"] .formkit-submit:hover{background-color:#125a96;} 
+          .formkit-form[data-uid="be4036594b"] .formkit-spinner{display:flex;flex-wrap:nowrap;position:absolute;top:0;left:0;right:0;bottom:0;margin:auto;opacity:0;transition:opacity 300ms ease-in-out;} 
+          .formkit-form[data-uid="be4036594b"] .formkit-submit[data-active] .formkit-spinner{opacity:1;} 
+          .formkit-form[data-uid="be4036594b"] .formkit-submit[data-active] span{opacity:0;} 
+          .formkit-form[data-uid="be4036594b"] .formkit-powered-by-convertkit-container{margin:10px 0;display:flex;justify-content:center;} 
+          .formkit-form[data-uid="be4036594b"] .formkit-powered-by-convertkit{font-size:12px;color:#3d3d3d;text-decoration:none;} 
+          /* End ConvertKit form styling */
+          /* Inline fields side-by-side */
+          .formkit-form[data-uid="be4036594b"] .formkit-fields {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+          }
+          .formkit-form[data-uid="be4036594b"] .formkit-input {
+            background:#fff;
+            padding:12px;
+            border:1px solid #e3e3e3;
+            border-radius:4px;
+            flex:1 0 auto;
+            line-height:1.4;
+            margin:0;
+            font-size:15px;
+            transition:border-color ease-out 300ms;
+          }
+          .formkit-form[data-uid="be4036594b"] .formkit-submit {
+            display:inline-block;
+            padding:12px 24px;
+            font-size:15px;
+            font-weight:700;
+            color:#fff;
+            background-color:#1677be;
+            border:none;
+            border-radius:4px;
+            cursor:pointer;
+            position:relative;
+            transition:background 200ms ease-in-out;
+            flex: 0 0 auto;
+            margin: 0;
+          }
+          /* Limit form width and center for default variant */
+          .formkit-form[data-uid="be4036594b"] {
+            max-width: 500px;
+            margin: 0 auto;
+          }
+        </style>
+      </form>
     </div>
     
     <!-- Features for default variant -->
