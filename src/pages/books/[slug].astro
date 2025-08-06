@@ -15,7 +15,7 @@ const book = await getEntryBySlug("books", slug);
 if (!book) throw new Error(`Book not found: ${slug}`);
 
 const {
-  data: { title, author, summary, tags, rating, cover, date },
+  data: { title, author, summary, tags, rating, cover, date, readMinutes },
   render,
 } = book;
 
@@ -55,15 +55,40 @@ const otherBooks = allBooks.filter(b => b.slug !== slug).slice(0, 3);
             <!-- Rating -->
             <div class="flex items-center space-x-2 mb-4">
               <div class="flex items-center">
-                {Array.from({ length: 5 }, (_, i) => (
-                  <svg 
-                    class={`w-5 h-5 ${i < rating ? 'text-accent-400' : 'text-gray-600'}`} 
-                    fill="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                ))}
+                {Array.from({ length: 5 }).map((_, i) => {
+                  const starValue = i + 1;
+                  const diff = rating - i;
+                  
+                  if (diff >= 1) {
+                    // Full star
+                    return (
+                      <svg class="w-5 h-5 text-accent-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                      </svg>
+                    );
+                  } else if (diff > 0) {
+                    // Partial star
+                    const percent = Math.round(diff * 100);
+                    return (
+                      <svg class="w-5 h-5" viewBox="0 0 24 24">
+                        <defs>
+                          <linearGradient id={`star-fill-${i}`} x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset={`${percent}%`} stop-color="currentColor" class="text-accent-400" />
+                            <stop offset={`${percent}%`} stop-color="currentColor" class="text-gray-600" />
+                          </linearGradient>
+                        </defs>
+                        <path fill={`url(#star-fill-${i})`} d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                      </svg>
+                    );
+                  } else {
+                    // Empty star
+                    return (
+                      <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                      </svg>
+                    );
+                  }
+                })}
               </div>
               <span class="text-gray-300 font-medium">{rating}/5</span>
             </div>
@@ -83,7 +108,7 @@ const otherBooks = allBooks.filter(b => b.slug !== slug).slice(0, 3);
             <!-- Meta Info -->
             <div class="flex items-center space-x-6 text-sm text-gray-400 book-meta">
               <span>📅 {date.toLocaleDateString()}</span>
-              <span>⏱️ 8-10 min read</span>
+              <span>⏱️ {readMinutes ? `${readMinutes.min}${readMinutes.max ? `-${readMinutes.max}` : ''} min read` : '8-10 min read'}</span>
               <span>🎯 Key insights</span>
             </div>
           </div>

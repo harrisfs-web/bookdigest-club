@@ -11,6 +11,10 @@ const books = defineCollection({
     rating: z.number().min(0).max(5),
     cover: z.string().startsWith("/covers/"),
     date: z.date(),
+    readMinutes: z.object({
+      min: z.number(),
+      max: z.number().optional()
+    }).optional(),
     slug: z.string().optional(),
   }),
 });
