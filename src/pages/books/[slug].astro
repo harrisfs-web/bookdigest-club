@@ -127,11 +127,8 @@ const otherBooks = allBooks.filter(b => b.slug !== slug).slice(0, 3);
       
       <!-- Action Buttons -->
       <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center action-buttons">
-        <button class="btn-primary px-8 py-3 rounded-xl font-semibold text-lg bg-primary-600 hover:bg-primary-700 transition-colors">
+        <button id="save-summary-btn" class="btn-primary px-8 py-3 rounded-xl font-semibold text-lg bg-primary-600 hover:bg-primary-700 transition-colors">
           💾 Save Summary
-        </button>
-        <button class="btn-secondary px-8 py-3 rounded-xl font-semibold text-lg bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors">
-          📤 Share
         </button>
         <a href="/books" class="btn-secondary px-8 py-3 rounded-xl font-semibold text-lg bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors text-center">
           📚 More Summaries
@@ -188,3 +185,92 @@ const otherBooks = allBooks.filter(b => b.slug !== slug).slice(0, 3);
     </section>
   )}
 </Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const saveButton = document.getElementById('save-summary-btn');
+    
+    if (saveButton) {
+      saveButton.addEventListener('click', function() {
+        // Get book data from the page
+        const bookTitle = document.querySelector('h1').textContent.trim();
+        const author = document.querySelector('.author').textContent.replace('by ', '').trim();
+        const summary = document.querySelector('.summary').textContent.trim();
+        const rating = document.querySelector('.text-gray-300.font-medium').textContent.trim();
+        
+        // Get tags
+        const tagElements = document.querySelectorAll('.book-tags span');
+        const tags = Array.from(tagElements).map(tag => tag.textContent.trim());
+        
+        // Get the main content (the rendered markdown content)
+        const contentElement = document.querySelector('.book-content');
+        let contentText = '';
+        
+        if (contentElement) {
+          // Extract text content while preserving some structure
+          const paragraphs = contentElement.querySelectorAll('p, h1, h2, h3, h4, h5, h6, li');
+          contentText = Array.from(paragraphs).map(p => {
+            const tagName = p.tagName.toLowerCase();
+            const text = p.textContent.trim();
+            
+            if (tagName.startsWith('h')) {
+              const level = parseInt(tagName.charAt(1));
+              return '#'.repeat(level) + ' ' + text;
+            } else if (tagName === 'li') {
+              return '- ' + text;
+            } else {
+              return text;
+            }
+          }).filter(text => text.length > 0).join('\n\n');
+        }
+        
+        // Create the markdown content
+        const markdownContent = `# ${bookTitle}
+**Author:** ${author}
+**Rating:** ${rating}
+**Tags:** ${tags.join(', ')}
+
+## Summary
+${summary}
+
+---
+
+${contentText}
+
+---
+
+*Downloaded from BookDigest Club - ${window.location.href}*
+*Generated on ${new Date().toLocaleDateString()}*`;
+
+        // Create and trigger download
+        const blob = new Blob([markdownContent], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        
+        // Create a safe filename
+        const safeTitle = bookTitle.toLowerCase()
+          .replace(/[^a-z0-9\s-]/g, '') // Remove special characters
+          .replace(/\s+/g, '-')         // Replace spaces with hyphens
+          .replace(/-+/g, '-')          // Replace multiple hyphens with single
+          .trim();
+        
+        a.href = url;
+        a.download = `${safeTitle}-summary.txt`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        
+        // Optional: Show a brief success message
+        const originalText = saveButton.textContent;
+        saveButton.textContent = '✅ Saved!';
+        saveButton.style.backgroundColor = '#10b981';
+        
+        setTimeout(() => {
+          saveButton.textContent = originalText;
+          saveButton.style.backgroundColor = '';
+        }, 2000);
+      });
+    }
+  });
+</script>
