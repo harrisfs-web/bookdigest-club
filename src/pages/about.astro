@@ -80,9 +80,28 @@ import Newsletter from "../components/Newsletter.astro";
         <a href="mailto:hello@bookdigest.club" class="btn-primary px-6 py-2.5 sm:px-8 sm:py-3 rounded-xl font-semibold text-base sm:text-lg">
           📧 Contact Us
         </a>
-        <a href="#" class="btn-secondary px-6 py-2.5 sm:px-8 sm:py-3 rounded-xl font-semibold text-base sm:text-lg">
+        <button id="open-suggest-modal" type="button" class="btn-secondary px-6 py-2.5 sm:px-8 sm:py-3 rounded-xl font-semibold text-base sm:text-lg">
           💡 Suggest a Book
-        </a>
+        </button>
+        <div id="suggest-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 hidden">
+          <div class="bg-white rounded-xl shadow-lg p-4 sm:p-6 w-full max-w-2xl relative">
+            <button id="close-suggest-modal" type="button" class="absolute top-2 right-2 text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
+            <h4 class="text-lg font-semibold mb-2">Suggest a Book</h4>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScgjIXlYnaHdqYj-in8hSxdoEhQu-kMmX8t4uOj5zAMHvP6tg/viewform?embedded=true" width="100%" height="419" frameborder="0" marginheight="0" marginwidth="0" class="w-full rounded-lg border">Loading…</iframe>
+          </div>
+        </div>
+</Layout>
+
+<script is:inline>
+  const openBtn = document.getElementById('open-suggest-modal');
+  const modal = document.getElementById('suggest-modal');
+  const closeBtn = document.getElementById('close-suggest-modal');
+  if (openBtn && modal && closeBtn) {
+    openBtn.onclick = () => { modal.classList.remove('hidden'); };
+    closeBtn.onclick = () => { modal.classList.add('hidden'); };
+    modal.onclick = (e) => { if (e.target === modal) closeBtn.onclick(); };
+  }
+</script>
       </div>
     </div>
   </section>
