@@ -39,6 +39,14 @@ const { title = "BookDigest" } = Astro.props;
     <meta name="twitter:description" content="AI-powered concise book summaries & recommendations." />
     <meta name="twitter:image"       content="https://bookdigest.club/og-default.jpg" />
     
+    <!-- Organization Logo Structured Data for Google -->
+    <script type="application/ld+json">
+      {"@context": "https://schema.org",
+       "@type": "Organization",
+       "name": "BookDigest Club",
+       "url": "https://bookdigest.club/",
+       "logo": "https://bookdigest.club/logo.png"}
+    </script>
   </head>
   <body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen font-sans">
   <!-- Google Tag Manager (noscript) -->
