@@ -68,6 +68,36 @@ const {
           .formkit-form[data-uid="be4036594b"] .formkit-powered-by-convertkit-container{margin:10px 0;display:flex;justify-content:center;} 
           .formkit-form[data-uid="be4036594b"] .formkit-powered-by-convertkit{font-size:12px;color:#3d3d3d;text-decoration:none;} 
           /* End ConvertKit form styling */
+          
+          /* Hide ConvertKit success overlay - aggressive approach */
+          .formkit-success-container,
+          .formkit-success,
+          [data-element="success"],
+          .formkit-alert-success,
+          .formkit-modal,
+          .formkit-overlay,
+          .formkit-popup,
+          .seva-success,
+          .seva-modal,
+          .seva-overlay,
+          div[style*="position: fixed"],
+          div[style*="z-index"],
+          .ck-modal,
+          .ck-overlay,
+          .convertkit-modal,
+          .convertkit-overlay {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+          }
+          
+          /* Hide any dynamically created overlays */
+          body > div[style*="position: fixed"]:not(.main-content),
+          body > div[style*="z-index"]:not(.main-content) {
+            display: none !important;
+          }
+          
           /* Inline fields side-by-side */
           .formkit-form[data-uid="be4036594b"] .formkit-fields {
             display: flex;
@@ -154,6 +184,155 @@ const {
     const statusDiv = document.getElementById('newsletter-status');
     const successMsg = document.getElementById('newsletter-success');
     const errorMsg = document.getElementById('newsletter-error');
+    
+    // Function to aggressively remove ConvertKit overlays
+    function removeConvertKitOverlays() {
+      const overlaySelectors = [
+        '.formkit-success-container',
+        '.formkit-success',
+        '[data-element="success"]',
+        '.formkit-alert-success',
+        '.formkit-modal',
+        '.formkit-overlay',
+        '.formkit-popup',
+        '.seva-success',
+        '.seva-modal',
+        '.seva-overlay',
+        '.ck-modal',
+        '.ck-overlay',
+        '.convertkit-modal',
+        '.convertkit-overlay'
+      ];
+      
+      overlaySelectors.forEach(selector => {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach(el => {
+          el.remove();
+        });
+      });
+      
+      // Also remove any fixed position divs that might be overlays, but preserve our form
+      const allDivs = document.querySelectorAll('div');
+      allDivs.forEach(div => {
+        const style = window.getComputedStyle(div);
+        const isFormContainer = div.closest('[data-sv-form="8405196"]') || div.querySelector('[data-sv-form="8405196"]');
+        const isCustomMessage = div.classList.contains('custom-success-message');
+        
+        if (!isFormContainer && !isCustomMessage && style.position === 'fixed' && 
+            (style.zIndex > 1000 || div.textContent.includes('Thanks for subscribing'))) {
+          div.remove();
+        }
+      });
+      
+      // Ensure our form stays visible
+      const ourForm = document.querySelector('[data-sv-form="8405196"]');
+      if (ourForm) {
+        ourForm.style.display = '';
+        ourForm.style.visibility = 'visible';
+        ourForm.style.opacity = '1';
+      }
+    }
+    
+    // Run overlay removal periodically
+    setInterval(removeConvertKitOverlays, 500);
+    
+    // Also run it on form submission
+    const convertKitForm = document.querySelector('[data-sv-form="8405196"]');
+    if (convertKitForm) {
+      convertKitForm.addEventListener('submit', function() {
+        // Hide overlays immediately and repeatedly
+        setTimeout(removeConvertKitOverlays, 100);
+        setTimeout(removeConvertKitOverlays, 500);
+        setTimeout(removeConvertKitOverlays, 1000);
+        setTimeout(removeConvertKitOverlays, 2000);
+        
+        // Show our custom success message after form submission
+        setTimeout(() => {
+          removeConvertKitOverlays();
+          showCustomSuccessMessage();
+          
+          // Clear the form input but keep the form visible
+          const emailInput = convertKitForm.querySelector('input[name="email_address"]');
+          if (emailInput) {
+            emailInput.value = '';
+          }
+          
+          // Reset the submit button state
+          const submitBtn = convertKitForm.querySelector('button[data-element="submit"]');
+          if (submitBtn) {
+            submitBtn.removeAttribute('data-active');
+            const spinner = submitBtn.querySelector('.formkit-spinner');
+            const span = submitBtn.querySelector('span');
+            if (spinner) spinner.style.opacity = '0';
+            if (span) span.style.opacity = '1';
+          }
+          
+        }, 1500);
+      });
+    }
+    
+    // Function to show custom success message
+    function showCustomSuccessMessage() {
+      // Remove any existing custom messages
+      const existingMessages = document.querySelectorAll('.custom-success-message');
+      existingMessages.forEach(msg => msg.remove());
+      
+      // Create custom success message
+      const successMessage = document.createElement('div');
+      successMessage.className = 'custom-success-message';
+      successMessage.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #10b981;
+        color: white;
+        padding: 16px 24px;
+        border-radius: 8px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        z-index: 10000;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        max-width: 350px;
+        animation: slideInRight 0.3s ease-out;
+      `;
+      successMessage.innerHTML = `
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <svg style="width: 20px; height: 20px; flex-shrink: 0;" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <div>
+            <div style="font-weight: 600;">Thanks for subscribing!</div>
+            <div style="font-size: 12px; opacity: 0.9; margin-top: 2px;">Check your email to confirm your subscription.</div>
+          </div>
+          <button onclick="this.parentElement.parentElement.remove()" style="background: none; border: none; color: white; font-size: 18px; cursor: pointer; opacity: 0.7; hover: opacity: 1;">×</button>
+        </div>
+      `;
+      
+      // Add animation styles
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes slideInRight {
+          from { transform: translateX(100%); opacity: 0; }
+          to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slideOutRight {
+          from { transform: translateX(0); opacity: 1; }
+          to { transform: translateX(100%); opacity: 0; }
+        }
+      `;
+      document.head.appendChild(style);
+      
+      document.body.appendChild(successMessage);
+      
+      // Auto-hide after 5 seconds
+      setTimeout(() => {
+        if (successMessage.parentElement) {
+          successMessage.style.animation = 'slideOutRight 0.3s ease-out';
+          setTimeout(() => successMessage.remove(), 300);
+        }
+      }, 5000);
+    }
     
     if (form) {
       form.addEventListener('submit', async function(e) {
