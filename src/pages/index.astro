@@ -6,7 +6,7 @@ import { getCollection } from "astro:content";
 const books = await getCollection("books");
 const featuredBooks = books.slice(0, 3); // Show first 3 books as featured
 ---
-<Layout title="BookDigest – AI-Powered Book Summaries">
+<Layout title="BookDigest – AI-Powered Book Summaries" description="Discover AI-powered concise book summaries and recommendations for busy readers.">
   <!-- Hero Section -->
   <section class="bg-gradient-to-r from-gray-900 to-gray-800 text-white min-h-[70vh] flex items-center hero-mobile">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 w-full">

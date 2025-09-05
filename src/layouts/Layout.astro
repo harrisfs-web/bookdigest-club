@@ -2,7 +2,8 @@
 /*  ADD THIS import so Astro bundles the file  */
 import "../styles/global.css";
 
-const { title = "BookDigest" } = Astro.props;
+const defaultDescription = "AI-powered concise book summaries & recommendations.";
+const { title = "BookDigest", description = defaultDescription } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +20,11 @@ const { title = "BookDigest" } = Astro.props;
     <meta charset="utf-8" />
     <title>{title}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-    <meta name="description" content="AI-powered concise book summaries & recommendations." />
+  <meta name="description" content={description} />
+    
+  <!-- Canonical & robots -->
+  <link rel="canonical" href={`https://bookdigest.club${Astro.url.pathname}`} />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
 
     <!-- Google Fonts -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -29,14 +34,15 @@ const { title = "BookDigest" } = Astro.props;
     <!-- Basic Open Graph -->
     <meta property="og:type"        content="website" />
     <meta property="og:site_name"   content="BookDigest" />
-    <meta property="og:title"       content={title} />
-    <meta property="og:description" content="AI-powered concise book summaries & recommendations." />
+  <meta property="og:title"       content={title} />
+  <meta property="og:description" content={description} />
     <meta property="og:image"       content="https://bookdigest.club/og-default.jpg" />
+  <meta property="og:url"         content={`https://bookdigest.club${Astro.url.pathname}`} />
 
     <!-- Twitter Card -->
     <meta name="twitter:card"        content="summary_large_image" />
     <meta name="twitter:title"       content={title} />
-    <meta name="twitter:description" content="AI-powered concise book summaries & recommendations." />
+  <meta name="twitter:description" content={description} />
     <meta name="twitter:image"       content="https://bookdigest.club/og-default.jpg" />
     
     <!-- Organization Logo Structured Data for Google -->

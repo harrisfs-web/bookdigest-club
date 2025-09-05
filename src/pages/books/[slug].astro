@@ -26,7 +26,19 @@ const allBooks = await getCollection("books");
 const otherBooks = allBooks.filter(b => b.slug !== slug).slice(0, 3);
 ---
 
-<Layout title={`${title} – Book Summary`}>
+<Layout title={`${title} – Book Summary`} description={`${title} by ${author}: ${summary}`}>
+  <script type="application/ld+json" is:inline>
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Book",
+      name: title,
+      author: { "@type": "Person", name: author },
+      image: new URL(cover, Astro.site).href,
+      datePublished: date.toISOString().split('T')[0],
+      url: new URL(Astro.url.pathname, Astro.site).href,
+      aggregateRating: { "@type": "AggregateRating", ratingValue: rating, reviewCount: 1 }
+    })}
+  </script>
   <!-- Hero Section with Book Info -->
   <section class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16 book-hero-section">
     <div class="max-w-6xl mx-auto px-4 page-container">
