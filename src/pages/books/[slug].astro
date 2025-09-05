@@ -27,8 +27,10 @@ const otherBooks = allBooks.filter(b => b.slug !== slug).slice(0, 3);
 ---
 
 <Layout title={`${title} – Book Summary`} description={`${title} by ${author}: ${summary}`}>
-  {(() => {
-    const obj = {
+  <script
+    slot="head"
+    type="application/ld+json"
+    set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Book",
       name: title,
@@ -37,13 +39,8 @@ const otherBooks = allBooks.filter(b => b.slug !== slug).slice(0, 3);
       datePublished: date.toISOString().split('T')[0],
       url: new URL(Astro.url.pathname, Astro.site).href,
       aggregateRating: { "@type": "AggregateRating", ratingValue: rating, reviewCount: 1 }
-    };
-    return (
-      <Fragment slot="head">
-        <script type="application/ld+json" is:inline>{JSON.stringify(obj)}</script>
-      </Fragment>
-    );
-  })()}
+    })}
+  />
   <!-- Hero Section with Book Info -->
   <section class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16 book-hero-section">
     <div class="max-w-6xl mx-auto px-4 page-container">
