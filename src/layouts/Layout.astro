@@ -53,6 +53,9 @@ const { title = "BookDigest", description = defaultDescription } = Astro.props;
        "url": "https://bookdigest.club/",
        "logo": "https://bookdigest.club/logo.png"}
     </script>
+
+  <!-- Page-specific head content (e.g., JSON-LD) -->
+  <slot name="head" />
   </head>
   <body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen font-sans">
   <!-- Google Tag Manager (noscript) -->
