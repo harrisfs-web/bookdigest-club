@@ -98,10 +98,10 @@ const { title = "BookDigest", description = defaultDescription } = Astro.props;
             <span>BookDigest</span>
           </a>
           <div class="flex items-center space-x-6">
-            <a href="/books" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">All Books</a>
-            <a href="/about" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">About</a>
-            <SearchPopover />
-          </div>
+            <a href="/books" class="text-gray-600 hover:text-primary-600 font-medium transition-colors" data-gtm-event="menu_click" data-click-content="All Books">All Books</a>
+            <a href="/about" class="text-gray-600 hover:text-primary-600 font-medium transition-colors" data-gtm-event="menu_click" data-click-content="About">About</a>
+             <SearchPopover />
+           </div>
         </div>
       </nav>
     </header>
