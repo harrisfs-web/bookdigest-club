@@ -58,6 +58,29 @@ const { title = "BookDigest", description = defaultDescription } = Astro.props;
   <!-- Page-specific head content (e.g., JSON-LD) -->
   <slot name="head" />
   </head>
+
+  <script>
+    // minimal dataLayer helper for BookDigest
+    window.dataLayer = window.dataLayer || [];
+    window.bd = {
+      track(eventName, params = {}) {
+        const payload = { event: eventName, ...params };
+        window.dataLayer.push(payload);
+        return payload;
+      }
+    };
+
+    // Global delegate: any element with data-gtm-event will push an event.
+    document.addEventListener('click', (e) => {
+      const el = e.target.closest && e.target.closest('[data-gtm-event]');
+      if (!el) return;
+      const eventName = el.getAttribute('data-gtm-event');
+      // prefer explicit data-click-content, fallback to trimmed textContent
+      const clickContent = el.getAttribute('data-click-content') || (el.textContent || '').trim();
+      window.bd.track(eventName, { click_content: clickContent });
+    }, { passive: true });
+  </script>
+
   <body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen font-sans">
   <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K87VK2MC"
