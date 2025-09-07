@@ -1,0 +1,130 @@
+---
+// Client-side popover search for books
+// Minimal, no external deps
+---
+<div class="relative" id="search-root">
+  <button id="open-search" type="button" aria-haspopup="dialog" aria-expanded="false" class="flex items-center gap-2 px-3 py-2 rounded-lg border text-sm text-gray-600 hover:text-primary-700 hover:border-primary-300">
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14z" /></svg>
+    <span>Search</span>
+    <span class="ml-2 hidden md:inline text-xs text-gray-400">/</span>
+  </button>
+  
+  <div id="search-popover" class="hidden fixed inset-0 z-[100]" role="dialog" aria-modal="true" aria-label="Site search">
+    <div class="absolute inset-0 bg-black/40" data-backdrop></div>
+    <div class="absolute left-1/2 top-20 -translate-x-1/2 w-[92vw] max-w-xl">
+      <div class="bg-white rounded-xl shadow-2xl border overflow-hidden">
+        <div class="flex items-center gap-2 p-3 border-b">
+          <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14z" /></svg>
+          <input id="search-input" type="search" placeholder="Search books by title, author, tag…" class="w-full outline-none text-sm p-2" aria-label="Search books" />
+          <button id="close-search" class="text-gray-400 hover:text-gray-600 px-2">Esc</button>
+        </div>
+  <div id="search-results" class="max-h-80 overflow-auto divide-y" role="listbox"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function(){
+  const state = {
+    items: [],
+    open: false,
+    selected: 0,
+  };
+
+  const root = document.getElementById('search-root');
+  const openBtn = root?.querySelector('#open-search');
+  const popover = root?.querySelector('#search-popover');
+  const input = root?.querySelector('#search-input');
+  const resultsEl = root?.querySelector('#search-results');
+  const closeBtn = root?.querySelector('#close-search');
+
+  async function ensureData(){
+    if(state.items.length) return;
+    try{
+      const res = await fetch('/api/search.json');
+      if(!res.ok) return;
+      const data = await res.json();
+      state.items = Array.isArray(data.items) ? data.items : [];
+    }catch{}
+  }
+
+  function open(){
+    if(!popover) return;
+    popover.classList.remove('hidden');
+    state.open = true; state.selected = 0;
+    window.setTimeout(()=> input?.focus(), 0);
+  }
+  function close(){
+    if(!popover) return;
+    popover.classList.add('hidden');
+    state.open = false;
+  }
+
+  function render(list){
+    if(!resultsEl) return;
+    if(!list.length){
+      resultsEl.innerHTML = '<div class="p-4 text-sm text-gray-500">No results</div>';
+      return;
+    }
+    resultsEl.innerHTML = list.map((it,idx)=>`
+  <a href="${it.url}" class="flex gap-3 p-3 hover:bg-gray-50 items-start ${idx===state.selected?'bg-gray-50':''}" role="option">
+        <img src="${it.cover}" alt="${it.title}" class="w-10 h-14 object-cover rounded" loading="lazy" />
+        <div class="min-w-0">
+          <div class="text-sm font-medium text-gray-900 truncate">${it.title}</div>
+          <div class="text-xs text-primary-600 mb-1">by ${it.author}</div>
+          <div class="text-xs text-gray-600 line-clamp-2">${it.summary}</div>
+        </div>
+      </a>`).join('');
+  }
+
+  function query(q){
+    q = (q||'').toLowerCase().trim();
+    if(!q) { render([]); return; }
+    const terms = q.split(/\s+/).filter(Boolean);
+    const scored = state.items.map(it=>{
+      const hay = `${it.title} ${it.author} ${(it.tags||[]).join(' ')} ${it.summary}`.toLowerCase();
+      let score = 0;
+      for(const t of terms){ if(hay.includes(t)) score++; }
+      return {it, score};
+    }).filter(x=>x.score>0)
+      .sort((a,b)=> b.score - a.score || a.it.title.localeCompare(b.it.title))
+      .slice(0, 12)
+      .map(x=>x.it);
+    render(scored);
+  }
+
+  function handleKeydown(e){
+    if(e.key === '/' && !state.open){ e.preventDefault(); ensureData().then(open); }
+    if(!state.open) return;
+    if(e.key === 'Escape'){ close(); }
+    if(e.key === 'ArrowDown'){ state.selected = Math.min(state.selected+1, (resultsEl?.children.length||1)-1); highlight(); }
+    if(e.key === 'ArrowUp'){ state.selected = Math.max(state.selected-1, 0); highlight(); }
+    if(e.key === 'Enter'){
+      const link = resultsEl?.children[state.selected]?.getAttribute('href');
+      if(link){ window.location.href = link; }
+    }
+  }
+
+  function highlight(){
+    if(!resultsEl) return;
+    Array.from(resultsEl.children).forEach((el, idx)=>{
+      el.classList.toggle('bg-gray-50', idx===state.selected);
+    });
+  }
+
+  root?.addEventListener('click', (e)=>{
+    const target = e.target;
+    if(target && target.getAttribute && target.getAttribute('data-backdrop')!==null){ close(); }
+  });
+
+  openBtn?.addEventListener('click', async ()=>{ await ensureData(); open(); });
+  closeBtn?.addEventListener('click', close);
+  document.addEventListener('keydown', handleKeydown);
+  input?.addEventListener('input', (e)=> query(e.target.value));
+})();
+</script>
+
+<style>
+.line-clamp-2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+</style>

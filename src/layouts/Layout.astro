@@ -1,6 +1,7 @@
 ---
 /*  ADD THIS import so Astro bundles the file  */
 import "../styles/global.css";
+import SearchPopover from "../components/SearchPopover.astro";
 
 const defaultDescription = "AI-powered concise book summaries & recommendations.";
 const { title = "BookDigest", description = defaultDescription } = Astro.props;
@@ -76,6 +77,7 @@ const { title = "BookDigest", description = defaultDescription } = Astro.props;
           <div class="flex items-center space-x-6">
             <a href="/books" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">All Books</a>
             <a href="/about" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">About</a>
+            <SearchPopover />
           </div>
         </div>
       </nav>
