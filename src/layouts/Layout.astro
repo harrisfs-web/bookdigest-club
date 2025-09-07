@@ -60,7 +60,6 @@ const { title = "BookDigest", description = defaultDescription } = Astro.props;
   </head>
 
   <script>
-    // minimal dataLayer helper for BookDigest
     window.dataLayer = window.dataLayer || [];
     window.bd = {
       track(eventName, params = {}) {
@@ -70,15 +69,36 @@ const { title = "BookDigest", description = defaultDescription } = Astro.props;
       }
     };
 
-    // Global delegate: any element with data-gtm-event will push an event.
-    document.addEventListener('click', (e) => {
-      const el = e.target.closest && e.target.closest('[data-gtm-event]');
-      if (!el) return;
-      const eventName = el.getAttribute('data-gtm-event');
-      // prefer explicit data-click-content, fallback to trimmed textContent
-      const clickContent = el.getAttribute('data-click-content') || (el.textContent || '').trim();
-      window.bd.track(eventName, { click_content: clickContent });
-    }, { passive: true });
+    // Robust delegated handler:
+    // - handles text-node clicks
+    // - uses pointerdown so we push before navigation
+    // - delays navigation a short time for links so GTM can run in Preview
+    document.addEventListener('pointerdown', (e) => {
+      try {
+        // Normalize element (if text node, use parentElement)
+        let target = e.target;
+        if (target && target.nodeType === 3 && target.parentElement) {
+          target = target.parentElement;
+        }
+        const el = target && target.closest ? target.closest('[data-gtm-event]') : null;
+        if (!el) return;
+
+        const eventName = el.getAttribute('data-gtm-event');
+        const clickContent = el.getAttribute('data-click-content') || (el.textContent || '').trim();
+
+        // If it's a link, prevent immediate navigation, push event, then follow the link.
+        if (el.tagName === 'A' && el.href) {
+          e.preventDefault();
+          window.bd.track(eventName, { click_content: clickContent });
+          setTimeout(() => { window.location.href = el.href; }, 150);
+        } else {
+          window.bd.track(eventName, { click_content: clickContent });
+        }
+      } catch (err) {
+        // avoid breaking the page if something unexpected happens
+        console.warn('bd track error', err);
+      }
+    }, { passive: false });
   </script>
 
   <body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen font-sans">
