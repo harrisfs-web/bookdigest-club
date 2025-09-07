@@ -60,33 +60,93 @@ const { title = "BookDigest", description = defaultDescription } = Astro.props;
   </head>
 
   <script>
-    window.dataLayer = window.dataLayer || [];
-    window.bd = {
-      track(eventName, params = {}) {
-        const payload = { event: eventName, ...params };
-        window.dataLayer.push(payload);
-        return payload;
+  // Respect CMP consent when pushing custom events to the dataLayer.
+  window.dataLayer = window.dataLayer || [];
+
+  (function(){
+    const dl = window.dataLayer;
+    const queue = [];
+
+    function hasCMPSignals(){
+      if (window.Usercentrics || window.__uc) return true;
+      for(let i = dl.length - 1; i >= 0; i--) {
+        const obj = dl[i];
+        if (!obj || typeof obj !== 'object') continue;
+        if (obj.ucCategory || obj.consent_status || obj.event === 'consent' || obj['Usercentrics']) return true;
       }
+      return false;
+    }
+
+    function consentGranted(){
+      // Inspect the dataLayer for common consent signals.
+      for(let i = dl.length - 1; i >= 0; i--) {
+        const obj = dl[i];
+        if (!obj || typeof obj !== 'object') continue;
+        // Usercentrics often pushes ucCategory with flags
+        if (obj.ucCategory && typeof obj.ucCategory === 'object'){
+          for(const k in obj.ucCategory){
+            if (/(analytics|google)/i.test(k)) return !!obj.ucCategory[k];
+          }
+        }
+        // Some CMPs push a top-level 'Google Analytics' boolean
+        if (typeof obj['Google Analytics'] !== 'undefined') return !!obj['Google Analytics'];
+        // Consent mode style push
+        if (obj.event === 'consent' && obj.analytics_storage === 'granted') return true;
+        if (obj.event === 'consent_status' && typeof obj.status !== 'undefined') return !!obj.status;
+      }
+
+      // If there are CMP signals but no explicit grant found, treat as denied.
+      if (hasCMPSignals()) return false;
+      // No CMP detected — assume allowed (preserve current behaviour)
+      return true;
+    }
+
+    // Exposed helper that queues or pushes depending on consent
+    window.bd = {
+      track(eventName, params = {}){
+        const payload = { event: eventName, ...params };
+        try{
+          if (consentGranted()){
+            dl.push(payload);
+          } else {
+            queue.push(payload);
+          }
+        }catch(e){
+          // fallback: push so we don't lose events if something unexpected happens
+          dl.push(payload);
+        }
+        return payload;
+      },
+      _queue: queue,
+      _consentGranted: consentGranted
     };
 
-    // Robust delegated handler:
-    // - handles text-node clicks
-    // - uses pointerdown so we push before navigation
-    // - delays navigation a short time for links so GTM can run in Preview
+    // Wrap dataLayer.push to observe consent changes — flush queue when consent becomes granted
+    if (dl && typeof dl.push === 'function'){
+      const origPush = dl.push.bind(dl);
+      dl.push = function(...args){
+        const res = origPush(...args);
+        try{
+          // if consent now granted, flush queued events
+          if (consentGranted() && queue.length){
+            while(queue.length) origPush(queue.shift());
+          }
+        }catch(e){}
+        return res;
+      }
+    }
+
+    // Robust delegated handler (pointerdown) for elements annotated with data-gtm-event
     document.addEventListener('pointerdown', (e) => {
       try {
-        // Normalize element (if text node, use parentElement)
         let target = e.target;
-        if (target && target.nodeType === 3 && target.parentElement) {
-          target = target.parentElement;
-        }
+        if (target && target.nodeType === 3 && target.parentElement) target = target.parentElement;
         const el = target && target.closest ? target.closest('[data-gtm-event]') : null;
         if (!el) return;
 
         const eventName = el.getAttribute('data-gtm-event');
         const clickContent = el.getAttribute('data-click-content') || (el.textContent || '').trim();
 
-        // If it's a link, prevent immediate navigation, push event, then follow the link.
         if (el.tagName === 'A' && el.href) {
           e.preventDefault();
           window.bd.track(eventName, { click_content: clickContent });
@@ -95,10 +155,11 @@ const { title = "BookDigest", description = defaultDescription } = Astro.props;
           window.bd.track(eventName, { click_content: clickContent });
         }
       } catch (err) {
-        // avoid breaking the page if something unexpected happens
         console.warn('bd track error', err);
       }
     }, { passive: false });
+
+  })();
   </script>
 
   <body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen font-sans">
