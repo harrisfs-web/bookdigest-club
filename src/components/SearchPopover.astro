@@ -68,7 +68,7 @@
       return;
     }
     resultsEl.innerHTML = list.map((it,idx)=>`
-  <a href="${it.url}" class="flex gap-3 p-3 hover:bg-gray-50 items-start ${idx===state.selected?'bg-gray-50':''}" role="option">
+  <a href="${it.url}" data-title="${it.title}" class="flex gap-3 p-3 hover:bg-gray-50 items-start ${idx===state.selected?'bg-gray-50':''}" role="option">
         <img src="${it.cover}" alt="${it.title}" class="w-10 h-14 object-cover rounded" loading="lazy" />
         <div class="min-w-0">
           <div class="text-sm font-medium text-gray-900 truncate">${it.title}</div>
@@ -76,6 +76,17 @@
           <div class="text-xs text-gray-600 line-clamp-2">${it.summary}</div>
         </div>
       </a>`).join('');
+  }
+
+  // Helper to send tracking events only when consent is granted by CMP
+  function sendEvent(name, params){
+    try{
+      if(window.bd && typeof window.bd._consentGranted === 'function'){
+        if(window.bd._consentGranted()){
+          if(typeof window.bd.track === 'function') window.bd.track(name, params);
+        }
+      }
+    }catch(e){ /* ignore */ }
   }
 
   function query(q){
@@ -101,8 +112,13 @@
     if(e.key === 'ArrowDown'){ state.selected = Math.min(state.selected+1, (resultsEl?.children.length||1)-1); highlight(); }
     if(e.key === 'ArrowUp'){ state.selected = Math.max(state.selected-1, 0); highlight(); }
     if(e.key === 'Enter'){
-      const link = resultsEl?.children[state.selected]?.getAttribute('href');
-      if(link){ window.location.href = link; }
+      const el = resultsEl?.children[state.selected];
+      const link = el?.getAttribute('href');
+      const title = el?.getAttribute('data-title') || el?.querySelector('.text-sm')?.textContent?.trim();
+      if(link){
+        sendEvent('search_completed', { search_selection: title });
+        setTimeout(()=> { window.location.href = link; }, 150);
+      }
     }
   }
 
@@ -118,7 +134,23 @@
     if(target && target.getAttribute && target.getAttribute('data-backdrop')!==null){ close(); }
   });
 
-  openBtn?.addEventListener('click', async ()=>{ await ensureData(); open(); });
+  // Track open action when user clicks the search button
+  openBtn?.addEventListener('click', async ()=>{ await ensureData(); open(); sendEvent('search_click'); });
+
+  // Delegate clicks on result items so we can track selection before navigation
+  resultsEl?.addEventListener('click', (e)=>{
+    try{
+      const a = e.target && e.target.closest ? e.target.closest('a') : null;
+      if(!a || !resultsEl.contains(a)) return;
+      const href = a.getAttribute('href');
+      const title = a.getAttribute('data-title') || a.querySelector('.text-sm')?.textContent?.trim();
+      if(href){
+        e.preventDefault();
+        sendEvent('search_completed', { search_selection: title });
+        setTimeout(()=> { window.location.href = href; }, 150);
+      }
+    }catch(err){/* ignore */}
+  });
   closeBtn?.addEventListener('click', close);
   document.addEventListener('keydown', handleKeydown);
   input?.addEventListener('input', (e)=> query(e.target.value));
