@@ -141,10 +141,10 @@ const otherBooks = allBooks.filter(b => b.slug !== slug).slice(0, 3);
       
       <!-- Action Buttons -->
       <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center action-buttons">
-        <button id="save-summary-btn" class="btn-primary px-8 py-3 rounded-xl font-semibold text-lg bg-primary-600 hover:bg-primary-700 transition-colors">
+  <button id="save-summary-btn" class="btn-primary px-8 py-3 rounded-xl font-semibold text-lg bg-primary-600 hover:bg-primary-700 transition-colors" data-gtm-event="cta_click" data-click-content="Save Summary">
           💾 Save Summary
         </button>
-        <a href="/books" class="btn-secondary px-8 py-3 rounded-xl font-semibold text-lg bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors text-center">
+  <a href="/books" class="btn-secondary px-8 py-3 rounded-xl font-semibold text-lg bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors text-center" data-gtm-event="cta_click" data-click-content="More Summaries">
           📚 More Summaries
         </a>
       </div>
