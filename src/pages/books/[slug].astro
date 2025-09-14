@@ -174,7 +174,7 @@ const otherBooks = allBooks.filter(b => b.slug !== slug).slice(0, 3);
         <div class="grid md:grid-cols-3 gap-8 recommendations-grid">
           {otherBooks.map(({ slug: otherSlug, data: { title: otherTitle, author: otherAuthor, summary: otherSummary, cover: otherCover } }) => (
             <article class="book-card group">
-              <a href={`/books/${otherSlug}/`} class="block">
+              <a href={`/books/${otherSlug}/`} class="block" data-gtm-event="book_click" data-click-content={otherTitle}>
                 <div class="relative overflow-hidden">
                   <img 
                     src={otherCover} 

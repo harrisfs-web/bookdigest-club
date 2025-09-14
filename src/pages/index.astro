@@ -82,7 +82,7 @@ const featuredBooks = books.slice(0, 3); // Show first 3 books as featured
       <div class="grid md:grid-cols-3 gap-8 mb-12 recommendations-grid">
         {featuredBooks.map(({ slug, data: { title, author, summary, cover } }) => (
           <article class="book-card group cursor-pointer mobile-book-card">
-            <a href={`/books/${slug}/`} class="block">
+            <a href={`/books/${slug}/`} class="block" data-gtm-event="book_click" data-click-content={title}>
               <div class="relative overflow-hidden">
                 <img src={cover} alt={`Cover of ${title}`} class="book-cover group-hover:scale-105 transition-transform duration-300 w-full h-48 object-cover" loading="lazy" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -98,7 +98,7 @@ const featuredBooks = books.slice(0, 3); // Show first 3 books as featured
       </div>
       
       <div class="text-center">
-        <a href="/books" class="btn-primary inline-flex items-center space-x-2 px-8 py-3 rounded-xl text-lg font-semibold mobile-button">
+  <a href="/books" class="btn-primary inline-flex items-center space-x-2 px-8 py-3 rounded-xl text-lg font-semibold mobile-button" data-gtm-event="book_click" data-click-content="View All Summaries CTA">
           <span>View All Summaries</span>
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
