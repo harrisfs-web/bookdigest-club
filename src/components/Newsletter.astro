@@ -180,6 +180,17 @@ const {
 <script>
   // Newsletter form handling - ready for Kit integration
   document.addEventListener('DOMContentLoaded', function() {
+    // Helper to send tracking events only when consent is granted by CMP (uses window.bd)
+    function sendEvent(name, params){
+      try{
+        if(window.bd && typeof window.bd._consentGranted === 'function'){
+          if(window.bd._consentGranted()){
+            if(typeof window.bd.track === 'function') window.bd.track(name, params);
+          }
+        }
+      }catch(e){ /* ignore */ }
+    }
+
     const form = document.getElementById('newsletter-form');
     const statusDiv = document.getElementById('newsletter-status');
     const successMsg = document.getElementById('newsletter-success');
@@ -268,6 +279,11 @@ const {
           }
           
         }, 1500);
+        // Track engagement when user focuses input (attach here in case kit mounts inputs dynamically)
+        const emailInput = convertKitForm.querySelector('input[name="email_address"]');
+        if(emailInput){
+          emailInput.addEventListener('focus', ()=> sendEvent('newsletter_engagement'));
+        }
       });
     }
     
@@ -370,8 +386,17 @@ const {
             successMsg.classList.remove('hidden');
             errorMsg.classList.add('hidden');
             form.reset();
+            // Track successful subscription
+            sendEvent('newsletter_success');
           } else {
-            throw new Error('Subscription failed');
+            // Attempt to extract error message from response body if possible
+            let errMsg = 'Subscription failed';
+            try{
+              const body = await response.json();
+              if(body && body.error) errMsg = body.error;
+            }catch(e){}
+            sendEvent('newsletter_error', { error_message: errMsg });
+            throw new Error(errMsg);
           }
           
         } catch (error) {
@@ -379,6 +404,8 @@ const {
           statusDiv.classList.remove('hidden');
           errorMsg.classList.remove('hidden');
           successMsg.classList.add('hidden');
+          // Track subscription error with message
+          try{ sendEvent('newsletter_error', { error_message: (error && error.message) ? error.message : 'Subscription failed' }); }catch(e){ }
         } finally {
           // Reset button
           submitBtn.textContent = originalText;
