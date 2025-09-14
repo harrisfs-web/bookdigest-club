@@ -249,8 +249,47 @@ const {
     
     // Also run it on form submission
     const convertKitForm = document.querySelector('[data-sv-form="8405196"]');
+    
+    // Attach engagement tracking as soon as the email input exists (CK script may hydrate later)
+    const sendEngagementOnce = (()=>{ let done=false; return ()=>{ if(done) return; done=true; sendEvent('newsletter_engagement'); }; })();
+    function attachFocusListener(){
+      const emailInput = document.querySelector('[data-sv-form="8405196"] input[name="email_address"]');
+      if(emailInput && !emailInput.dataset.bdFocus){
+        emailInput.dataset.bdFocus = '1';
+        emailInput.addEventListener('focus', sendEngagementOnce, { passive: true });
+        return true;
+      }
+      return false;
+    }
+    // Try immediately, then poll briefly in case CK injects later
+    if(!attachFocusListener()){
+      const focusPollStart = Date.now();
+      const focusPoll = setInterval(()=>{
+        if(attachFocusListener() || Date.now() - focusPollStart > 4000){ clearInterval(focusPoll); }
+      }, 200);
+    }
+
     if (convertKitForm) {
       convertKitForm.addEventListener('submit', function() {
+        // Detect success vs error using MutationObserver on error list plus a fallback timeout.
+        const errorList = convertKitForm.querySelector('[data-element="errors"]');
+        let reported = false;
+        function reportSuccess(){ if(reported) return; reported = true; sendEvent('newsletter_success'); cleanup(); }
+        function reportError(msg){ if(reported) return; reported = true; sendEvent('newsletter_error', { error_message: msg || 'Subscription failed' }); cleanup(); }
+        function extractErrors(){ if(!errorList) return []; return Array.from(errorList.children).map(li=> (li.textContent||'').trim()).filter(Boolean); }
+        function evaluate(){
+          const errs = extractErrors();
+            if(errs.length){ reportError(errs.join(' | ')); }
+            else { reportSuccess(); }
+        }
+        const timeoutId = setTimeout(evaluate, 1800); // heuristic: CK usually responds < 1.5s
+        const observer = errorList ? new MutationObserver(()=>{
+          const errs = extractErrors();
+          if(errs.length){ reportError(errs.join(' | ')); }
+        }) : null;
+        if(observer && errorList){ observer.observe(errorList, { childList: true }); }
+        function cleanup(){ clearTimeout(timeoutId); if(observer) observer.disconnect(); }
+
         // Hide overlays immediately and repeatedly
         setTimeout(removeConvertKitOverlays, 100);
         setTimeout(removeConvertKitOverlays, 500);
@@ -279,11 +318,6 @@ const {
           }
           
         }, 1500);
-        // Track engagement when user focuses input (attach here in case kit mounts inputs dynamically)
-        const emailInput = convertKitForm.querySelector('input[name="email_address"]');
-        if(emailInput){
-          emailInput.addEventListener('focus', ()=> sendEvent('newsletter_engagement'));
-        }
       });
     }
     
