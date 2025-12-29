@@ -10,6 +10,8 @@ cover: "/covers/stoner.jpg"
 date: 1965-08-01
 readMinutes: { min: 10, max: 12 }
 
+---
+
 ## Why this book matters
 
 John Williams’ *Stoner* is frequently cited as "the greatest novel you have never read," though in recent years it has shed its obscurity to become a beloved classic. On the surface, it is an unassuming story about an unassuming man: William Stoner, an assistant professor of English at the University of Missouri during the first half of the 20th century. He is not a war hero; he is not a famous scholar; his marriage is a disaster; and he is estranged from his only child. Yet, the book matters profoundly because it challenges our modern, loud definitions of success. It is a radical assertion that an "ordinary" life—filled with quiet disappointments, small victories, and a steadfast commitment to one's craft—is a life worth living, and perhaps even a heroic one.
