@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Neurological Habit Loop</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #f8fafc;
+    overflow: hidden;
+    width: 100%;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #64748b;
+    margin-bottom: 10px;
+  }
+  .diagram {
+    position: relative;
+    width: 320px;
+    height: 270px;
+  }
+  /* SVG arc arrows */
+  .arrows {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+  }
+  .node {
+    position: absolute;
+    width: 100px;
+    border-radius: 16px;
+    padding: 12px 8px 10px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .node .icon {
+    font-size: 26px;
+    line-height: 1;
+  }
+  .node .label {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+  .node .desc {
+    font-size: 10px;
+    line-height: 1.35;
+    opacity: 0.82;
+  }
+  /* Top node: Cue */
+  .node-cue {
+    background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+    color: #fff;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  /* Bottom-left: Routine */
+  .node-routine {
+    background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+    color: #fff;
+    bottom: 0px;
+    left: 2px;
+  }
+  /* Bottom-right: Reward */
+  .node-reward {
+    background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+    color: #fff;
+    bottom: 0px;
+    right: 2px;
+  }
+  .craving-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border: 2px solid #e2e8f0;
+    border-radius: 50px;
+    padding: 5px 12px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #6366f1;
+    letter-spacing: 0.04em;
+    box-shadow: 0 2px 8px rgba(99,102,241,0.12);
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+  <div class="title">The Neurological Habit Loop</div>
+  <div class="diagram">
+    <!-- SVG curved arrows -->
+    <svg class="arrows" viewBox="0 0 320 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Cue → Routine (top to bottom-left) -->
+      <path d="M 110 78 Q 60 150 105 210" stroke="#3b82f6" stroke-width="2.5" stroke-dasharray="6 3" fill="none" marker-end="url(#arrowBlue)"/>
+      <!-- Routine → Reward (bottom-left to bottom-right) -->
+      <path d="M 152 228 Q 160 250 168 228" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="6 3" fill="none" marker-end="url(#arrowAmber)"/>
+      <!-- Reward → Cue (bottom-right to top) -->
+      <path d="M 215 210 Q 260 150 210 78" stroke="#10b981" stroke-width="2.5" stroke-dasharray="6 3" fill="none" marker-end="url(#arrowGreen)"/>
+
+      <defs>
+        <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#3b82f6"/>
+        </marker>
+        <marker id="arrowAmber" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/>
+        </marker>
+        <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#10b981"/>
+        </marker>
+      </defs>
+    </svg>
+
+    <!-- Nodes -->
+    <div class="node node-cue">
+      <span class="icon">⚡</span>
+      <span class="label">Cue</span>
+      <span class="desc">The trigger that starts the loop — time, place, emotion, or people</span>
+    </div>
+
+    <div class="node node-routine">
+      <span class="icon">🔄</span>
+      <span class="label">Routine</span>
+      <span class="desc">The automatic behaviour the brain executes</span>
+    </div>
+
+    <div class="node node-reward">
+      <span class="icon">✨</span>
+      <span class="label">Reward</span>
+      <span class="desc">Positive signal that tells the brain to remember the loop</span>
+    </div>
+
+    <!-- Centre craving badge -->
+    <div class="craving-badge">⬤ CRAVING</div>
+  </div>
+</body>
+</html>
