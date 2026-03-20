@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Rise &amp; Fall of Civilisations</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, sans-serif;
+    background: #f8fafc;
+    overflow: hidden;
+    width: 100%;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    gap: 8px;
+  }
+  .title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #64748b;
+  }
+  .arc-wrap {
+    position: relative;
+    width: 340px;
+    height: 185px;
+  }
+  svg.arc-svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+  .center-label {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 9px;
+    font-weight: 700;
+    color: #64748b;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .stages {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 660px;
+    gap: 4px;
+  }
+  .stage {
+    flex: 1;
+    border-radius: 10px;
+    padding: 8px 6px 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    align-items: center;
+  }
+  .stage-birth { background: linear-gradient(160deg, #dbeafe, #bfdbfe); border: 1.5px solid #93c5fd; }
+  .stage-growth { background: linear-gradient(160deg, #d1fae5, #a7f3d0); border: 1.5px solid #6ee7b7; }
+  .stage-maturity { background: linear-gradient(160deg, #fef9c3, #fde68a); border: 1.5px solid #fcd34d; }
+  .stage-decline { background: linear-gradient(160deg, #fed7aa, #fdba74); border: 1.5px solid #fb923c; }
+  .stage-fall { background: linear-gradient(160deg, #fee2e2, #fecaca); border: 1.5px solid #fca5a5; }
+  .stage-name {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #1e293b;
+  }
+  .stage-note {
+    font-size: 8.5px;
+    color: #475569;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .stage-example {
+    font-size: 8px;
+    font-style: italic;
+    color: #64748b;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="title">The Rise &amp; Fall of Civilisations</div>
+  <div class="arc-wrap">
+    <svg class="arc-svg" viewBox="0 0 340 185" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Background arc segments (semi-circle) -->
+      <!-- Birth: 180°–216° -->
+      <path d="M 170 170 L 46 87 A 140 140 0 0 1 84 28 Z" fill="#bfdbfe" opacity="0.9"/>
+      <!-- Growth: 216°–252° -->
+      <path d="M 170 170 L 84 28 A 140 140 0 0 1 170 30 Z" fill="#a7f3d0" opacity="0.9"/>
+      <!-- Maturity: 252°–288° -->
+      <path d="M 170 170 L 170 30 A 140 140 0 0 1 256 28 Z" fill="#fde68a" opacity="0.9"/>
+      <!-- Decline: 288°–324° -->
+      <path d="M 170 170 L 256 28 A 140 140 0 0 1 294 87 Z" fill="#fdba74" opacity="0.9"/>
+      <!-- Fall: 324°–360° -->
+      <path d="M 170 170 L 294 87 A 140 140 0 0 1 310 170 Z" fill="#fecaca" opacity="0.9"/>
+      <!-- Inner white circle -->
+      <circle cx="170" cy="170" r="80" fill="#f8fafc"/>
+      <!-- Labels on arc -->
+      <text x="68" y="100" font-size="8" font-weight="700" fill="#1e40af" text-anchor="middle" transform="rotate(-55 68 100)">BIRTH</text>
+      <text x="112" y="38" font-size="8" font-weight="700" fill="#065f46" text-anchor="middle" transform="rotate(-20 112 38)">GROWTH</text>
+      <text x="170" y="26" font-size="8" font-weight="700" fill="#92400e" text-anchor="middle">MATURITY</text>
+      <text x="228" y="38" font-size="8" font-weight="700" fill="#c2410c" text-anchor="middle" transform="rotate(20 228 38)">DECLINE</text>
+      <text x="274" y="100" font-size="8" font-weight="700" fill="#b91c1c" text-anchor="middle" transform="rotate(55 274 100)">FALL</text>
+      <!-- Arrow around arc -->
+      <path d="M 48 172 A 122 122 0 0 1 292 172" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3" fill="none" marker-end="url(#arrowGray)"/>
+      <defs>
+        <marker id="arrowGray" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L7,3 z" fill="#94a3b8"/>
+        </marker>
+      </defs>
+    </svg>
+    <div class="center-label">Every civilisation<br>follows this arc</div>
+  </div>
+  <div class="stages">
+    <div class="stage stage-birth">
+      <div class="stage-name">Birth</div>
+      <div class="stage-note">New ideas &amp; energy</div>
+      <div class="stage-example">Early Rome</div>
+    </div>
+    <div class="stage stage-growth">
+      <div class="stage-name">Growth</div>
+      <div class="stage-note">Expanding power</div>
+      <div class="stage-example">Classical Greece</div>
+    </div>
+    <div class="stage stage-maturity">
+      <div class="stage-name">Maturity</div>
+      <div class="stage-note">Peak culture &amp; wealth</div>
+      <div class="stage-example">Renaissance Italy</div>
+    </div>
+    <div class="stage stage-decline">
+      <div class="stage-name">Decline</div>
+      <div class="stage-note">Inequality &amp; stagnation</div>
+      <div class="stage-example">Late Western Rome</div>
+    </div>
+    <div class="stage stage-fall">
+      <div class="stage-name">Fall/Renewal</div>
+      <div class="stage-note">Collapse or reset</div>
+      <div class="stage-example">476 AD Rome</div>
+    </div>
+  </div>
+</body>
+</html>
