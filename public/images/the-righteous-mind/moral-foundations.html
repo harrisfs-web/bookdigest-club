@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haidt's Six Moral Foundations</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, sans-serif;
+    background: #f8fafc;
+    overflow: hidden;
+    width: 100%;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    gap: 10px;
+  }
+  .title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #64748b;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 100%;
+    max-width: 680px;
+  }
+  .card {
+    border-radius: 12px;
+    padding: 12px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  }
+  .card-liberal { background: linear-gradient(160deg, #dbeafe, #bfdbfe); border: 1.5px solid #93c5fd; }
+  .card-all { background: linear-gradient(160deg, #f1f5f9, #e2e8f0); border: 1.5px solid #cbd5e1; }
+  .card-icon { font-size: 20px; line-height: 1; }
+  .card-name {
+    font-size: 11px;
+    font-weight: 800;
+    color: #1e293b;
+  }
+  .card-axis {
+    font-size: 9px;
+    font-weight: 600;
+    color: #3b82f6;
+    letter-spacing: 0.02em;
+  }
+  .card-all .card-axis { color: #64748b; }
+  .card-origin {
+    font-size: 9px;
+    color: #475569;
+    line-height: 1.4;
+  }
+  .legend {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-size: 9.5px;
+    color: #64748b;
+  }
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 4px;
+  }
+  .dot-blue { background: #3b82f6; }
+  .dot-gray { background: #94a3b8; }
+</style>
+</head>
+<body>
+  <div class="title">Haidt's Six Moral Foundations</div>
+  <div class="grid">
+    <div class="card card-liberal">
+      <span class="card-icon">❤️</span>
+      <div class="card-name">Care / Harm</div>
+      <div class="card-axis">Protect the vulnerable</div>
+      <div class="card-origin">Evolved from mammalian nurturing</div>
+    </div>
+    <div class="card card-liberal">
+      <span class="card-icon">⚖️</span>
+      <div class="card-name">Fairness / Cheating</div>
+      <div class="card-axis">Reciprocity &amp; proportionality</div>
+      <div class="card-origin">Evolved from cooperation</div>
+    </div>
+    <div class="card card-liberal">
+      <span class="card-icon">🗽</span>
+      <div class="card-name">Liberty / Oppression</div>
+      <div class="card-axis">Resistance to bullies</div>
+      <div class="card-origin">Evolved from anti-dominance</div>
+    </div>
+    <div class="card card-all">
+      <span class="card-icon">🏛️</span>
+      <div class="card-name">Loyalty / Betrayal</div>
+      <div class="card-axis">Group solidarity</div>
+      <div class="card-origin">Evolved from coalition formation</div>
+    </div>
+    <div class="card card-all">
+      <span class="card-icon">👑</span>
+      <div class="card-name">Authority / Subversion</div>
+      <div class="card-axis">Hierarchy &amp; respect</div>
+      <div class="card-origin">Evolved from primate dominance</div>
+    </div>
+    <div class="card card-all">
+      <span class="card-icon">🕊️</span>
+      <div class="card-name">Sanctity / Degradation</div>
+      <div class="card-axis">Purity &amp; disgust</div>
+      <div class="card-origin">Evolved from pathogen avoidance</div>
+    </div>
+  </div>
+  <div class="legend">
+    <span><span class="legend-dot dot-blue"></span>Liberals weight heavily</span>
+    <span><span class="legend-dot dot-gray"></span>Conservatives use all six equally</span>
+  </div>
+</body>
+</html>

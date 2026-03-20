@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Barbell Strategy</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, sans-serif;
+    background: #f8fafc;
+    overflow: hidden;
+    width: 100%;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    gap: 10px;
+  }
+  .title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #64748b;
+  }
+  .barbell {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 660px;
+    gap: 0;
+  }
+  .weight {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+    flex-shrink: 0;
+  }
+  .weight-left {
+    background: linear-gradient(135deg, #1e3a5f 0%, #1e40af 100%);
+    color: #fff;
+  }
+  .weight-right {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: #fff;
+  }
+  .weight-pct {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+  }
+  .weight-label {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.85;
+  }
+  .weight-items {
+    font-size: 9px;
+    text-align: center;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-top: 2px;
+  }
+  .bar-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+  .bar {
+    height: 12px;
+    width: 100%;
+    background: linear-gradient(90deg, #334155, #475569, #334155);
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  .bar-label {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #64748b;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .subtitle {
+    font-size: 11px;
+    color: #475569;
+    text-align: center;
+    font-style: italic;
+    max-width: 500px;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+  <div class="title">The Barbell Strategy</div>
+  <div class="barbell">
+    <div class="weight weight-left">
+      <div class="weight-pct">90%</div>
+      <div class="weight-label">Safe</div>
+      <div class="weight-items">Cash<br>Treasury bonds<br>Index funds<br>No middle risk</div>
+    </div>
+    <div class="bar-wrapper">
+      <div class="bar"></div>
+      <div class="bar-label">Nothing<br>in the middle</div>
+    </div>
+    <div class="weight weight-right">
+      <div class="weight-pct">10%</div>
+      <div class="weight-label">Speculative</div>
+      <div class="weight-items">Moonshots<br>Deep options<br>Venture bets<br>Asymmetric upside</div>
+    </div>
+  </div>
+  <div class="subtitle">Avoid the middle: safe + speculative beats 'balanced'</div>
+</body>
+</html>

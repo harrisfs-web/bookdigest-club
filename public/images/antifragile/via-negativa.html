@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Via Negativa</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, sans-serif;
+    background: #f8fafc;
+    overflow: hidden;
+    width: 100%;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    gap: 10px;
+  }
+  .title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #64748b;
+    text-align: center;
+  }
+  .columns {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    max-width: 640px;
+  }
+  .col {
+    flex: 1;
+    border-radius: 14px;
+    padding: 14px 12px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+  .col-add {
+    background: linear-gradient(160deg, #fee2e2 0%, #fecaca 100%);
+    border: 1.5px solid #fca5a5;
+  }
+  .col-remove {
+    background: linear-gradient(160deg, #d1fae5 0%, #a7f3d0 100%);
+    border: 1.5px solid #6ee7b7;
+  }
+  .col-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .col-icon { font-size: 18px; }
+  .col-title {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .col-add .col-title { color: #b91c1c; }
+  .col-remove .col-title { color: #065f46; }
+  .col-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .col-list li {
+    font-size: 10px;
+    font-weight: 600;
+    color: #334155;
+    background: rgba(255,255,255,0.6);
+    border-radius: 6px;
+    padding: 4px 8px;
+  }
+  .quote {
+    font-size: 10px;
+    font-style: italic;
+    color: #475569;
+    text-align: center;
+    max-width: 520px;
+    line-height: 1.5;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 6px;
+  }
+</style>
+</head>
+<body>
+  <div class="title">Via Negativa — Improvement by Removal</div>
+  <div class="columns">
+    <div class="col col-add">
+      <div class="col-header">
+        <span class="col-icon">❌</span>
+        <span class="col-title">Adding (Via Positiva)</span>
+      </div>
+      <ul class="col-list">
+        <li>More meetings</li>
+        <li>More medication</li>
+        <li>More complexity</li>
+        <li>More rules</li>
+        <li>More data</li>
+      </ul>
+    </div>
+    <div class="col col-remove">
+      <div class="col-header">
+        <span class="col-icon">✅</span>
+        <span class="col-title">Removing (Via Negativa)</span>
+      </div>
+      <ul class="col-list">
+        <li>Eliminate bad habits</li>
+        <li>Stop harmful treatments</li>
+        <li>Reduce dependencies</li>
+        <li>Cut unnecessary rules</li>
+        <li>Remove noise</li>
+      </ul>
+    </div>
+  </div>
+  <div class="quote">"The greatest gains come not from what you add, but from what you remove."</div>
+</body>
+</html>

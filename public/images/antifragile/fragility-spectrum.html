@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Fragility Triad</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, sans-serif;
+    background: #f8fafc;
+    overflow: hidden;
+    width: 100%;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 16px;
+  }
+  .title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #64748b;
+    margin-bottom: 12px;
+  }
+  .columns {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 720px;
+  }
+  .col {
+    flex: 1;
+    border-radius: 14px;
+    padding: 14px 12px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+  .col-fragile {
+    background: linear-gradient(160deg, #fee2e2 0%, #fecaca 100%);
+    border: 1.5px solid #fca5a5;
+  }
+  .col-robust {
+    background: linear-gradient(160deg, #f1f5f9 0%, #e2e8f0 100%);
+    border: 1.5px solid #cbd5e1;
+  }
+  .col-antifragile {
+    background: linear-gradient(160deg, #d1fae5 0%, #a7f3d0 100%);
+    border: 1.5px solid #6ee7b7;
+  }
+  .col-emoji { font-size: 24px; line-height: 1; }
+  .col-label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+  }
+  .col-fragile .col-label { color: #b91c1c; }
+  .col-robust .col-label { color: #475569; }
+  .col-antifragile .col-label { color: #065f46; }
+  .col-traits {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .col-traits li {
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+    padding: 3px 6px;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.55);
+    color: #334155;
+  }
+  .col-examples {
+    font-size: 9px;
+    color: #475569;
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 2px;
+  }
+  .col-examples strong { display: block; font-weight: 700; color: #334155; margin-bottom: 1px; }
+</style>
+</head>
+<body>
+  <div class="title">The Fragility Triad</div>
+  <div class="columns">
+    <div class="col col-fragile">
+      <span class="col-emoji">🥃</span>
+      <span class="col-label">Fragile</span>
+      <ul class="col-traits">
+        <li>Hates disorder</li>
+        <li>Breaks under stress</li>
+        <li>Needs calm &amp; stability</li>
+      </ul>
+      <div class="col-examples">
+        <strong>Examples</strong>
+        Supply chains · Glass<br>Over-optimised systems
+      </div>
+    </div>
+    <div class="col col-robust">
+      <span class="col-emoji">🛡️</span>
+      <span class="col-label">Robust</span>
+      <ul class="col-traits">
+        <li>Tolerates disorder</li>
+        <li>Resists stress</li>
+        <li>Unchanged by volatility</li>
+      </ul>
+      <div class="col-examples">
+        <strong>Examples</strong>
+        Rocks · Simple rules<br>Redundant systems
+      </div>
+    </div>
+    <div class="col col-antifragile">
+      <span class="col-emoji">📈</span>
+      <span class="col-label">Antifragile</span>
+      <ul class="col-traits">
+        <li>Loves disorder</li>
+        <li>Gains from stress</li>
+        <li>Grows with volatility</li>
+      </ul>
+      <div class="col-examples">
+        <strong>Examples</strong>
+        Muscles · Evolution<br>Options
+      </div>
+    </div>
+  </div>
+</body>
+</html>
