@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Virtuous and Vicious Cycles of Institutions</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f8fafc;
+      height: 360px;
+      box-sizing: border-box;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 360px;
+    }
+    .title {
+      text-align: center;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #1e293b;
+      padding: 9px 16px 5px;
+      letter-spacing: 0.3px;
+    }
+    .cycles {
+      display: flex;
+      gap: 10px;
+      padding: 0 12px;
+      flex: 1;
+      min-height: 0;
+    }
+    .cycle {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 0;
+    }
+    .cycle-label {
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 7px;
+      letter-spacing: 0.3px;
+    }
+    .cycle-label.virtuous { color: #2563eb; }
+    .cycle-label.vicious { color: #dc2626; }
+    .flow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      width: 100%;
+      flex: 1;
+      justify-content: center;
+    }
+    .pill {
+      border-radius: 20px;
+      padding: 5px 10px;
+      font-size: 10px;
+      font-weight: 600;
+      text-align: center;
+      width: 85%;
+      line-height: 1.3;
+      box-sizing: border-box;
+      border: 1.5px solid;
+    }
+    .pill.blue {
+      background: #dbeafe;
+      border-color: #93c5fd;
+      color: #1e3a8a;
+    }
+    .pill.red {
+      background: #fee2e2;
+      border-color: #fca5a5;
+      color: #7f1d1d;
+    }
+    .arrow {
+      font-size: 13px;
+      line-height: 1;
+      margin: 1px 0;
+    }
+    .arrow.blue { color: #3b82f6; }
+    .arrow.red { color: #ef4444; }
+    .loop-badge {
+      margin-top: 5px;
+      font-size: 14px;
+      line-height: 1;
+    }
+    .divider {
+      width: 1.5px;
+      background: linear-gradient(to bottom, transparent, #cbd5e1, transparent);
+      margin: 0 4px;
+      align-self: stretch;
+    }
+    .banner {
+      background: #1e293b;
+      color: #f1f5f9;
+      font-size: 10px;
+      font-weight: 600;
+      text-align: center;
+      padding: 7px 16px;
+      letter-spacing: 0.1px;
+      line-height: 1.4;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">The Virtuous &amp; Vicious Cycles of Institutions</div>
+    <div class="cycles">
+      <div class="cycle">
+        <div class="cycle-label virtuous">🔄 Virtuous Cycle</div>
+        <div class="flow">
+          <div class="pill blue">Inclusive political institutions</div>
+          <div class="arrow blue">↓</div>
+          <div class="pill blue">Inclusive economic institutions</div>
+          <div class="arrow blue">↓</div>
+          <div class="pill blue">Broad prosperity</div>
+          <div class="arrow blue">↓</div>
+          <div class="pill blue">Political stability</div>
+          <div class="arrow blue">↓</div>
+          <div class="pill blue">Strengthens inclusive institutions</div>
+          <div class="loop-badge">↺</div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="cycle">
+        <div class="cycle-label vicious">💀 Vicious Cycle</div>
+        <div class="flow">
+          <div class="pill red">Extractive political institutions</div>
+          <div class="arrow red">↓</div>
+          <div class="pill red">Extractive economic institutions</div>
+          <div class="arrow red">↓</div>
+          <div class="pill red">Concentrated wealth</div>
+          <div class="arrow red">↓</div>
+          <div class="pill red">Elite entrench power</div>
+          <div class="arrow red">↓</div>
+          <div class="pill red">Blocks reform</div>
+          <div class="loop-badge">↺</div>
+        </div>
+      </div>
+    </div>
+    <div class="banner">Once a cycle begins, it self-reinforces — which is why institutional change is so rare and revolution so disruptive.</div>
+  </div>
+</body>
+</html>
