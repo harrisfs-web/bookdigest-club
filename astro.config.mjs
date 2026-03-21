@@ -7,7 +7,11 @@ export default defineConfig({
   site: "https://bookdigest.club",
 
   // …other config
-  integrations: [sitemap()],
+  integrations: [sitemap({
+    serialize(item) {
+      return { ...item, lastmod: new Date().toISOString() };
+    },
+  })],
 
   vite: {
     plugins: [tailwindcss()]

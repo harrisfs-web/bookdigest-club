@@ -26,7 +26,12 @@ const allBooks = await getCollection("books");
 const otherBooks = allBooks.filter(b => b.slug !== slug).slice(0, 3);
 ---
 
-<Layout title={`${title} – Book Summary`} description={`${title} by ${author}: ${summary}`}>
+<Layout
+  title={`${title} – Book Summary`}
+  description={`${title} by ${author}: ${summary}`}
+  ogImage={new URL(cover, Astro.site).href}
+  ogType="article"
+>
   <script
     slot="head"
     type="application/ld+json"
@@ -37,8 +42,8 @@ const otherBooks = allBooks.filter(b => b.slug !== slug).slice(0, 3);
       author: { "@type": "Person", name: author },
       image: new URL(cover, Astro.site).href,
       datePublished: date.toISOString().split('T')[0],
+      dateModified: date.toISOString().split('T')[0],
       url: new URL(Astro.url.pathname, Astro.site).href,
-      aggregateRating: { "@type": "AggregateRating", ratingValue: rating, reviewCount: 1 }
     })}
   />
   <!-- Hero Section with Book Info -->
@@ -52,7 +57,7 @@ const otherBooks = allBooks.filter(b => b.slug !== slug).slice(0, 3);
               src={cover} 
               alt={`Cover of ${title}`} 
               class="w-full max-w-sm mx-auto rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-300" 
-              loading="lazy" 
+              fetchpriority="high"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
