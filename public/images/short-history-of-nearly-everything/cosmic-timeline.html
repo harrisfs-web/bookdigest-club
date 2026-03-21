@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cosmic Calendar</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, sans-serif;
+    background: #0f172a;
+    overflow: hidden;
+    width: 100%;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px 6px;
+    gap: 0;
+    position: relative;
+  }
+  /* Star field */
+  .stars {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .star {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.6;
+  }
+  .title {
+    font-size: 11.5px;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #67e8f9;
+    margin-bottom: 10px;
+    z-index: 1;
+    text-align: center;
+  }
+  .timeline-wrap {
+    width: 100%;
+    max-width: 720px;
+    z-index: 1;
+    position: relative;
+  }
+  /* Month labels */
+  .months {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2px;
+    margin-bottom: 3px;
+  }
+  .month {
+    font-size: 7px;
+    color: #475569;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  /* The bar */
+  .bar-track {
+    position: relative;
+    height: 10px;
+    background: linear-gradient(90deg, #1e3a5f 0%, #0e7490 40%, #06b6d4 70%, #22d3ee 100%);
+    border-radius: 5px;
+    box-shadow: 0 0 18px rgba(6,182,212,0.35);
+    margin-bottom: 0;
+  }
+  /* Dot marker on bar */
+  .dot-marker {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #06b6d4;
+    box-shadow: 0 0 8px 3px rgba(6,182,212,0.7);
+    z-index: 2;
+  }
+  .dot-marker.last {
+    background: #f472b6;
+    box-shadow: 0 0 10px 4px rgba(244,114,182,0.8);
+    width: 11px;
+    height: 11px;
+  }
+  /* Labels above and below bar */
+  .labels-above {
+    display: flex;
+    position: relative;
+    height: 108px;
+    margin-bottom: 2px;
+  }
+  .labels-below {
+    display: flex;
+    position: relative;
+    height: 96px;
+    margin-top: 2px;
+  }
+  .event-label {
+    position: absolute;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+  }
+  .event-label.above {
+    bottom: 0;
+    padding-bottom: 6px;
+  }
+  .event-label.below {
+    top: 0;
+    padding-top: 6px;
+  }
+  .event-card {
+    background: rgba(15,23,42,0.85);
+    border: 1px solid rgba(6,182,212,0.35);
+    border-radius: 7px;
+    padding: 3px 6px;
+    text-align: center;
+    min-width: 60px;
+    max-width: 76px;
+  }
+  .event-card.last-card {
+    border-color: rgba(244,114,182,0.55);
+    background: rgba(30,15,42,0.9);
+  }
+  .event-emoji {
+    font-size: 11px;
+    line-height: 1.2;
+  }
+  .event-date {
+    font-size: 7.5px;
+    font-weight: 700;
+    color: #06b6d4;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+  .event-name {
+    font-size: 7.5px;
+    color: #e2e8f0;
+    line-height: 1.25;
+    font-weight: 500;
+  }
+  .last-card .event-date { color: #f472b6; }
+  /* Connector line from card to bar */
+  .connector {
+    width: 1px;
+    background: rgba(6,182,212,0.4);
+    flex-shrink: 0;
+  }
+  .event-label.above .connector { height: 6px; order: 1; }
+  .event-label.above .event-card { order: 0; }
+  .event-label.below .connector { height: 6px; order: 0; }
+  .event-label.below .event-card { order: 1; }
+  .last-label .connector { background: rgba(244,114,182,0.5); }
+  /* Caption */
+  .caption {
+    font-size: 8.5px;
+    color: #64748b;
+    text-align: center;
+    margin-top: 8px;
+    z-index: 1;
+    line-height: 1.45;
+    max-width: 560px;
+  }
+  .caption span { color: #94a3b8; }
+</style>
+</head>
+<body>
+
+  <!-- Star field -->
+  <div class="stars">
+    <span class="star" style="width:1px;height:1px;top:8%;left:5%"></span>
+    <span class="star" style="width:2px;height:2px;top:12%;left:18%"></span>
+    <span class="star" style="width:1px;height:1px;top:5%;left:30%"></span>
+    <span class="star" style="width:1px;height:1px;top:20%;left:42%"></span>
+    <span class="star" style="width:2px;height:2px;top:7%;left:55%"></span>
+    <span class="star" style="width:1px;height:1px;top:15%;left:68%"></span>
+    <span class="star" style="width:1px;height:1px;top:4%;left:78%"></span>
+    <span class="star" style="width:2px;height:2px;top:18%;left:88%"></span>
+    <span class="star" style="width:1px;height:1px;top:9%;left:95%"></span>
+    <span class="star" style="width:1px;height:1px;top:72%;left:8%"></span>
+    <span class="star" style="width:2px;height:2px;top:80%;left:22%"></span>
+    <span class="star" style="width:1px;height:1px;top:65%;left:35%"></span>
+    <span class="star" style="width:1px;height:1px;top:75%;left:60%"></span>
+    <span class="star" style="width:2px;height:2px;top:85%;left:75%"></span>
+    <span class="star" style="width:1px;height:1px;top:70%;left:90%"></span>
+    <span class="star" style="width:1px;height:1px;top:30%;left:2%"></span>
+    <span class="star" style="width:1px;height:1px;top:45%;left:12%"></span>
+    <span class="star" style="width:2px;height:2px;top:55%;left:48%"></span>
+    <span class="star" style="width:1px;height:1px;top:35%;left:72%"></span>
+    <span class="star" style="width:1px;height:1px;top:50%;left:96%"></span>
+  </div>
+
+  <div class="title">The Cosmic Calendar — If the Universe Were One Year</div>
+
+  <div class="timeline-wrap">
+    <!-- Labels above bar (events at odd positions) -->
+    <div class="labels-above">
+      <!-- Big Bang: 0% -->
+      <div class="event-label above" style="left:1%">
+        <div class="event-card">
+          <div class="event-emoji">💥</div>
+          <div class="event-date">Jan 1</div>
+          <div class="event-name">Big Bang</div>
+        </div>
+        <div class="connector"></div>
+      </div>
+      <!-- Earth forms: ~70% -->
+      <div class="event-label above" style="left:70%">
+        <div class="event-card">
+          <div class="event-emoji">🌍</div>
+          <div class="event-date">Sep 14</div>
+          <div class="event-name">Earth forms</div>
+        </div>
+        <div class="connector"></div>
+      </div>
+      <!-- First fish: ~94.5% -->
+      <div class="event-label above" style="left:94.5%">
+        <div class="event-card">
+          <div class="event-emoji">🐟</div>
+          <div class="event-date">Dec 17</div>
+          <div class="event-name">First fish</div>
+        </div>
+        <div class="connector"></div>
+      </div>
+    </div>
+
+    <!-- Month markers -->
+    <div class="months">
+      <span class="month">Jan</span>
+      <span class="month">Feb</span>
+      <span class="month">Mar</span>
+      <span class="month">Apr</span>
+      <span class="month">May</span>
+      <span class="month">Jun</span>
+      <span class="month">Jul</span>
+      <span class="month">Aug</span>
+      <span class="month">Sep</span>
+      <span class="month">Oct</span>
+      <span class="month">Nov</span>
+      <span class="month">Dec</span>
+    </div>
+
+    <!-- Timeline bar with dot markers -->
+    <div class="bar-track">
+      <!-- Big Bang: Jan 1 = 0% -->
+      <div class="dot-marker" style="left:1%"></div>
+      <!-- Milky Way: Jan 22 = ~5.8% -->
+      <div class="dot-marker" style="left:5.8%"></div>
+      <!-- Solar System: Sep 2 = ~66.7% -->
+      <div class="dot-marker" style="left:66.7%"></div>
+      <!-- Earth: Sep 14 = ~70% -->
+      <div class="dot-marker" style="left:70%"></div>
+      <!-- First life: Sep 21 = ~71.8% -->
+      <div class="dot-marker" style="left:71.8%"></div>
+      <!-- First fish: Dec 17 = ~94.5% -->
+      <div class="dot-marker" style="left:94.5%"></div>
+      <!-- Dinosaurs: Dec 28 = ~98.1% -->
+      <div class="dot-marker" style="left:98.1%"></div>
+      <!-- Dinos extinct: Dec 30 = ~99.2% -->
+      <div class="dot-marker" style="left:99.2%"></div>
+      <!-- Humans: Dec 31 11:59pm ≈ 100% -->
+      <div class="dot-marker last" style="left:99.97%"></div>
+    </div>
+
+    <!-- Labels below bar (events at even positions) -->
+    <div class="labels-below">
+      <!-- Milky Way: ~5.8% -->
+      <div class="event-label below" style="left:5.8%">
+        <div class="connector"></div>
+        <div class="event-card">
+          <div class="event-emoji">🌌</div>
+          <div class="event-date">Jan 22</div>
+          <div class="event-name">Milky Way forms</div>
+        </div>
+      </div>
+      <!-- Solar System: ~66.7% -->
+      <div class="event-label below" style="left:66.7%">
+        <div class="connector"></div>
+        <div class="event-card">
+          <div class="event-emoji">☀️</div>
+          <div class="event-date">Sep 2</div>
+          <div class="event-name">Solar System forms</div>
+        </div>
+      </div>
+      <!-- First life: ~71.8% -->
+      <div class="event-label below" style="left:71.8%">
+        <div class="connector"></div>
+        <div class="event-card">
+          <div class="event-emoji">🦠</div>
+          <div class="event-date">Sep 21</div>
+          <div class="event-name">First life (bacteria)</div>
+        </div>
+      </div>
+      <!-- Dinosaurs: ~98.1% -->
+      <div class="event-label below" style="left:98.1%">
+        <div class="connector"></div>
+        <div class="event-card">
+          <div class="event-emoji">🦕</div>
+          <div class="event-date">Dec 28</div>
+          <div class="event-name">Dinosaurs appear</div>
+        </div>
+      </div>
+      <!-- Dinos extinct + humans: last card -->
+      <div class="event-label below last-label" style="left:99.5%">
+        <div class="connector"></div>
+        <div class="event-card last-card">
+          <div class="event-emoji">☄️🧑</div>
+          <div class="event-date">Dec 30–31</div>
+          <div class="event-name">Dinos extinct · Humans</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="caption">
+    <span>Every second on this calendar = 437 years of real time.</span> All of human civilisation fits in the last 22 seconds of the year.
+  </div>
+
+</body>
+</html>
