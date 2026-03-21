@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#1a1a2e"/>
+  <rect x="60" y="60" width="1080" height="510" rx="24" fill="#16213e"/>
+  <text x="600" y="270" font-family="Georgia, serif" font-size="96" font-weight="bold" fill="#ffffff" text-anchor="middle">BookDigest</text>
+  <text x="600" y="370" font-family="Georgia, serif" font-size="40" fill="#a0aec0" text-anchor="middle">AI-powered book summaries</text>
+  <rect x="500" y="410" width="200" height="4" rx="2" fill="#4f46e5"/>
+</svg>
