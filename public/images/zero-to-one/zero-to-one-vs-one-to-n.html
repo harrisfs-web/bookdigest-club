@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0 to 1 vs. 1 to N — Two Kinds of Progress</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f8fafc;
+      overflow: hidden;
+      width: 100%;
+      height: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 18px 10px;
+      gap: 12px;
+    }
+    .title {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: #475569;
+      text-align: center;
+    }
+    .columns {
+      display: flex;
+      gap: 14px;
+      width: 100%;
+      max-width: 680px;
+      align-items: stretch;
+    }
+    .col {
+      flex: 1;
+      border-radius: 16px;
+      padding: 16px 16px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .col-icon {
+      font-size: 28px;
+      line-height: 1;
+    }
+    .col-label {
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #64748b;
+    }
+    .col-name {
+      font-size: 14px;
+      font-weight: 800;
+      color: #1e293b;
+      line-height: 1.2;
+    }
+    .col-body {
+      font-size: 10px;
+      color: #334155;
+      line-height: 1.6;
+    }
+    .col-examples {
+      margin-top: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .example-item {
+      font-size: 9.5px;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      width: fit-content;
+    }
+    .blue-col {
+      background: linear-gradient(155deg, #dbeafe, #bfdbfe);
+      border: 1.5px solid #93c5fd;
+    }
+    .blue-col .example-item {
+      background: rgba(59,130,246,0.15);
+      color: #1d4ed8;
+    }
+    .slate-col {
+      background: linear-gradient(155deg, #f1f5f9, #e2e8f0);
+      border: 1.5px solid #cbd5e1;
+    }
+    .slate-col .example-item {
+      background: rgba(100,116,139,0.15);
+      color: #475569;
+    }
+    .banner {
+      width: 100%;
+      max-width: 680px;
+      background: #1e293b;
+      color: #f1f5f9;
+      border-radius: 12px;
+      padding: 8px 16px;
+      text-align: center;
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    .banner span {
+      color: #60a5fa;
+    }
+  </style>
+</head>
+<body>
+  <div class="title">0 to 1 vs. 1 to N — Two Kinds of Progress</div>
+
+  <div class="columns">
+    <div class="col blue-col">
+      <span class="col-icon">🚀</span>
+      <div class="col-label">Vertical Progress</div>
+      <div class="col-name">0 → 1</div>
+      <div class="col-body">Creating something that has never existed. Doing the unexpected. Going from nothing to something. Technology. Breakthrough. Monopoly.</div>
+      <div class="col-examples">
+        <span class="example-item">✦ The printing press</span>
+        <span class="example-item">✦ The internet</span>
+        <span class="example-item">✦ The iPhone</span>
+      </div>
+    </div>
+
+    <div class="col slate-col">
+      <span class="col-icon">📋</span>
+      <div class="col-label">Horizontal Progress</div>
+      <div class="col-name">1 → N</div>
+      <div class="col-body">Copying things that already work. Globalisation. Spreading what exists. Scaling. Commoditisation. Competition.</div>
+      <div class="col-examples">
+        <span class="example-item">◆ More factories</span>
+        <span class="example-item">◆ More restaurants</span>
+        <span class="example-item">◆ More of the same</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="banner">
+    The world needs more <span>0→1</span> thinkers. Anyone can do 1→N.
+  </div>
+</body>
+</html>
