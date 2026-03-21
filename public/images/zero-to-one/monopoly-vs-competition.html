@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Monopoly Beats Competition — Always</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f8fafc;
+      overflow: hidden;
+      width: 100%;
+      height: 380px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 18px 10px;
+      gap: 12px;
+    }
+    .title {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: #475569;
+      text-align: center;
+    }
+    .row {
+      display: flex;
+      gap: 0;
+      width: 100%;
+      max-width: 680px;
+      align-items: stretch;
+    }
+    .col {
+      flex: 1;
+      border-radius: 16px;
+      padding: 16px 16px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .col-heading {
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .list-item {
+      font-size: 10px;
+      color: #334155;
+      line-height: 1.4;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+    .list-item::before {
+      content: "—";
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .badge {
+      margin-top: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      width: fit-content;
+    }
+    .red-col {
+      background: #fef2f2;
+      border: 1.5px solid #fca5a5;
+      border-radius: 16px 0 0 16px;
+    }
+    .red-col .col-heading { color: #ef4444; }
+    .red-col .list-item::before { color: #f87171; }
+    .red-col .badge { background: #fee2e2; color: #b91c1c; }
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 10px;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+    .green-col {
+      background: #f0fdf4;
+      border: 1.5px solid #86efac;
+      border-radius: 0 16px 16px 0;
+    }
+    .green-col .col-heading { color: #10b981; }
+    .green-col .list-item::before { color: #34d399; }
+    .green-col .badge { background: #d1fae5; color: #065f46; }
+    .banner {
+      width: 100%;
+      max-width: 680px;
+      background: #1e293b;
+      color: #f1f5f9;
+      border-radius: 12px;
+      padding: 8px 16px;
+      text-align: center;
+      font-size: 10.5px;
+      font-weight: 600;
+      font-style: italic;
+      letter-spacing: 0.02em;
+    }
+  </style>
+</head>
+<body>
+  <div class="title">Why Monopoly Beats Competition — Always</div>
+
+  <div class="row">
+    <div class="col red-col">
+      <div class="col-heading">Perfect Competition</div>
+      <div class="list-item">Undifferentiated products</div>
+      <div class="list-item">Price-takers not price-makers</div>
+      <div class="list-item">Thin margins</div>
+      <div class="list-item">No long-term profits</div>
+      <div class="list-item">Firms lie about being different</div>
+      <div class="list-item">Race to the bottom</div>
+      <div class="badge">✈️ Airlines industry</div>
+    </div>
+
+    <div class="divider">⚔️</div>
+
+    <div class="col green-col">
+      <div class="col-heading">Monopoly</div>
+      <div class="list-item">Unique product or service</div>
+      <div class="list-item">Sets its own prices</div>
+      <div class="list-item">Fat margins</div>
+      <div class="list-item">Long-term profits</div>
+      <div class="list-item">Firms lie about being a monopoly</div>
+      <div class="list-item">Power to do good</div>
+      <div class="badge">🔍 Google</div>
+    </div>
+  </div>
+
+  <div class="banner">
+    Competition is for losers. Build something so good it has no competition.
+  </div>
+</body>
+</html>

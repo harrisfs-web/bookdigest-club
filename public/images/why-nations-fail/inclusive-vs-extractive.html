@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inclusive vs. Extractive Institutions</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f8fafc;
+      height: 380px;
+      box-sizing: border-box;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 380px;
+    }
+    .title {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: #1e293b;
+      padding: 10px 16px 6px;
+      letter-spacing: 0.3px;
+    }
+    .columns {
+      display: flex;
+      gap: 10px;
+      padding: 0 12px;
+      flex: 1;
+      min-height: 0;
+    }
+    .col {
+      flex: 1;
+      border-radius: 12px;
+      border: 1.5px solid;
+      padding: 10px 12px 8px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      min-height: 0;
+      overflow: hidden;
+    }
+    .col-inclusive {
+      background: linear-gradient(160deg, #f0fdf4, #dcfce7);
+      border-color: #86efac;
+    }
+    .col-extractive {
+      background: linear-gradient(160deg, #fef2f2, #fee2e2);
+      border-color: #fca5a5;
+    }
+    .col-header {
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-align: center;
+      margin-bottom: 8px;
+      padding-bottom: 6px;
+      border-bottom: 1.5px solid;
+    }
+    .col-inclusive .col-header {
+      color: #10b981;
+      border-color: #a7f3d0;
+    }
+    .col-extractive .col-header {
+      color: #ef4444;
+      border-color: #fca5a5;
+    }
+    .section-label {
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      margin: 5px 0 3px;
+    }
+    .col-inclusive .section-label { color: #059669; }
+    .col-extractive .section-label { color: #dc2626; }
+    ul {
+      margin: 0;
+      padding-left: 14px;
+      list-style: none;
+    }
+    ul li {
+      font-size: 10px;
+      color: #374151;
+      line-height: 1.45;
+      margin-bottom: 1px;
+      position: relative;
+    }
+    .col-inclusive ul li::before {
+      content: "✓";
+      position: absolute;
+      left: -13px;
+      color: #10b981;
+      font-size: 9px;
+      font-weight: 700;
+    }
+    .col-extractive ul li::before {
+      content: "✗";
+      position: absolute;
+      left: -13px;
+      color: #ef4444;
+      font-size: 9px;
+      font-weight: 700;
+    }
+    .badge {
+      margin-top: auto;
+      padding: 5px 8px;
+      border-radius: 8px;
+      font-size: 9.5px;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.3;
+    }
+    .badge-inclusive {
+      background: #d1fae5;
+      color: #065f46;
+      border: 1px solid #6ee7b7;
+    }
+    .badge-extractive {
+      background: #fee2e2;
+      color: #7f1d1d;
+      border: 1px solid #fca5a5;
+    }
+    .banner {
+      background: #1e293b;
+      color: #f1f5f9;
+      font-size: 10.5px;
+      font-weight: 600;
+      text-align: center;
+      padding: 7px 16px;
+      letter-spacing: 0.2px;
+      line-height: 1.4;
+      flex-shrink: 0;
+    }
+    .section-divider {
+      height: 1px;
+      margin: 4px 0;
+    }
+    .col-inclusive .section-divider { background: #a7f3d0; }
+    .col-extractive .section-divider { background: #fca5a5; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Inclusive vs. Extractive Institutions</div>
+    <div class="columns">
+      <div class="col col-inclusive">
+        <div class="col-header">INCLUSIVE INSTITUTIONS 🏛️</div>
+        <div class="section-label">Economic</div>
+        <ul>
+          <li>Secure property rights</li>
+          <li>Free markets &amp; competition</li>
+          <li>Access to capital</li>
+          <li>Rule of law</li>
+          <li>Creative destruction allowed</li>
+        </ul>
+        <div class="section-divider"></div>
+        <div class="section-label">Political</div>
+        <ul>
+          <li>Pluralistic power</li>
+          <li>Checks &amp; balances</li>
+          <li>Free and fair elections</li>
+          <li>Protection from arbitrary power</li>
+        </ul>
+        <div class="badge badge-inclusive">🌍 UK · USA · South Korea · Botswana</div>
+      </div>
+      <div class="col col-extractive">
+        <div class="col-header">EXTRACTIVE INSTITUTIONS ⛓️</div>
+        <div class="section-label">Economic</div>
+        <ul>
+          <li>No property rights</li>
+          <li>Monopolised markets</li>
+          <li>Blocked entry for newcomers</li>
+          <li>Elite enrichment only</li>
+          <li>Creative destruction blocked</li>
+        </ul>
+        <div class="section-divider"></div>
+        <div class="section-label">Political</div>
+        <ul>
+          <li>Power concentrated in elite</li>
+          <li>No accountability</li>
+          <li>Rigged elections</li>
+          <li>Arbitrary rule</li>
+        </ul>
+        <div class="badge badge-extractive">🔒 North Korea · Zimbabwe · Colonial Congo · Soviet USSR</div>
+      </div>
+    </div>
+    <div class="banner">Institutions — not geography or culture — explain why nations succeed or fail.</div>
+  </div>
+</body>
+</html>

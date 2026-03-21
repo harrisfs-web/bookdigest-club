@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Critical Junctures — When History's Path Changes</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f8fafc;
+      height: 340px;
+      box-sizing: border-box;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 340px;
+    }
+    .title {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: #1e293b;
+      padding: 9px 16px 6px;
+      letter-spacing: 0.2px;
+    }
+    .timeline-wrap {
+      position: relative;
+      flex: 1;
+      padding: 0 10px;
+      min-height: 0;
+    }
+    .connector {
+      position: absolute;
+      top: 50%;
+      left: 22px;
+      right: 22px;
+      height: 2px;
+      background: linear-gradient(to right, #93c5fd, #fcd34d, #6ee7b7, #fca5a5, #c4b5fd);
+      transform: translateY(-50%);
+      z-index: 0;
+    }
+    .cards {
+      display: flex;
+      gap: 7px;
+      height: 100%;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .card {
+      flex: 1;
+      border-radius: 10px;
+      border: 1.5px solid;
+      padding: 8px 7px 7px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      min-height: 0;
+    }
+    .card-blue  { background: #eff6ff; border-color: #93c5fd; }
+    .card-amber { background: #fffbeb; border-color: #fcd34d; }
+    .card-green { background: #f0fdf4; border-color: #6ee7b7; }
+    .card-rose  { background: #fff1f2; border-color: #fca5a5; }
+    .card-purple{ background: #faf5ff; border-color: #c4b5fd; }
+    .card-top {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+    .num {
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      font-size: 9px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #fff;
+    }
+    .card-blue  .num { background: #3b82f6; }
+    .card-amber .num { background: #f59e0b; }
+    .card-green .num { background: #10b981; }
+    .card-rose  .num { background: #f43f5e; }
+    .card-purple .num { background: #8b5cf6; }
+    .icon {
+      font-size: 13px;
+      line-height: 1;
+    }
+    .card-title {
+      font-size: 9.5px;
+      font-weight: 700;
+      color: #1e293b;
+      line-height: 1.2;
+    }
+    .card-year {
+      font-size: 8.5px;
+      font-weight: 600;
+      color: #64748b;
+      margin-bottom: 4px;
+    }
+    .card-body {
+      font-size: 8.5px;
+      color: #374151;
+      line-height: 1.4;
+    }
+    .banner {
+      background: #1e293b;
+      color: #f1f5f9;
+      font-size: 10px;
+      font-weight: 600;
+      text-align: center;
+      padding: 7px 16px;
+      letter-spacing: 0.1px;
+      line-height: 1.4;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Critical Junctures — When History's Path Changes</div>
+    <div class="timeline-wrap">
+      <div class="connector"></div>
+      <div class="cards">
+        <div class="card card-blue">
+          <div class="card-top">
+            <div class="num">1</div>
+            <span class="icon">🌊</span>
+          </div>
+          <div class="card-title">The Black Death</div>
+          <div class="card-year">1346</div>
+          <div class="card-body">Labour scarcity empowered peasants in the West but entrenched serfdom in the East — diverging institutional paths that persist to this day.</div>
+        </div>
+        <div class="card card-amber">
+          <div class="card-top">
+            <div class="num">2</div>
+            <span class="icon">⚓</span>
+          </div>
+          <div class="card-title">Atlantic Trade</div>
+          <div class="card-year">1500s</div>
+          <div class="card-body">Enriched merchants in England and Netherlands, entrenched crown elites in Spain — different political trajectories that shaped the Industrial Revolution.</div>
+        </div>
+        <div class="card card-green">
+          <div class="card-top">
+            <div class="num">3</div>
+            <span class="icon">🏭</span>
+          </div>
+          <div class="card-title">Industrial Revolution</div>
+          <div class="card-year">1760s</div>
+          <div class="card-body">England's inclusive institutions let entrepreneurs innovate; extractive regimes elsewhere blocked it, falling irreversibly behind.</div>
+        </div>
+        <div class="card card-rose">
+          <div class="card-top">
+            <div class="num">4</div>
+            <span class="icon">🗺️</span>
+          </div>
+          <div class="card-title">Colonial Boundaries</div>
+          <div class="card-year">1880s</div>
+          <div class="card-body">Arbitrary borders locked in extractive institutions across Africa and Asia — shaping poverty that persists today.</div>
+        </div>
+        <div class="card card-purple">
+          <div class="card-top">
+            <div class="num">5</div>
+            <span class="icon">🧱</span>
+          </div>
+          <div class="card-title">Iron Curtain</div>
+          <div class="card-year">1945</div>
+          <div class="card-body">East vs. West Germany: same people, same culture — different institutions determined diverging futures within a single generation.</div>
+        </div>
+      </div>
+    </div>
+    <div class="banner">Small institutional differences, amplified by critical junctures, compound into vast wealth gaps.</div>
+  </div>
+</body>
+</html>

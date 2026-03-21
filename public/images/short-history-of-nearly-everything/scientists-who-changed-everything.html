@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scientists Who Changed Everything</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, sans-serif;
+    background: #f8fafc;
+    overflow: hidden;
+    width: 100%;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px 6px;
+    gap: 8px;
+  }
+  .title {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #64748b;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 7px;
+    width: 100%;
+    max-width: 720px;
+    flex: 1;
+  }
+  .card {
+    border-radius: 10px;
+    padding: 7px 7px 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .card-icon {
+    font-size: 16px;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .card-name-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    min-width: 0;
+  }
+  .card-name {
+    font-size: 9px;
+    font-weight: 800;
+    color: #1e293b;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2;
+  }
+  .card-dates {
+    font-size: 8px;
+    font-weight: 500;
+    color: #64748b;
+    line-height: 1.2;
+  }
+  .card-text {
+    font-size: 8.5px;
+    color: #334155;
+    line-height: 1.4;
+    margin-top: 1px;
+  }
+
+  /* Era colour themes */
+  .amber {
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+    border: 1.5px solid #fcd34d;
+  }
+  .amber .card-name { color: #92400e; }
+
+  .green {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    border: 1.5px solid #86efac;
+  }
+  .green .card-name { color: #14532d; }
+
+  .blue {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    border: 1.5px solid #93c5fd;
+  }
+  .blue .card-name { color: #1e3a8a; }
+
+  .purple {
+    background: linear-gradient(135deg, #faf5ff 0%, #ede9fe 100%);
+    border: 1.5px solid #c4b5fd;
+  }
+  .purple .card-name { color: #4c1d95; }
+</style>
+</head>
+<body>
+
+  <div class="title">8 Scientists Who Rewrote Our Understanding of Everything</div>
+
+  <div class="grid">
+
+    <!-- Newton -->
+    <div class="card amber">
+      <div class="card-header">
+        <span class="card-icon">⚡</span>
+        <div class="card-name-wrap">
+          <span class="card-name">Isaac Newton</span>
+          <span class="card-dates">1643–1727</span>
+        </div>
+      </div>
+      <p class="card-text">Unified gravity, motion, and light into mathematical laws that governed the universe for 200 years</p>
+    </div>
+
+    <!-- Lavoisier -->
+    <div class="card amber">
+      <div class="card-header">
+        <span class="card-icon">🔬</span>
+        <div class="card-name-wrap">
+          <span class="card-name">Lavoisier</span>
+          <span class="card-dates">1743–1794</span>
+        </div>
+      </div>
+      <p class="card-text">Founded modern chemistry by identifying oxygen and establishing the law of conservation of mass</p>
+    </div>
+
+    <!-- Lyell -->
+    <div class="card green">
+      <div class="card-header">
+        <span class="card-icon">🌋</span>
+        <div class="card-name-wrap">
+          <span class="card-name">Charles Lyell</span>
+          <span class="card-dates">1797–1875</span>
+        </div>
+      </div>
+      <p class="card-text">Established deep time: the Earth is billions of years old, not thousands, revolutionising geology and enabling Darwin</p>
+    </div>
+
+    <!-- Darwin -->
+    <div class="card green">
+      <div class="card-header">
+        <span class="card-icon">🐢</span>
+        <div class="card-name-wrap">
+          <span class="card-name">Charles Darwin</span>
+          <span class="card-dates">1809–1882</span>
+        </div>
+      </div>
+      <p class="card-text">Evolution by natural selection explains the origin and diversity of all life on Earth</p>
+    </div>
+
+    <!-- Curie -->
+    <div class="card blue">
+      <div class="card-header">
+        <span class="card-icon">⚛️</span>
+        <div class="card-name-wrap">
+          <span class="card-name">Marie Curie</span>
+          <span class="card-dates">1867–1934</span>
+        </div>
+      </div>
+      <p class="card-text">Discovered radioactivity and polonium; first person to win two Nobel Prizes in two different sciences</p>
+    </div>
+
+    <!-- Hubble -->
+    <div class="card blue">
+      <div class="card-header">
+        <span class="card-icon">🌌</span>
+        <div class="card-name-wrap">
+          <span class="card-name">Edwin Hubble</span>
+          <span class="card-dates">1889–1953</span>
+        </div>
+      </div>
+      <p class="card-text">Proved the universe is expanding beyond the Milky Way, establishing the Big Bang framework</p>
+    </div>
+
+    <!-- Crick & Franklin -->
+    <div class="card purple">
+      <div class="card-header">
+        <span class="card-icon">🧬</span>
+        <div class="card-name-wrap">
+          <span class="card-name">Crick &amp; Franklin</span>
+          <span class="card-dates">Crick 1916–2004 · Franklin 1920–58</span>
+        </div>
+      </div>
+      <p class="card-text">Decoded the double-helix structure of DNA, revealing how life copies itself</p>
+    </div>
+
+    <!-- Lemaître -->
+    <div class="card purple">
+      <div class="card-header">
+        <span class="card-icon">💥</span>
+        <div class="card-name-wrap">
+          <span class="card-name">Georges Lemaître</span>
+          <span class="card-dates">1894–1966</span>
+        </div>
+      </div>
+      <p class="card-text">Proposed the Big Bang theory of the universe's origin; a Belgian priest who changed cosmology</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

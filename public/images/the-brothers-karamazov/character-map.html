@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Karamazov Family — Character Map</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, sans-serif;
+    background: #f8fafc;
+    overflow: hidden;
+    width: 100%;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 14px 16px 10px;
+    gap: 0;
+  }
+  .chart-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #64748b;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+  }
+  .map {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    flex: 1;
+  }
+  /* ── nodes ── */
+  .node {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    padding: 6px 10px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+    z-index: 2;
+  }
+  .node-name {
+    font-size: 10.5px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #fff;
+  }
+  .node-desc {
+    font-size: 8.5px;
+    font-style: italic;
+    line-height: 1.3;
+    margin-top: 2px;
+    color: rgba(255,255,255,0.88);
+  }
+  /* father */
+  .node-father {
+    background: #1e293b;
+    width: 148px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    border: 2px solid #334155;
+  }
+  /* sons row */
+  .node-dmitri {
+    background: #3b82f6;
+    width: 136px;
+    left: 2%;
+    top: 110px;
+    border: 2px solid #2563eb;
+  }
+  .node-ivan {
+    background: #8b5cf6;
+    width: 136px;
+    left: 50%;
+    top: 110px;
+    transform: translateX(-50%);
+    border: 2px solid #7c3aed;
+  }
+  .node-alyosha {
+    background: #10b981;
+    width: 136px;
+    right: 2%;
+    top: 110px;
+    border: 2px solid #059669;
+  }
+  /* smerdyakov */
+  .node-smerdyakov {
+    background: #64748b;
+    width: 140px;
+    left: 50%;
+    top: 220px;
+    transform: translateX(-50%);
+    border: 2px dashed #94a3b8;
+  }
+  /* secondary */
+  .node-grushenka {
+    background: #d97706;
+    width: 128px;
+    left: 3%;
+    top: 300px;
+    border: 2px solid #b45309;
+  }
+  .node-katerina {
+    background: #db2777;
+    width: 128px;
+    left: 50%;
+    top: 300px;
+    transform: translateX(-50%);
+    border: 2px solid #be185d;
+  }
+  .node-zosima {
+    background: #0d9488;
+    width: 128px;
+    right: 3%;
+    top: 300px;
+    border: 2px solid #0f766e;
+  }
+
+  /* ── connector lines (thin colored divs) ── */
+  .line {
+    position: absolute;
+    background: #cbd5e1;
+    z-index: 1;
+    border-radius: 2px;
+  }
+  /* father → dmitri (diagonal) */
+  .l-f-d {
+    width: 2px;
+    height: 72px;
+    left: calc(2% + 68px);
+    top: 56px;
+    transform: rotate(28deg);
+    transform-origin: top center;
+    background: #93c5fd;
+  }
+  /* father → ivan (straight down) */
+  .l-f-i {
+    width: 2px;
+    height: 54px;
+    left: 50%;
+    top: 54px;
+    transform: translateX(-50%);
+    background: #c4b5fd;
+  }
+  /* father → alyosha (diagonal) */
+  .l-f-a {
+    width: 2px;
+    height: 72px;
+    right: calc(2% + 68px);
+    top: 56px;
+    transform: rotate(-28deg);
+    transform-origin: top center;
+    background: #6ee7b7;
+  }
+  /* father → smerdyakov (dashed look via repeating-linear-gradient) */
+  .l-f-s {
+    width: 2px;
+    height: 162px;
+    left: 50%;
+    top: 54px;
+    transform: translateX(-50%);
+    background: repeating-linear-gradient(
+      to bottom,
+      #94a3b8 0px, #94a3b8 6px,
+      transparent 6px, transparent 12px
+    );
+  }
+  /* dmitri → grushenka */
+  .l-d-g {
+    width: 2px;
+    height: 72px;
+    left: calc(2% + 68px);
+    top: 236px;
+    background: #fbbf24;
+  }
+  /* dmitri → katerina */
+  .l-d-k {
+    width: 2px;
+    height: 52px;
+    left: calc(2% + 68px);
+    top: 236px;
+    transform: rotate(30deg);
+    transform-origin: top center;
+    background: #f9a8d4;
+  }
+  /* alyosha → zosima */
+  .l-a-z {
+    width: 2px;
+    height: 72px;
+    right: calc(3% + 64px);
+    top: 236px;
+    background: #5eead4;
+  }
+</style>
+</head>
+<body>
+  <div class="chart-title">The Karamazov Family — Character Map</div>
+  <div class="map">
+
+    <!-- connector lines (below nodes) -->
+    <div class="line l-f-d"></div>
+    <div class="line l-f-i"></div>
+    <div class="line l-f-a"></div>
+    <div class="line l-f-s"></div>
+    <div class="line l-d-g"></div>
+    <div class="line l-d-k"></div>
+    <div class="line l-a-z"></div>
+
+    <!-- nodes -->
+    <div class="node node-father">
+      <div class="node-name">Fyodor Karamazov</div>
+      <div class="node-desc">The Father (murdered)<br>Debauched · Chaotic Origin</div>
+    </div>
+
+    <div class="node node-dmitri">
+      <div class="node-name">Dmitri (Mitya)</div>
+      <div class="node-desc">Passionate · Sensual · Soldier<br>Accused of the murder<br>Body &amp; Instinct</div>
+    </div>
+
+    <div class="node node-ivan">
+      <div class="node-name">Ivan</div>
+      <div class="node-desc">Intellectual · Atheist · Tormented<br>Author of the Grand Inquisitor<br>The Rational Mind</div>
+    </div>
+
+    <div class="node node-alyosha">
+      <div class="node-name">Alyosha</div>
+      <div class="node-desc">Gentle · Spiritual · Monk<br>The Moral Centre<br>Soul &amp; Faith</div>
+    </div>
+
+    <div class="node node-smerdyakov">
+      <div class="node-name">Smerdyakov</div>
+      <div class="node-desc">The Fourth Brother (illegitimate)<br>Epileptic Servant<br>The Actual Murderer</div>
+    </div>
+
+    <div class="node node-grushenka">
+      <div class="node-name">Grushenka</div>
+      <div class="node-desc">Dmitri's beloved<br>Also courted by Fyodor</div>
+    </div>
+
+    <div class="node node-katerina">
+      <div class="node-name">Katerina</div>
+      <div class="node-desc">Dmitri's fiancée<br>Testifies against him</div>
+    </div>
+
+    <div class="node node-zosima">
+      <div class="node-name">Father Zosima</div>
+      <div class="node-desc">Alyosha's mentor<br>Voice of faith</div>
+    </div>
+
+  </div>
+</body>
+</html>
