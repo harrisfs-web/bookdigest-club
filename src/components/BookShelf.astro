@@ -22,8 +22,6 @@ const { books } = Astro.props as Props;
           <a
             href={getBookPath(book.slug)}
             class="block"
-            data-gtm-event="book_click"
-            data-click-content={book.data.title}
           >
             <img
               src={book.data.cover}
@@ -87,9 +85,19 @@ const { books } = Astro.props as Props;
       }
     }, { passive: true });
 
+    scroller.addEventListener('scroll', () => {
+      if (!touchActive) return;
+
+      const scrollDelta = Math.abs(scroller.scrollLeft - scrollStartLeft);
+      if (scrollDelta > 2) {
+        // Any touch-driven scrolling should suppress the synthetic click that follows.
+        suppressUntil = Date.now() + 500;
+      }
+    }, { passive: true });
+
     scroller.addEventListener('touchend', () => {
       if (touchActive && moved) {
-        suppressUntil = Date.now() + 400;
+        suppressUntil = Date.now() + 500;
       }
 
       touchActive = false;
