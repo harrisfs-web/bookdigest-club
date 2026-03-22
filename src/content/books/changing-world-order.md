@@ -10,6 +10,11 @@ date: 2021-11-30
 readMinutes: { min: 12, max: 16 }
 ---
 
+<section class="editorial-note" aria-label="Editorial note">
+  <p class="editorial-note__label">Editorial Note</p>
+  <p>Dalio has a framework for everything, which is both the book's strength and its weakness. Set aside the self-congratulation and what remains is a genuinely useful lens for reading geopolitical cycles -- especially relevant right now.</p>
+  <p class="editorial-note__signature">Harris F.</p>
+</section>
 ## Why this book matters
 
 Ray Dalio distills patterns from centuries of **credit cycles**, **great-power competition**, and **reserve-currency dynamics** into a **Big Cycle** playbook. Nations tend to rise through **education, innovation, productivity, competitiveness, and trade**, then gain **financial-center** status and a **reserve currency**. Success invites **debt accumulation**, **asset bubbles**, widening **wealth/opportunity gaps**, **internal conflict**, and often **external rivalry**—until the system is **restructured** (via inflation, defaults, reforms, or conflict). The argument is not fatalistic; it is a set of **probabilistic cause–effect links** meant to inform **policy choices** and **portfolio design**.

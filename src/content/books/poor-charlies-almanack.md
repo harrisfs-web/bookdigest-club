@@ -10,6 +10,11 @@ date: 2005-01-01
 readMinutes: { min: 14, max: 20 }
 ---
 
+<section class="editorial-note" aria-label="Editorial note">
+  <p class="editorial-note__label">Editorial Note</p>
+  <p>Not a book you read linearly. Munger's mental models framework -- building a latticework of ideas from multiple disciplines -- is one of the most practical thinking tools I've come across. The wit helps. He was sharper at 90 than most writers are at 40.</p>
+  <p class="editorial-note__signature">Harris F.</p>
+</section>
 ## Why this book matters
 
 Charlie Munger spent decades as Warren Buffett's partner at Berkshire Hathaway, quietly accumulating one of the most formidable minds in modern finance — not through esoteric trading algorithms or proprietary databases, but through an obsessive, lifelong commitment to **thinking more clearly than everyone else**. *Poor Charlie's Almanack*, first published in 2005 and expanded in subsequent editions, is the closest thing to a complete record of how that mind works. Compiled and edited by Peter Kaufman from Munger's speeches, talks, and commencement addresses across four decades, the book is not a conventional business text. It is something stranger and more valuable: a sustained argument that **the most important intellectual tool in any domain is the ability to reason well across many domains simultaneously**.

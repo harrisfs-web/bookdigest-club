@@ -10,6 +10,11 @@ date: 2011-10-25
 readMinutes: { min: 12, max: 16 }
 ---
 
+<section class="editorial-note" aria-label="Editorial note">
+  <p class="editorial-note__label">Editorial Note</p>
+  <p>Long, dense, and worth every page. Kahneman spent a career proving that the mind we think we have is not the mind we actually use. Some of the specific studies have faced replication issues since, but the core framework -- System 1 vs System 2 -- remains one of the most useful mental models in circulation.</p>
+  <p class="editorial-note__signature">Harris F.</p>
+</section>
 ## Why this book matters
 
 Daniel Kahneman’s *Thinking, Fast and Slow* synthesizes decades of research on judgment and decision-making into a framework that explains **why smart people make predictable mistakes**. The book introduces two interacting modes of thought—**System 1** (fast, automatic, associative) and **System 2** (slow, effortful, rule-based)—and shows how heuristics (mental shortcuts) enable efficient cognition while also **systematically biasing** our judgments. It is foundational for fields from behavioral economics and public policy to product design and clinical practice. Kahneman’s explanations of **loss aversion, framing, anchoring, base-rate neglect, the planning fallacy, and the peak–end rule** have become common vocabulary for anyone who makes or studies decisions. Beyond cataloging biases, the book offers **practical guardrails** for better thinking: adopt simple policies, use checklists and algorithms where possible, design environments (choice architecture) that steer choices, and separate **experienced** from **remembered** well-being.

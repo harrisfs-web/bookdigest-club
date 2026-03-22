@@ -10,6 +10,11 @@ date: 2018-10-16
 readMinutes: { min: 15, max: 20 }
 ---
 
+<section class="editorial-note" aria-label="Editorial note">
+  <p class="editorial-note__label">Editorial Note</p>
+  <p>The critics who call this obvious are missing the point. Yes, the ideas are not new. But Clear is one of the rare writers who makes behaviour change feel genuinely achievable rather than aspirational. The identity chapter alone is worth the read.</p>
+  <p class="editorial-note__signature">Harris F.</p>
+</section>
 ## Why this book matters
 James Clear’s *Atomic Habits* matters because it reframes self-improvement from grand resolutions into **small, consistent behavioral changes** that compound over time. In an era obsessed with quick fixes and dramatic transformations, Clear offers a grounded, evidence-informed approach that emphasizes **systems over goals**, **identity over outcomes**, and **environment over willpower**. His framework empowers individuals to take control of their habits not through motivation alone, but through intentional design of cues, routines, and rewards.
 

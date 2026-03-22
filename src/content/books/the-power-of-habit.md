@@ -10,6 +10,11 @@ date: 2012-02-28
 readMinutes: { min: 12, max: 18 }
 ---
 
+<section class="editorial-note" aria-label="Editorial note">
+  <p class="editorial-note__label">Editorial Note</p>
+  <p>Where Atomic Habits gives you the system, Duhigg gives you the science. The neurological loop -- cue, routine, reward -- is laid out with enough case studies that the abstract becomes concrete. The Starbucks and NFL sections alone are worth it.</p>
+  <p class="editorial-note__signature">Harris F.</p>
+</section>
 ## Why this book matters
 
 Charles Duhigg's *The Power of Habit* arrived in 2012 as one of the most thorough investigations of habit science ever written for a general audience. Where self-help books typically tell you *what* to do, Duhigg goes a step further and explains **why habits form at all** — diving into the neuroscience of the basal ganglia, the social dynamics of organizational culture, and the historical mechanics of social movements. The result is a book that feels less like a productivity manual and more like a detective story, weaving together research labs, NFL locker rooms, corporate boardrooms, and Alcoholics Anonymous meetings to illuminate a single unifying idea: **habits are not destiny — they are a code that can be read and rewritten**.

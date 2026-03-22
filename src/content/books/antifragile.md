@@ -10,6 +10,11 @@ date: 2012-11-27
 readMinutes: { min: 16, max: 22 }
 ---
 
+<section class="editorial-note" aria-label="Editorial note">
+  <p class="editorial-note__label">Editorial Note</p>
+  <p>Taleb is insufferable in the best possible way. He repeats himself, name-drops constantly, and somehow you come away thinking differently about almost everything. The core idea -- that some things do not just survive chaos, they need it -- is one of those concepts you cannot unlearn.</p>
+  <p class="editorial-note__signature">Harris F.</p>
+</section>
 ## Why this book matters
 
 Nassim Nicholas Taleb's *Antifragile* is the book that introduced a concept the English language did not previously possess. Before Taleb, we had words for things that break under stress (fragile) and things that resist it (robust), but no word for things that actually **benefit** from disorder, uncertainty, and volatility. The absence of this word was, Taleb argues, the absence of an idea — and the absence of the idea had been blinding us to one of the most fundamental properties of natural and human systems. In everything from human muscles to financial portfolios, from immune systems to political institutions, some entities don't merely survive disruption: they grow stronger from it. Taleb calls this property antifragility, and understanding it changes how you think about risk, planning, innovation, and the nature of knowledge itself.

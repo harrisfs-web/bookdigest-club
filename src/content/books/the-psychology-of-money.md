@@ -10,6 +10,11 @@ date: 2020-09-08
 readMinutes: { min: 8, max: 10 }
 ---
 
+<section class="editorial-note" aria-label="Editorial note">
+  <p class="editorial-note__label">Editorial Note</p>
+  <p>The best finance book for people who do not think they like finance. Housel's argument is that financial outcomes are driven more by behaviour than knowledge -- and that behaviour is shaped by experiences most people never examine. The chapter on saving without a goal changed how I think about financial security.</p>
+  <p class="editorial-note__signature">Harris F.</p>
+</section>
 ## Why this book matters
 
 Morgan Housel’s *The Psychology of Money* stands out because it reframes personal finance as a matter of behavior, not just knowledge. In a world obsessed with technical investing strategies and market predictions, Housel argues that **how you think about money is often more important than what you know about it**. The book’s core insight is that financial success is less about intelligence and more about self-awareness, patience, and emotional control. Housel draws on history, psychology, and real-life anecdotes to show that **our relationship with money is deeply personal and often irrational**—and that understanding our own biases is the key to making better decisions.

@@ -10,6 +10,11 @@ date: 2015-02-10
 readMinutes: { min: 8, max: 12 }
 ---
 
+<section class="editorial-note" aria-label="Editorial note">
+  <p class="editorial-note__label">Editorial Note</p>
+  <p>Harari is a gifted populariser who occasionally oversteps into speculation, and that's fine -- he always tells you when he's doing it. The sections on cognitive revolution and collective fictions changed how I think about why humans cooperate at scale.</p>
+  <p class="editorial-note__signature">Harris F.</p>
+</section>
 ## Why this book matters
 
 Yuval Noah Harari’s *Sapiens* is a landmark work that reimagines the story of humanity, blending history, anthropology, and philosophy to explain how Homo sapiens came to rule the world. In a genre often dominated by narrow or Eurocentric perspectives, Harari offers a global, big-picture narrative that connects the dots between biology, culture, economics, and technology. The book’s core insight is that **our ability to cooperate flexibly in large numbers—driven by shared myths, beliefs, and stories—has been the decisive force in human history**. Harari’s accessible style and provocative arguments have made *Sapiens* a global bestseller, sparking debate and reflection far beyond academic circles.

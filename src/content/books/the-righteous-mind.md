@@ -10,6 +10,11 @@ date: 2012-03-13
 readMinutes: { min: 13, max: 18 }
 ---
 
+<section class="editorial-note" aria-label="Editorial note">
+  <p class="editorial-note__label">Editorial Note</p>
+  <p>Haidt's moral foundations theory -- that liberals and conservatives are responding to genuinely different moral priorities, not just the same ones badly -- is one of the most useful frameworks I've found for understanding political disagreement without dismissing it.</p>
+  <p class="editorial-note__signature">Harris F.</p>
+</section>
 ## Why this book matters
 
 Jonathan Haidt's *The Righteous Mind* arrives with a deceptively simple question: why do good, intelligent, well-meaning people end up in such bitter, unresolvable disagreement about politics and morality? After decades of research in moral psychology, Haidt's answer overturns one of the Enlightenment's most cherished assumptions — that moral reasoning is primarily a rational enterprise, and that disagreement therefore reflects factual error, logical failure, or motivated dishonesty. His answer is more disturbing and, in a way, more generous: moral judgements are primarily **emotional and intuitive**, the product of a moral sense shaped by millions of years of evolution and thousands of years of cultural tradition. Reasoning follows the intuition rather than driving it, and the differences between political and religious groups reflect not different levels of intelligence or integrity but genuinely different moral sensitivities — different weighting of different values — that are to a significant degree inbuilt.

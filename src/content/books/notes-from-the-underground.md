@@ -12,6 +12,11 @@ readMinutes: { min: 8, max: 12 }
 
 ---
 
+<section class="editorial-note" aria-label="Editorial note">
+  <p class="editorial-note__label">Editorial Note</p>
+  <p>The narrator is petty, contradictory, and completely insufferable -- which is the whole point. Dostoevsky uses him to demolish the Enlightenment idea that humans are rational creatures who simply need better conditions. We are not, and we do not. Surprisingly funny in places.</p>
+  <p class="editorial-note__signature">Harris F.</p>
+</section>
 ## Why this book matters
 
 Notes from Underground is frequently cited as the first true existentialist novel: a piercing cry from the margins of society that shattered the optimistic rationalism of the 19th century. Written in 1864, Fyodor Dostoevsky’s novella introduces us to the "Underground Man," a nameless, retired civil servant who serves as one of literature’s most complex anti-heroes. This book is not merely a story; it is a philosophical battleground. It matters because it challenges the comfortable assumption that human beings act in their own best interests. It confronts the reader with the uncomfortable truth that humans often crave chaos, suffering, and destruction simply to prove they are free agents, not piano keys to be played by the laws of nature.

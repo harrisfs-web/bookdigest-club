@@ -10,6 +10,11 @@ date: 2003-05-06
 readMinutes: { min: 15, max: 20 }
 ---
 
+<section class="editorial-note" aria-label="Editorial note">
+  <p class="editorial-note__label">Editorial Note</p>
+  <p>Bryson has no business making quantum physics and plate tectonics this entertaining, and yet. The best thing about this book is how it makes scientists feel like people -- eccentric, obsessive, occasionally ridiculous people who happened to change everything. Required reading for anyone who switched off during school science.</p>
+  <p class="editorial-note__signature">Harris F.</p>
+</section>
 ## Why This Book Matters
 
 Bill Bryson is, by his own cheerful admission, not a scientist. He made his name as a travel writer — the sort of person who could make a road trip through small-town America or a walk along the Appalachian Trail feel like the most compelling thing in the world. Which is precisely why, when he confesses in the book's opening pages that he became fascinated by science as an adult and found most science books impenetrable, you believe him absolutely. *A Short History of Nearly Everything* is the book he wished had existed when he was young: a single, readable, human volume that explained how we know what we know about the universe, the Earth, and the life upon it. The result, published in 2003, is one of the most extraordinary works of popular science ever written — not because it breaks new scientific ground, but because it makes existing scientific knowledge feel newly miraculous.

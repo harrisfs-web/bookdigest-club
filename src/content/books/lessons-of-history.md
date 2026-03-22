@@ -10,6 +10,11 @@ date: 1968-01-01
 readMinutes: { min: 8, max: 12 }
 ---
 
+<section class="editorial-note" aria-label="Editorial note">
+  <p class="editorial-note__label">Editorial Note</p>
+  <p>At 100 pages, this is the most concentrated dose of historical wisdom I've encountered. Written by two people who had spent 40 years writing an 11-volume history of civilisation. Every sentence has weight. Read it slowly.</p>
+  <p class="editorial-note__signature">Harris F.</p>
+</section>
 ## Why this book matters
 
 Will and Ariel Durant spent forty years writing their monumental *Story of Civilization* — eleven volumes, nearly ten thousand pages, covering the full sweep of human history from prehistoric times to the Napoleonic era. *The Lessons of History*, published in 1968, was their attempt to distil that lifetime of scholarship into a single small volume: 102 pages identifying the patterns, principles, and ironies that history repeats across cultures, centuries, and continents. The result is one of the most concentrated pieces of intellectual nonfiction ever written. Every page carries the weight of the four decades and ten thousand pages behind it. Reading it feels less like reading a book and more like having a conversation with someone who has spent a lifetime learning to see the shape of human affairs.

@@ -10,6 +10,11 @@ date: 2014-09-16
 readMinutes: { min: 10, max: 14 }
 ---
 
+<section class="editorial-note" aria-label="Editorial note">
+  <p class="editorial-note__label">Editorial Note</p>
+  <p>Thiel is a genuinely contrarian thinker, which makes this book both valuable and occasionally maddening. His core argument -- that competition is for losers and monopoly is the goal -- cuts against everything we are taught about markets. Disagree with half of it and still walk away with better questions than you started with.</p>
+  <p class="editorial-note__signature">Harris F.</p>
+</section>
 ## Why this book matters
 
 Peter Thiel co-founded PayPal in 1998 alongside Elon Musk, Max Levchin, and Reid Hoffman, and the company's alumni went on to form one of the most consequential networks in the history of technology. The so-called **PayPal Mafia** — a loose cohort of founders and early employees who collectively went on to build or fund Tesla, LinkedIn, YouTube, Palantir, SpaceX, Yelp, Yammer, and dozens of other transformative companies — represents a concentration of entrepreneurial success that has no parallel in the modern era. When Thiel speaks about how to build something genuinely new, he does so from an unusual vantage point: he has not only done it himself, but he has watched a remarkable number of his collaborators do it again and again, in radically different domains, using what appear to be shared underlying principles. *Zero to One* is an attempt to articulate those principles.

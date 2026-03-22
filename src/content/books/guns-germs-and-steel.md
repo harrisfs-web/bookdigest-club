@@ -10,6 +10,11 @@ date: 1997-03-01
 readMinutes: { min: 10, max: 14 }
 ---
 
+<section class="editorial-note" aria-label="Editorial note">
+  <p class="editorial-note__label">Editorial Note</p>
+  <p>Still controversial, still essential. Diamond's argument that geography -- not culture or intelligence -- explains civilisational dominance is uncomfortable for some and liberating for others. Whether you buy it fully or not, it permanently changes how you read history.</p>
+  <p class="editorial-note__signature">Harris F.</p>
+</section>
 ## Why this book matters
 
 Jared Diamond’s *Guns, Germs, and Steel* tackles “Yali’s question”: **Why did some societies develop guns, germs, and steel—and others did not?** The book’s thesis is that **biogeography**—the distribution of domesticable plants and animals, continental axes, and ecological barriers—created compounding advantages. Food production enabled **surplus, population density, specialization, states, technology, and writing**; close proximity to animals bred novel pathogens that devastated populations without prior exposure. Rather than resorting to racist or essentialist stories, the book reframes global inequality as the product of **environmental constraints and diffusion dynamics**.

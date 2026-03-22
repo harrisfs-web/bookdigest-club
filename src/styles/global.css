@@ -265,6 +265,29 @@ body { /* Safety net for any child transforms */
   margin: 2rem 0;
 }
 
+.prose .editorial-note {
+  border-left: 4px solid rgb(14 165 233);
+  background: linear-gradient(135deg, rgb(240 249 255), rgb(239 246 255));
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  margin: 0 0 2rem;
+}
+
+.prose .editorial-note__label {
+  margin: 0 0 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgb(3 105 161);
+}
+
+.prose .editorial-note__signature {
+  margin: 0.75rem 0 0;
+  font-weight: 600;
+  color: rgb(30 64 175);
+}
+
 /* Animation utilities */
 .animate-fade-in {
   animation: fadeIn 0.5s ease-in-out;

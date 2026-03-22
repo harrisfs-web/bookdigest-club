@@ -10,6 +10,11 @@ date: 0180-01-01
 readMinutes: { min: 8, max: 12 }
 ---
 
+<section class="editorial-note" aria-label="Editorial note">
+  <p class="editorial-note__label">Editorial Note</p>
+  <p>This was never meant to be published. It's a Roman emperor's private journal, reminding himself daily not to be an idiot. That intimacy is what makes it outlast every formal philosophy text of the era. The Stoics had one good idea and Aurelius lived it.</p>
+  <p class="editorial-note__signature">Harris F.</p>
+</section>
 ## Why this book matters
 
 *Meditations* is not a treatise but a **journal**—short Greek notes Marcus Aurelius wrote to himself to practice **Stoicism** while ruling an empire. It is a manual for **character under pressure**: cultivate virtue, act justly, see clearly, and accept fate without bitterness. Its discipline of **cognitive reframing, voluntary discomfort, negative visualization, and focusing on what is within one’s control** influenced modern **cognitive-behavioral therapy (CBT)** and remains a sturdy operating system for leadership and daily life.

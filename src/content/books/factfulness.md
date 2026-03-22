@@ -10,6 +10,11 @@ cover: "/covers/factfulness.jpg"
 date: 2018-04-03
 readMinutes: { min: 5, max: 8 }
 ---
+<section class="editorial-note" aria-label="Editorial note">
+  <p class="editorial-note__label">Editorial Note</p>
+  <p>Rosling died before this was published, which gives it an odd warmth. He was furious at how wrong educated people are about global progress, and that controlled fury makes the book more compelling than its data-heavy premise suggests. The best antidote to doom-scrolling I've found.</p>
+  <p class="editorial-note__signature">Harris F.</p>
+</section>
 ## Why this book matters
 
 In an era defined by 24-hour news cycles and alarmist headlines, *Factfulness* serves as a crucial intellectual intervention. Hans Rosling, a physician and statistician, dedicated his life to battling global ignorance with data. The core thesis of the book is that the vast majority of human beings—including Nobel laureates and global leaders—hold a devastatingly inaccurate worldview. We tend to believe the world is poorer, less healthy, and more dangerous than it actually is. Rosling argues that this isn't just a matter of lacking knowledge; it is a result of evolutionary instincts that bias us toward drama and negativity.

@@ -10,6 +10,11 @@ date: 1946-01-01
 readMinutes: { min: 10, max: 14 }
 ---
 
+<section class="editorial-note" aria-label="Editorial note">
+  <p class="editorial-note__label">Editorial Note</p>
+  <p>There's nothing comfortable about this book and there should not be. Frankl wrote it in nine days after surviving four concentration camps. The psychological framework he builds -- that meaning, not happiness, is what sustains us -- hits differently once you understand where it came from.</p>
+  <p class="editorial-note__signature">Harris F.</p>
+</section>
 ## Why this book matters
 
 Viktor Frankl wrote the first draft of *Man's Search for Meaning* in nine days, immediately after his liberation from Auschwitz and three other Nazi concentration camps in 1945. He was a trained psychiatrist who had already, before his imprisonment, developed the outline of a therapeutic philosophy he called **logotherapy** — a psychology centred not on the Freudian past or the Adlerian drive for power, but on the human need to find meaning in life. The camps gave his theory a laboratory so extreme, so unforgiving, and so brutal that the insights he drew from it carry a weight that no controlled study could replicate. Frankl did not merely survive one of history's most organised attempts at dehumanisation; he used it to test and refine his understanding of what it means to be human.

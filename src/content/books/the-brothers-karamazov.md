@@ -10,6 +10,11 @@ date: 1880-01-01
 readMinutes: { min: 18, max: 25 }
 ---
 
+<section class="editorial-note" aria-label="Editorial note">
+  <p class="editorial-note__label">Editorial Note</p>
+  <p>The longest book on this list and the one most likely to rearrange you. Dostoevsky packs theology, murder, family dysfunction, and the problem of evil into a novel that somehow never feels bloated. The Grand Inquisitor chapter is one of the greatest pieces of prose in any language.</p>
+  <p class="editorial-note__signature">Harris F.</p>
+</section>
 ## Why this book matters
 
 *The Brothers Karamazov* is Fyodor Dostoevsky's final novel — completed just four months before his death in 1881 — and it is widely regarded as the summit of his achievement and one of the greatest novels in any language. Sigmund Freud, in his 1928 essay *Dostoevsky and Parricide*, called it "the most magnificent novel ever written," and Albert Einstein listed it among the most important books he had ever read. Friedrich Nietzsche, who famously described Dostoevsky as "the only psychologist who had anything to teach me," drew on the novel's psychological depth throughout his own late work. The book's stature rests not merely on its narrative power or its characterisation — extraordinary as both are — but on its capacity to hold, simultaneously and without cheap resolution, the two most serious claims about human existence that the 19th century produced: the case for atheism and the case for faith. No other work in world literature makes the argument against God with such force, and then makes the argument for faith with equal sincerity, within the same covers.

@@ -10,6 +10,14 @@ date: 1976-01-01
 readMinutes: { min: 10, max: 14 }
 ---
 
+<section class="editorial-note" aria-label="Editorial note">
+	<p class="editorial-note__label">Editorial Note</p>
+	<p>
+		The title is the most misunderstood in popular science. Dawkins isn't saying organisms are selfish — he's saying genes behave as if they are, which explains altruism, cooperation, and sacrifice in a way nothing else does as cleanly. The meme concept, introduced here almost as an aside, ended up being its own intellectual legacy.
+	</p>
+	<p class="editorial-note__signature">Harris F.</p>
+</section>
+
 ## Why this book matters
 
 Richard Dawkins reframed evolutionary thinking by shifting the unit of selection from **organisms** or **groups** to **genes**. Genes that make more copies of themselves—by building **survival machines** (bodies) that behave in certain ways—spread in populations. This **gene’s‑eye view** clarifies the logic behind **altruism, cooperation, spite, and competition**, revealing how apparently selfless behaviors often advance the replication of shared genes (via **kin selection**), reciprocity, or strategic stability. The book also popularized **evolutionary game theory** and introduced **memes** as cultural replicators. Whether one agrees with every claim, the framework is a powerful, testable way to reason about behavior across biology and culture.

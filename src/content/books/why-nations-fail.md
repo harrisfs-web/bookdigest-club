@@ -10,6 +10,11 @@ date: 2012-03-20
 readMinutes: { min: 14, max: 18 }
 ---
 
+<section class="editorial-note" aria-label="Editorial note">
+  <p class="editorial-note__label">Editorial Note</p>
+  <p>The thesis is deceptively simple: nations fail because of extractive institutions, not geography or culture. Acemoglu and Robinson spend 500 pages making it very hard to argue with. A necessary counterpoint to Diamond's Guns, Germs, and Steel -- read them back to back.</p>
+  <p class="editorial-note__signature">Harris F.</p>
+</section>
 ## Why this book matters
 
 The question of why some nations are rich and others poor is the oldest and most consequential puzzle in economics. Adam Smith devoted *The Wealth of Nations* to it in 1776. Malthus agonised over it. Marx built an entire philosophical system around his answer. In the twentieth century, the debate sharpened as the gap between rich and poor countries widened to historically unprecedented levels, producing competing schools: Jeffrey Sachs argued that geography and disease burdens trap nations in poverty, and that targeted aid could break the cycle. Jared Diamond, in *Guns, Germs, and Steel* — [already summarised on this site](/books/guns-germs-and-steel) — argued that geographic luck determined which civilisations developed the technologies and pathogens that enabled conquest and complexity. Max Weber pointed to culture, specifically the Protestant work ethic, as the engine of Northern European prosperity. Each of these theories carries genuine explanatory force for some cases. None of them, Daron Acemoglu and James Robinson argue, is sufficient — and none of them can explain the cases that matter most.

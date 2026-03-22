@@ -12,6 +12,11 @@ readMinutes: { min: 6, max: 8 }
 
 ---
 
+<section class="editorial-note" aria-label="Editorial note">
+  <p class="editorial-note__label">Editorial Note</p>
+  <p>Waxman is a political scientist, not an advocate, and that restraint is exactly what this subject needs. He does not flatten the conflict into a morality play. Essential reading for anyone who wants to form an informed opinion rather than just confirm an existing one.</p>
+  <p class="editorial-note__signature">Harris F.</p>
+</section>
 ## Why this book matters
 
 In a world of polarized headlines and social media echo chambers, Dov Waxman’s *The Israeli-Palestinian Conflict: What Everyone Needs to Know* serves as a vital intellectual anchor. Waxman, a leading scholar in Israel Studies, avoids the common pitfall of taking sides. Instead, he provides a nuanced, accessible framework for understanding the competing narratives that drive this century-long struggle. His core thesis is that the conflict is not just about land, but about **clashing national identities**, historical traumas, and the fundamental right to self-determination.
