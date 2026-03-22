@@ -39,7 +39,7 @@ const showReadMore = variant === "catalog";
 
 <article class={cardClass}>
   <div class="flex h-full flex-col">
-    <a href={getBookPath(slug)} class="block" data-gtm-event="book_click" data-click-content={title}>
+    <a href={getBookPath(slug)} class="block" data-touch-scroll-guard="true" data-gtm-event="book_click" data-click-content={title}>
       <div class="relative overflow-hidden">
         <img
           src={cover}
@@ -87,6 +87,7 @@ const showReadMore = variant === "catalog";
             <a
               href={getCategoryPath(category.slug)}
               class={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium transition-colors ${highlightCategories.length > 0 ? "bg-primary-100 text-primary-700 hover:bg-primary-200" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
+              data-touch-scroll-guard="true"
               data-gtm-event="category_click"
               data-click-content={category.name}
             >

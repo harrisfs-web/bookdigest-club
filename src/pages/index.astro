@@ -32,10 +32,10 @@ const quickReadCount = books.filter((book) => {
           Discover AI-powered concise book summaries and recommendations for busy readers
         </p>
         <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-md sm:max-w-none mx-auto px-4 sm:px-0">
-          <a href="/books" class="btn-primary bg-accent-500 hover:bg-accent-600 text-gray-900 font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg transition-all duration-300 hover:scale-105 w-full sm:w-auto text-center mobile-button" data-gtm-event="cta_click" data-click-content="Browse Summaries">
+          <a href="/books" class="btn-primary bg-accent-500 hover:bg-accent-600 text-gray-900 font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg transition-all duration-300 hover:scale-105 w-full sm:w-auto text-center mobile-button" data-touch-scroll-guard="true" data-gtm-event="cta_click" data-click-content="Browse Summaries">
             Browse Summaries
           </a>
-          <a href="#featured" class="btn-secondary bg-white/10 hover:bg-white/20 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg transition-all duration-300 backdrop-blur-sm w-full sm:w-auto text-center mobile-button" data-gtm-event="cta_click" data-click-content="Featured Books">
+          <a href="#featured" class="btn-secondary bg-white/10 hover:bg-white/20 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg transition-all duration-300 backdrop-blur-sm w-full sm:w-auto text-center mobile-button" data-touch-scroll-guard="true" data-gtm-event="cta_click" data-click-content="Featured Books">
             Featured Books
           </a>
         </div>
@@ -87,6 +87,7 @@ const quickReadCount = books.filter((book) => {
               <a
                 href={getCategoryPath(category.slug)}
                 class="inline-flex items-center gap-2 rounded-full border border-primary-100 bg-primary-50 px-4 py-2 text-sm font-medium text-primary-700 transition-colors hover:border-primary-200 hover:bg-primary-100"
+                data-touch-scroll-guard="true"
                 data-gtm-event="category_click"
                 data-click-content={category.name}
               >
@@ -105,7 +106,7 @@ const quickReadCount = books.filter((book) => {
       </div>
       
       <div class="text-center">
-        <a href="/books" class="btn-primary inline-flex items-center space-x-2 px-8 py-3 rounded-xl text-lg font-semibold mobile-button" data-gtm-event="cta_click" data-click-content="View All Summaries">
+        <a href="/books" class="btn-primary inline-flex items-center space-x-2 px-8 py-3 rounded-xl text-lg font-semibold mobile-button" data-touch-scroll-guard="true" data-gtm-event="cta_click" data-click-content="View All Summaries">
           <span>View All Summaries</span>
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -126,6 +127,7 @@ const quickReadCount = books.filter((book) => {
         <a
           href="/books"
           class="hidden sm:inline-flex text-sm font-semibold text-primary-700 transition-colors hover:text-primary-800"
+          data-touch-scroll-guard="true"
           data-gtm-event="cta_click"
           data-click-content="Browse Full Library"
         >

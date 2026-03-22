@@ -71,6 +71,7 @@ const topCategories = getTopBookCategories(allBooks, 6).filter((category) => cat
             <a
               href={getCategoryPath(category.slug)}
               class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white/90 transition-colors hover:bg-white/10"
+              data-touch-scroll-guard="true"
               data-gtm-event="category_click"
               data-click-content={category.name}
             >

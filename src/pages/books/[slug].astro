@@ -6,7 +6,6 @@ import Newsletter from "../../components/Newsletter.astro";
 import { getBookCategoryLinks, getRelatedBooks, getCategoryPath } from "../../lib/bookCategories";
 import Breadcrumb from "../../components/Breadcrumb.astro";
 import ShareButtons from "../../components/ShareButtons.astro";
-
 /* 1. Build-time list of paths */
 export async function getStaticPaths() {
   const books = await getCollection("books");
@@ -106,6 +105,7 @@ const recommendationSubtitle = relatedBooks.some((entry) => entry.score > 0)
                   target="_blank"
                   rel="noopener noreferrer"
                   class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-300 hover:text-emerald-200 transition-colors"
+                  data-touch-scroll-guard="true"
                   data-gtm-event="external_link_click"
                   data-click-content="Goodreads"
                 >
@@ -165,6 +165,7 @@ const recommendationSubtitle = relatedBooks.some((entry) => entry.score > 0)
                 <a
                   href={getCategoryPath(category.slug)}
                   class="bg-primary-600/30 text-primary-200 px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm transition-colors hover:bg-primary-500/40"
+                  data-touch-scroll-guard="true"
                   data-gtm-event="category_click"
                   data-click-content={category.name}
                 >
@@ -195,10 +196,10 @@ const recommendationSubtitle = relatedBooks.some((entry) => entry.score > 0)
       
       <!-- Action Buttons -->
       <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center action-buttons">
-  <button id="save-summary-btn" class="btn-primary px-8 py-3 rounded-xl font-semibold text-lg bg-primary-600 hover:bg-primary-700 transition-colors" data-gtm-event="cta_click" data-click-content="Save Summary">
+  <button id="save-summary-btn" class="btn-primary px-8 py-3 rounded-xl font-semibold text-lg bg-primary-600 hover:bg-primary-700 transition-colors" data-touch-scroll-guard="true" data-gtm-event="cta_click" data-click-content="Save Summary">
           💾 Save Summary
         </button>
-  <a href="/books" class="btn-secondary px-8 py-3 rounded-xl font-semibold text-lg bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors text-center" data-gtm-event="cta_click" data-click-content="More Summaries">
+  <a href="/books" class="btn-secondary px-8 py-3 rounded-xl font-semibold text-lg bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors text-center" data-touch-scroll-guard="true" data-gtm-event="cta_click" data-click-content="More Summaries">
           📚 More Summaries
         </a>
       </div>
