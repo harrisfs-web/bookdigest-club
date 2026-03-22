@@ -8,6 +8,7 @@ rating: 4.6
 cover: "/covers/thinking-fast-and-slow.jpg"
 date: 2011-10-25
 readMinutes: { min: 12, max: 16 }
+featured: true
 keywords: ["thinking fast and slow summary", "daniel kahneman book review", "system 1 system 2 explained", "cognitive bias book", "behavioral economics kahneman", "heuristics and biases"]
 ---
 

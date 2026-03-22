@@ -1,24 +1,30 @@
 ---
 // Client-side popover search for books
 // Minimal, no external deps
+const {
+  className = "",
+  buttonClassName = "",
+  inputPlaceholder = "Search books by title, author, tag...",
+  enableHotkey = true,
+} = Astro.props;
 ---
-<div class="relative" id="search-root">
-  <button id="open-search" type="button" aria-label="Search" aria-haspopup="dialog" aria-expanded="false" class="flex items-center gap-1 sm:gap-2 px-2.5 sm:px-3 py-2 rounded-lg border text-sm text-gray-600 hover:text-primary-700 hover:border-primary-300 whitespace-nowrap">
+<div class={`relative ${className}`} data-search-root data-enable-hotkey={enableHotkey ? "true" : "false"}>
+  <button data-open-search type="button" aria-label="Search" aria-haspopup="dialog" aria-expanded="false" class={`flex items-center gap-1 sm:gap-2 px-2.5 sm:px-3 py-2 rounded-lg border text-sm text-gray-600 hover:text-primary-700 hover:border-primary-300 whitespace-nowrap ${buttonClassName}`}>
     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14z" /></svg>
     <span class="hidden sm:inline">Search</span>
     <span class="ml-1 hidden md:inline text-xs text-gray-400">/</span>
   </button>
-  
-  <div id="search-popover" class="hidden fixed inset-0 z-[100]" role="dialog" aria-modal="true" aria-label="Site search">
+
+  <div data-search-popover class="hidden fixed inset-0 z-[100]" role="dialog" aria-modal="true" aria-label="Site search">
     <div class="absolute inset-0 bg-black/40" data-backdrop></div>
-  <div class="absolute left-1/2 top-20 -translate-x-1/2 w-[92vw] max-w-xl px-2">
+    <div class="absolute left-1/2 top-20 -translate-x-1/2 w-[92vw] max-w-xl px-2">
       <div class="bg-white rounded-xl shadow-2xl border overflow-hidden">
         <div class="flex items-center gap-2 p-3 border-b">
           <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14z" /></svg>
-          <input id="search-input" type="search" placeholder="Search books by title, author, tag…" class="w-full outline-none text-sm p-2" aria-label="Search books" />
-          <button id="close-search" class="text-gray-400 hover:text-gray-600 px-2">Esc</button>
+          <input data-search-input type="search" placeholder={inputPlaceholder} class="w-full outline-none text-sm p-2" aria-label="Search books" />
+          <button data-close-search class="text-gray-400 hover:text-gray-600 px-2">Esc</button>
         </div>
-  <div id="search-results" class="max-h-80 overflow-auto divide-y" role="listbox"></div>
+        <div data-search-results class="max-h-80 overflow-auto divide-y" role="listbox"></div>
       </div>
     </div>
   </div>
@@ -26,49 +32,65 @@
 
 <script is:inline>
 (function(){
-  const state = {
-    items: [],
-    open: false,
-    selected: 0,
-  };
+  const roots = document.querySelectorAll('[data-search-root]');
+  if(!roots.length) return;
 
-  const root = document.getElementById('search-root');
-  const openBtn = root?.querySelector('#open-search');
-  const popover = root?.querySelector('#search-popover');
-  const input = root?.querySelector('#search-input');
-  const resultsEl = root?.querySelector('#search-results');
-  const closeBtn = root?.querySelector('#close-search');
+  let globalData = [];
+  let hasFetched = false;
 
   async function ensureData(){
-    if(state.items.length) return;
+    if(hasFetched) return globalData;
     try{
       const res = await fetch('/api/search.json');
-      if(!res.ok) return;
-      const data = await res.json();
-      state.items = Array.isArray(data.items) ? data.items : [];
+      if(res.ok){
+        const data = await res.json();
+        globalData = Array.isArray(data.items) ? data.items : [];
+      }
     }catch{}
+    hasFetched = true;
+    return globalData;
   }
 
-  function open(){
-    if(!popover) return;
-    popover.classList.remove('hidden');
-    state.open = true; state.selected = 0;
-    window.setTimeout(()=> input?.focus(), 0);
-  }
-  function close(){
-    if(!popover) return;
-    popover.classList.add('hidden');
-    state.open = false;
-  }
+  roots.forEach((root, index) => {
+    const state = {
+      items: [],
+      open: false,
+      selected: 0,
+      enableHotkey: root.getAttribute('data-enable-hotkey') === 'true',
+    };
 
-  function render(list){
-    if(!resultsEl) return;
-    if(!list.length){
-      resultsEl.innerHTML = '<div class="p-4 text-sm text-gray-500">No results</div>';
-      return;
+    const openBtn = root.querySelector('[data-open-search]');
+    const popover = root.querySelector('[data-search-popover]');
+    const input = root.querySelector('[data-search-input]');
+    const resultsEl = root.querySelector('[data-search-results]');
+    const closeBtn = root.querySelector('[data-close-search]');
+
+    function syncData(){
+      state.items = globalData;
     }
-    resultsEl.innerHTML = list.map((it,idx)=>`
-  <a href="${it.url}" data-title="${it.title}" class="flex gap-3 p-3 hover:bg-gray-50 items-start ${idx===state.selected?'bg-gray-50':''}" role="option">
+
+    function open(){
+      if(!popover) return;
+      popover.classList.remove('hidden');
+      state.open = true;
+      state.selected = 0;
+      window.setTimeout(() => input?.focus(), 0);
+    }
+
+    function close(){
+      if(!popover) return;
+      popover.classList.add('hidden');
+      state.open = false;
+    }
+
+    function render(list){
+      if(!resultsEl) return;
+      if(!list.length){
+        resultsEl.innerHTML = '<div class="p-4 text-sm text-gray-500">No results</div>';
+        return;
+      }
+      resultsEl.innerHTML = list.map((it, idx) => `
+  <a href="${it.url}" data-title="${it.title}" class="flex gap-3 p-3 hover:bg-gray-50 items-start ${idx === state.selected ? 'bg-gray-50' : ''}" role="option">
         <img src="${it.cover}" alt="${it.title}" class="w-10 h-14 object-cover rounded" loading="lazy" />
         <div class="min-w-0">
           <div class="text-sm font-medium text-gray-900 truncate">${it.title}</div>
@@ -76,84 +98,111 @@
           <div class="text-xs text-gray-600 line-clamp-2">${it.summary}</div>
         </div>
       </a>`).join('');
-  }
+    }
 
-  // Helper to send tracking events only when consent is granted by CMP
-  function sendEvent(name, params){
-    try{
-      if(window.bd && typeof window.bd._consentGranted === 'function'){
-        if(window.bd._consentGranted()){
-          if(typeof window.bd.track === 'function') window.bd.track(name, params);
+    function sendEvent(name, params){
+      try{
+        if(window.bd && typeof window.bd._consentGranted === 'function'){
+          if(window.bd._consentGranted()){
+            if(typeof window.bd.track === 'function') window.bd.track(name, params);
+          }
         }
-      }
-    }catch(e){ /* ignore */ }
-  }
-
-  function query(q){
-    q = (q||'').toLowerCase().trim();
-    if(!q) { render([]); return; }
-    const terms = q.split(/\s+/).filter(Boolean);
-    const scored = state.items.map(it=>{
-      const hay = `${it.title} ${it.author} ${(it.tags||[]).join(' ')} ${it.summary}`.toLowerCase();
-      let score = 0;
-      for(const t of terms){ if(hay.includes(t)) score++; }
-      return {it, score};
-    }).filter(x=>x.score>0)
-      .sort((a,b)=> b.score - a.score || a.it.title.localeCompare(b.it.title))
-      .slice(0, 12)
-      .map(x=>x.it);
-    render(scored);
-  }
-
-  function handleKeydown(e){
-    if(e.key === '/' && !state.open){ e.preventDefault(); ensureData().then(open); }
-    if(!state.open) return;
-    if(e.key === 'Escape'){ close(); }
-    if(e.key === 'ArrowDown'){ state.selected = Math.min(state.selected+1, (resultsEl?.children.length||1)-1); highlight(); }
-    if(e.key === 'ArrowUp'){ state.selected = Math.max(state.selected-1, 0); highlight(); }
-    if(e.key === 'Enter'){
-      const el = resultsEl?.children[state.selected];
-      const link = el?.getAttribute('href');
-      const title = el?.getAttribute('data-title') || el?.querySelector('.text-sm')?.textContent?.trim();
-      if(link){
-        sendEvent('search_completed', { search_selection: title });
-        setTimeout(()=> { window.location.href = link; }, 150);
+      }catch(e){
+        // ignore tracking errors
       }
     }
-  }
 
-  function highlight(){
-    if(!resultsEl) return;
-    Array.from(resultsEl.children).forEach((el, idx)=>{
-      el.classList.toggle('bg-gray-50', idx===state.selected);
-    });
-  }
-
-  root?.addEventListener('click', (e)=>{
-    const target = e.target;
-    if(target && target.getAttribute && target.getAttribute('data-backdrop')!==null){ close(); }
-  });
-
-  // Track open action when user clicks the search button
-  openBtn?.addEventListener('click', async ()=>{ await ensureData(); open(); sendEvent('search_click'); });
-
-  // Delegate clicks on result items so we can track selection before navigation
-  resultsEl?.addEventListener('click', (e)=>{
-    try{
-      const a = e.target && e.target.closest ? e.target.closest('a') : null;
-      if(!a || !resultsEl.contains(a)) return;
-      const href = a.getAttribute('href');
-      const title = a.getAttribute('data-title') || a.querySelector('.text-sm')?.textContent?.trim();
-      if(href){
-        e.preventDefault();
-        sendEvent('search_completed', { search_selection: title });
-        setTimeout(()=> { window.location.href = href; }, 150);
+    function query(q){
+      q = (q || '').toLowerCase().trim();
+      if(!q){
+        render([]);
+        return;
       }
-    }catch(err){/* ignore */}
+      const terms = q.split(/\s+/).filter(Boolean);
+      const scored = state.items.map((it) => {
+        const hay = `${it.title} ${it.author} ${(it.tags || []).join(' ')} ${it.summary}`.toLowerCase();
+        let score = 0;
+        for(const t of terms){
+          if(hay.includes(t)) score++;
+        }
+        return { it, score };
+      }).filter((x) => x.score > 0)
+        .sort((a, b) => b.score - a.score || a.it.title.localeCompare(b.it.title))
+        .slice(0, 12)
+        .map((x) => x.it);
+      render(scored);
+    }
+
+    function highlight(){
+      if(!resultsEl) return;
+      Array.from(resultsEl.children).forEach((el, idx) => {
+        el.classList.toggle('bg-gray-50', idx === state.selected);
+      });
+    }
+
+    function handleKeydown(e){
+      if(state.enableHotkey && index === 0 && e.key === '/' && !state.open){
+        e.preventDefault();
+        ensureData().then(() => {
+          syncData();
+          open();
+        });
+      }
+      if(!state.open) return;
+      if(e.key === 'Escape') close();
+      if(e.key === 'ArrowDown'){
+        state.selected = Math.min(state.selected + 1, (resultsEl?.children.length || 1) - 1);
+        highlight();
+      }
+      if(e.key === 'ArrowUp'){
+        state.selected = Math.max(state.selected - 1, 0);
+        highlight();
+      }
+      if(e.key === 'Enter'){
+        const el = resultsEl?.children[state.selected];
+        const link = el?.getAttribute('href');
+        const title = el?.getAttribute('data-title') || el?.querySelector('.text-sm')?.textContent?.trim();
+        if(link){
+          sendEvent('search_completed', { search_selection: title });
+          setTimeout(() => { window.location.href = link; }, 150);
+        }
+      }
+    }
+
+    root?.addEventListener('click', (e) => {
+      const target = e.target;
+      if(target && target.getAttribute && target.getAttribute('data-backdrop') !== null){
+        close();
+      }
+    });
+
+    openBtn?.addEventListener('click', async () => {
+      await ensureData();
+      syncData();
+      open();
+      sendEvent('search_click');
+    });
+
+    resultsEl?.addEventListener('click', (e) => {
+      try{
+        const a = e.target && e.target.closest ? e.target.closest('a') : null;
+        if(!a || !resultsEl.contains(a)) return;
+        const href = a.getAttribute('href');
+        const title = a.getAttribute('data-title') || a.querySelector('.text-sm')?.textContent?.trim();
+        if(href){
+          e.preventDefault();
+          sendEvent('search_completed', { search_selection: title });
+          setTimeout(() => { window.location.href = href; }, 150);
+        }
+      }catch(err){
+        // ignore
+      }
+    });
+
+    closeBtn?.addEventListener('click', close);
+    input?.addEventListener('input', (e) => query(e.target.value));
+    document.addEventListener('keydown', handleKeydown);
   });
-  closeBtn?.addEventListener('click', close);
-  document.addEventListener('keydown', handleKeydown);
-  input?.addEventListener('input', (e)=> query(e.target.value));
 })();
 </script>
 
