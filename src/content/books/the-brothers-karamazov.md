@@ -8,6 +8,7 @@ rating: 4.8
 cover: "/covers/the-brothers-karamazov.jpg"
 date: 1880-01-01
 readMinutes: { min: 18, max: 25 }
+keywords: ["brothers karamazov summary", "dostoevsky masterpiece review", "grand inquisitor parable", "faith and doubt literature", "russian literature analysis", "dostoevsky novel guide"]
 ---
 
 <section class="editorial-note" aria-label="Editorial note">

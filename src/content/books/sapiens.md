@@ -8,7 +8,9 @@ rating: 4.4
 cover: "/covers/sapiens.jpg"
 date: 2015-02-10
 readMinutes: { min: 8, max: 12 }
+keywords: ["sapiens summary", "yuval noah harari book review", "brief history of humankind", "cognitive revolution sapiens", "agricultural revolution history", "sapiens key insights"]
 ---
+
 
 <section class="editorial-note" aria-label="Editorial note">
   <p class="editorial-note__label">Editorial Note</p>

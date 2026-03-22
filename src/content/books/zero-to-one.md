@@ -8,6 +8,7 @@ rating: 4.2
 cover: "/covers/zero-to-one.jpg"
 date: 2014-09-16
 readMinutes: { min: 10, max: 14 }
+keywords: ["zero to one summary", "peter thiel startup book", "startup secrets book review", "monopoly vs competition business", "venture capital book", "zero to one key insights"]
 ---
 
 <section class="editorial-note" aria-label="Editorial note">

@@ -8,6 +8,7 @@ rating: 4.2
 cover: "/covers/changing-world-order.jpg"
 date: 2021-11-30
 readMinutes: { min: 12, max: 16 }
+keywords: ["changing world order summary", "ray dalio book review", "empire cycles history", "reserve currency history", "big debt crisis", "dalio macro history"]
 ---
 
 <section class="editorial-note" aria-label="Editorial note">

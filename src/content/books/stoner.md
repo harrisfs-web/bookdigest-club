@@ -9,8 +9,10 @@ rating: 4.8
 cover: "/covers/stoner.jpg"
 date: 1965-08-01
 readMinutes: { min: 10, max: 12 }
+keywords: ["stoner novel summary", "john williams fiction", "stoner book review", "academic life novel", "quiet life literary fiction", "john williams stoner analysis"]
 
 ---
+
 
 <section class="editorial-note" aria-label="Editorial note">
   <p class="editorial-note__label">Editorial Note</p>

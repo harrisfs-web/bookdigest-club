@@ -9,8 +9,10 @@ rating: 4.8
 cover: "/covers/israeli-palestinian-conflict-waxman.jpg"
 date: 2025-12-29
 readMinutes: { min: 6, max: 8 }
+keywords: ["israeli palestinian conflict book summary", "middle east conflict history", "israel palestine explained", "conflict resolution book review", "arab israeli conflict analysis", "middle east history book"]
 
 ---
+
 
 <section class="editorial-note" aria-label="Editorial note">
   <p class="editorial-note__label">Editorial Note</p>

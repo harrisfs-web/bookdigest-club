@@ -15,6 +15,7 @@ const books = defineCollection({
       min: z.number(),
       max: z.number().optional()
     }).optional(),
+    keywords: z.array(z.string()).optional(),
     slug: z.string().optional(),
   }),
 });

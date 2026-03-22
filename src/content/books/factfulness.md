@@ -9,7 +9,9 @@ rating: 4.3
 cover: "/covers/factfulness.jpg"
 date: 2018-04-03
 readMinutes: { min: 5, max: 8 }
+keywords: ["factfulness summary", "hans rosling book review", "global progress data", "ten human instincts", "fact-based worldview", "factfulness key insights"]
 ---
+
 <section class="editorial-note" aria-label="Editorial note">
   <p class="editorial-note__label">Editorial Note</p>
   <p>Rosling died before this was published, which gives it an odd warmth. He was furious at how wrong educated people are about global progress, and that controlled fury makes the book more compelling than its data-heavy premise suggests. The best antidote to doom-scrolling I've found.</p>

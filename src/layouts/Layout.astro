@@ -9,6 +9,9 @@ const {
   description = defaultDescription,
   ogImage = "/og-default.svg",
   ogType = "website",
+  author,
+  keywords,
+  robots = "index, follow, max-image-preview:large",
 } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -30,7 +33,10 @@ const {
     
   <!-- Canonical & robots -->
   <link rel="canonical" href={`https://bookdigest.club${Astro.url.pathname}`} />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="robots" content={robots} />
+  {author && <meta name="author" content={author} />}
+  {keywords && keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
+  <link rel="alternate" type="application/rss+xml" title="BookDigest" href="/rss.xml" />
 
     <!-- Google Fonts -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -147,7 +153,12 @@ const {
         if (el.tagName === 'A' && el.href) {
           e.preventDefault();
           window.bd.track(eventName, { click_content: clickContent });
-          setTimeout(() => { window.location.href = el.href; }, 150);
+          const opensNewTab = el.target === '_blank' || el.target === '_new';
+          if (opensNewTab) {
+            setTimeout(() => { window.open(el.href, '_blank', 'noopener,noreferrer'); }, 150);
+          } else {
+            setTimeout(() => { window.location.href = el.href; }, 150);
+          }
         } else {
           window.bd.track(eventName, { click_content: clickContent });
         }

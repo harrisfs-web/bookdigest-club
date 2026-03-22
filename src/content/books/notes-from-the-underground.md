@@ -9,8 +9,10 @@ rating: 4.8
 cover: "/covers/nftug.jpg"
 date: 1864-01-01
 readMinutes: { min: 8, max: 12 }
+keywords: ["notes from underground summary", "dostoevsky book review", "underground man analysis", "irrational human behavior", "russian literature classic", "existential alienation literature"]
 
 ---
+
 
 <section class="editorial-note" aria-label="Editorial note">
   <p class="editorial-note__label">Editorial Note</p>

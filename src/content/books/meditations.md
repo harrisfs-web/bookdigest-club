@@ -8,6 +8,7 @@ rating: 4.7
 cover: "/covers/meditations.jpg"
 date: 0180-01-01
 readMinutes: { min: 8, max: 12 }
+keywords: ["meditations summary", "marcus aurelius stoicism", "stoic philosophy book review", "stoicism daily practice", "roman emperor wisdom", "meditations key insights"]
 ---
 
 <section class="editorial-note" aria-label="Editorial note">

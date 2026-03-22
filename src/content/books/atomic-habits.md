@@ -8,7 +8,9 @@ rating: 4.0
 cover: "/covers/atomic-habits.jpg"
 date: 2018-10-16
 readMinutes: { min: 15, max: 20 }
+keywords: ["atomic habits summary", "james clear habit formation", "atomic habits book review", "cue craving response reward", "1% better every day", "habit stacking"]
 ---
+
 
 <section class="editorial-note" aria-label="Editorial note">
   <p class="editorial-note__label">Editorial Note</p>

@@ -8,6 +8,7 @@ rating: 4.5
 cover: "/covers/poor-charlies-almanack.jpg"
 date: 2005-01-01
 readMinutes: { min: 14, max: 20 }
+keywords: ["poor charlie's almanack summary", "charlie munger wisdom", "munger mental models", "latticework of mental models", "munger inversion thinking", "charlie munger book review"]
 ---
 
 <section class="editorial-note" aria-label="Editorial note">

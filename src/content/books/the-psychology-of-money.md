@@ -8,7 +8,9 @@ rating: 4.5
 cover: "/covers/the-psychology-of-money.jpg"
 date: 2020-09-08
 readMinutes: { min: 8, max: 10 }
+keywords: ["psychology of money summary", "morgan housel book review", "personal finance psychology", "wealth mindset book", "long term investing lessons", "money behavior book"]
 ---
+
 
 <section class="editorial-note" aria-label="Editorial note">
   <p class="editorial-note__label">Editorial Note</p>

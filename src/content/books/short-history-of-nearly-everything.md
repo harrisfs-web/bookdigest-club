@@ -8,6 +8,7 @@ rating: 4.6
 cover: "/covers/short-history-of-nearly-everything.jpg"
 date: 2003-05-06
 readMinutes: { min: 15, max: 20 }
+keywords: ["short history of nearly everything summary", "bill bryson science book", "history of the universe book", "science history accessible", "bill bryson book review", "earth history explained"]
 ---
 
 <section class="editorial-note" aria-label="Editorial note">

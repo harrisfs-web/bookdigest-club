@@ -4,6 +4,8 @@ import BookCard from "../../components/BookCard.astro";
 import Layout from "../../layouts/Layout.astro";
 import Newsletter from "../../components/Newsletter.astro";
 import { getBookCategoryLinks, getRelatedBooks, getCategoryPath } from "../../lib/bookCategories";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import ShareButtons from "../../components/ShareButtons.astro";
 
 /* 1. Build-time list of paths */
 export async function getStaticPaths() {
@@ -19,7 +21,7 @@ const book = await getEntryBySlug("books", slug);
 if (!book) throw new Error(`Book not found: ${slug}`);
 
 const {
-  data: { title, author, summary, rating, cover, date, readMinutes },
+  data: { title, author, summary, rating, cover, date, readMinutes, isbn, keywords },
   render,
 } = book;
 
@@ -38,25 +40,44 @@ const recommendationSubtitle = relatedBooks.some((entry) => entry.score > 0)
   title={`${title} – Book Summary`}
   description={`${title} by ${author}: ${summary}`}
   ogImage={new URL(cover, Astro.site).href}
-  ogType="article"
+  ogType="book"
+  author={author}
+  keywords={keywords}
 >
   <script
     slot="head"
     type="application/ld+json"
-    set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Book",
-      name: title,
-      author: { "@type": "Person", name: author },
-      image: new URL(cover, Astro.site).href,
-      datePublished: date.toISOString().split('T')[0],
-      dateModified: date.toISOString().split('T')[0],
-      url: new URL(Astro.url.pathname, Astro.site).href,
-    })}
+    set:html={JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        name: title,
+        author: { "@type": "Person", name: author },
+        isbn: isbn,
+        image: new URL(cover, Astro.site).href,
+        datePublished: date.toISOString().split('T')[0],
+        dateModified: date.toISOString().split('T')[0],
+        url: new URL(Astro.url.pathname, Astro.site).href,
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": new URL('/', Astro.site).href},
+          {"@type": "ListItem", "position": 2, "name": "Books", "item": new URL('/books/', Astro.site).href},
+          {"@type": "ListItem", "position": 3, "name": title, "item": new URL(Astro.url.pathname, Astro.site).href},
+        ]
+      }
+    ])}
   />
   <!-- Hero Section with Book Info -->
   <section class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16 book-hero-section">
     <div class="max-w-6xl mx-auto px-4 page-container">
+      <Breadcrumb items={[
+        { label: "Home", href: "/" },
+        { label: "Books", href: "/books" },
+        { label: title },
+      ]} />
       <div class="grid lg:grid-cols-3 gap-12 items-start">
         <!-- Book Cover -->
         <div class="lg:col-span-1 flex justify-center">
@@ -166,6 +187,12 @@ const recommendationSubtitle = relatedBooks.some((entry) => entry.score > 0)
           📚 More Summaries
         </a>
       </div>
+
+      <ShareButtons
+        url={new URL(Astro.url.pathname, Astro.site).href}
+        title={`${title} – BookDigest`}
+        summary={summary}
+      />
 
       <!-- Inline Newsletter -->
       <div class="mt-16 p-8 bg-gradient-to-r from-primary-50 to-accent-50 rounded-2xl border border-primary-100 newsletter-form">

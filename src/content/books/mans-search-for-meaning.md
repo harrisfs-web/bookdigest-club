@@ -8,6 +8,7 @@ rating: 4.8
 cover: "/covers/mans-search-for-meaning.jpg"
 date: 1946-01-01
 readMinutes: { min: 10, max: 14 }
+keywords: ["man's search for meaning summary", "viktor frankl book review", "logotherapy explained", "finding meaning in suffering", "holocaust memoir psychology", "existential meaning life"]
 ---
 
 <section class="editorial-note" aria-label="Editorial note">

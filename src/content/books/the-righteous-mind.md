@@ -8,6 +8,7 @@ rating: 4.5
 cover: "/covers/the-righteous-mind.jpg"
 date: 2012-03-13
 readMinutes: { min: 13, max: 18 }
+keywords: ["righteous mind summary", "jonathan haidt book review", "moral foundations theory", "liberal conservative psychology", "political psychology book", "moral psychology explained"]
 ---
 
 <section class="editorial-note" aria-label="Editorial note">

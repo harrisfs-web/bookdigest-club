@@ -8,6 +8,7 @@ rating: 4.5
 cover: "/covers/the-selfish-gene.jpg"
 date: 1976-01-01
 readMinutes: { min: 10, max: 14 }
+keywords: ["selfish gene summary", "richard dawkins book review", "gene-centric evolution", "meme concept origin", "evolutionary biology book", "selfish gene key insights"]
 ---
 
 <section class="editorial-note" aria-label="Editorial note">

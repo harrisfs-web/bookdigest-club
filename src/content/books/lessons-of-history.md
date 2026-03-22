@@ -8,6 +8,7 @@ rating: 4.5
 cover: "/covers/lessons-of-history.jpg"
 date: 1968-01-01
 readMinutes: { min: 8, max: 12 }
+keywords: ["lessons of history summary", "will durant ariel durant", "philosophy of history", "civilisation cycles explained", "history wisdom book", "lessons from history key ideas"]
 ---
 
 <section class="editorial-note" aria-label="Editorial note">

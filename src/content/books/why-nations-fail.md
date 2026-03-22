@@ -8,6 +8,7 @@ rating: 4.5
 cover: "/covers/why-nations-fail.jpg"
 date: 2012-03-20
 readMinutes: { min: 14, max: 18 }
+keywords: ["why nations fail summary", "daron acemoglu book review", "inclusive extractive institutions", "economic prosperity explained", "political economy book", "why some countries are rich or poor"]
 ---
 
 <section class="editorial-note" aria-label="Editorial note">

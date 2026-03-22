@@ -8,6 +8,7 @@ rating: 4.5
 cover: "/covers/the-power-of-habit.jpg"
 date: 2012-02-28
 readMinutes: { min: 12, max: 18 }
+keywords: ["power of habit summary", "charles duhigg book review", "habit loop explained", "keystone habits science", "changing habits book", "power of habit key lessons"]
 ---
 
 <section class="editorial-note" aria-label="Editorial note">

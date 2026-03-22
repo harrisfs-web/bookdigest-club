@@ -8,6 +8,7 @@ rating: 4.3
 cover: "/covers/guns-germs-and-steel.jpg"
 date: 1997-03-01
 readMinutes: { min: 10, max: 14 }
+keywords: ["guns germs and steel summary", "jared diamond book review", "why civilizations succeed", "geography and history", "agricultural origins", "why europe dominated world"]
 ---
 
 <section class="editorial-note" aria-label="Editorial note">

@@ -8,6 +8,7 @@ rating: 4.0
 cover: "/covers/antifragile.jpg"
 date: 2012-11-27
 readMinutes: { min: 16, max: 22 }
+keywords: ["antifragile book summary", "nassim taleb antifragile", "antifragility explained", "barbell strategy", "via negativa", "black swan taleb"]
 ---
 
 <section class="editorial-note" aria-label="Editorial note">
