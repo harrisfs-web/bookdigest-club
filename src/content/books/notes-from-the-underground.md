@@ -2,6 +2,7 @@
 
 title: "Notes from Underground"
 author: "Fyodor Dostoevsky"
+goodreadsUrl: "https://www.goodreads.com/book/show/49455.Notes_from_Underground"
 summary: "A foundational existentialist text exploring the depths of human spite, the rejection of rationalism, and the chaotic freedom of the human will."
 tags: ["Philosophy", "Existentialism", "Psychology", "Classics", "Literature"]
 isbn: "9780679734529"
@@ -130,20 +131,20 @@ The book found its true appreciation in the 20th century. **Friedrich Nietzsche*
 
 ## Suggested Further Reading
 
-* **** **"Crime and Punishment" by Fyodor Dostoevsky**
-* An expansion of the "Great Man" theory and the psychological toll of rationalizing evil, featuring a protagonist (Raskolnikov) who shares the Underground Man's isolation but attempts to act on it.
+* <a href="https://www.goodreads.com/book/show/7144.Crime_and_Punishment" target="_blank" rel="noopener noreferrer"><strong>"Crime and Punishment" by Fyodor Dostoevsky</strong></a>
+* <strong>An expansion of the "Great Man" theory and the psychological toll of rationalizing evil, featuring a protagonist (Raskolnikov) who shares the Underground Man's isolation but attempts to act on it.</strong>
 
 
-* **** **"The Stranger" (L’Étranger) by Albert Camus**
-* Explores the absurd and the indifferent, offering a different take on the alienated anti-hero who, unlike the Underground Man, feels nothing rather than everything.
+* <a href="https://www.goodreads.com/book/show/49552.The_Stranger" target="_blank" rel="noopener noreferrer"><strong>"The Stranger" (L’Étranger) by Albert Camus</strong></a>
+* <strong>Explores the absurd and the indifferent, offering a different take on the alienated anti-hero who, unlike the Underground Man, feels nothing rather than everything.</strong>
 
 
-* **** **"Nausea" by Jean-Paul Sartre**
-* A direct descendant of *Notes*, this diary-format novel deals with "Roquentin," a historian who is overcome by the physical sensation of existence and the absurdity of the world.
+* <a href="https://www.goodreads.com/book/show/298275.Nausea" target="_blank" rel="noopener noreferrer"><strong>"Nausea" by Jean-Paul Sartre</strong></a>
+* <strong>A direct descendant of Notes, this diary-format novel deals with "Roquentin," a historian who is overcome by the physical sensation of existence and the absurdity of the world.</strong>
 
 
-* **"Invisible Man" by Ralph Ellison**
-* Heavily influenced by Dostoevsky, this novel explores the social and racial "underground" of an African American man, dealing with similar themes of visibility, identity, and social blindness.
+* <a href="https://www.goodreads.com/book/show/16981.Invisible_Man" target="_blank" rel="noopener noreferrer"><strong>"Invisible Man" by Ralph Ellison</strong></a>
+* <strong>Heavily influenced by Dostoevsky, this novel explores the social and racial "underground" of an African American man, dealing with similar themes of visibility, identity, and social blindness.</strong>
 
 
 

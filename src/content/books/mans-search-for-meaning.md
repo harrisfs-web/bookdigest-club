@@ -1,6 +1,7 @@
 ---
 title: "Man's Search for Meaning"
 author: "Viktor E. Frankl"
+goodreadsUrl: "https://www.goodreads.com/book/show/4069.Man_s_Search_for_Meaning"
 summary: "A psychiatrist's account of survival in Nazi concentration camps and the discovery that meaning — not pleasure — is the primary human drive."
 tags: ["Philosophy", "Psychology", "Memoir", "Existentialism"]
 isbn: "9780807014271"
@@ -102,12 +103,12 @@ A more pointed criticism concerns the representativeness of Frankl's account. He
 
 ## Suggested Further Reading
 
-- ***Meditations* by Marcus Aurelius (circa 170 AD)** — The Stoic philosophical tradition that Frankl's work most closely parallels: the emphasis on the inner freedom of attitude, the distinction between what is in our control and what is not, and the finding of purpose in service and engagement rather than in pleasure.
+- <a href="https://www.goodreads.com/book/show/30659.Meditations" target="_blank" rel="noopener noreferrer"><strong>Meditations by Marcus Aurelius (circa 170 AD)</strong></a> — The Stoic philosophical tradition that Frankl's work most closely parallels: the emphasis on the inner freedom of attitude, the distinction between what is in our control and what is not, and the finding of purpose in service and engagement rather than in pleasure.
 
-- ***The Antifragile* by Nassim Nicholas Taleb (2012)** — Shares with Frankl the conviction that adversity, properly faced, can produce genuine growth. Taleb's framework of antifragility is a systemic version of Frankl's individual psychological insight.
+- <a href="https://www.goodreads.com/book/show/13530973-antifragile" target="_blank" rel="noopener noreferrer"><strong>The Antifragile by Nassim Nicholas Taleb (2012)</strong></a> — Shares with Frankl the conviction that adversity, properly faced, can produce genuine growth. Taleb's framework of antifragility is a systemic version of Frankl's individual psychological insight.
 
-- ***Thinking, Fast and Slow* by Daniel Kahneman (2011)** — Provides the cognitive science context for understanding why Frankl's will-to-meaning argument challenges the hedonic psychology implicit in much of behavioural economics: the distinction between experiencing self and remembering self maps onto dimensions of the meaning/pleasure distinction.
+- <a href="https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow" target="_blank" rel="noopener noreferrer"><strong>Thinking, Fast and Slow by Daniel Kahneman (2011)</strong></a> — Provides the cognitive science context for understanding why Frankl's will-to-meaning argument challenges the hedonic psychology implicit in much of behavioural economics: the distinction between experiencing self and remembering self maps onto dimensions of the meaning/pleasure distinction.
 
-- ***The Righteous Mind* by Jonathan Haidt (2012)** — Haidt's moral psychology shares with Frankl an interest in the non-rational foundations of what makes life feel meaningful and the cognitive science of moral experience.
+- <a href="https://www.goodreads.com/book/show/11324722-the-righteous-mind" target="_blank" rel="noopener noreferrer"><strong>The Righteous Mind by Jonathan Haidt (2012)</strong></a> — Haidt's moral psychology shares with Frankl an interest in the non-rational foundations of what makes life feel meaningful and the cognitive science of moral experience.
 
-- ***Atomic Habits* by James Clear (2018)** — For readers interested in the practical application of meaning-making: Clear's identity-based approach to habit change draws on the logotherapeutic insight that sustainable behaviour change requires alignment with a sense of who one is and what one values, not just behavioural incentives.
+- <a href="https://www.goodreads.com/book/show/40121378-atomic-habits" target="_blank" rel="noopener noreferrer"><strong>Atomic Habits by James Clear (2018)</strong></a> — For readers interested in the practical application of meaning-making: Clear's identity-based approach to habit change draws on the logotherapeutic insight that sustainable behaviour change requires alignment with a sense of who one is and what one values, not just behavioural incentives.

@@ -1,6 +1,7 @@
 ---
 title: "Poor Charlie's Almanack"
 author: "Charlie Munger"
+goodreadsUrl: "https://www.goodreads.com/book/show/944947.Poor_Charlie_s_Almanack"
 summary: "Charlie Munger's collected wisdom on mental models, rational thinking, and the art of worldly wisdom."
 tags: ["Mental Models", "Investing", "Philosophy", "Decision-Making"]
 isbn: "9781953953377"
@@ -102,14 +103,14 @@ A more sympathetic critique, raised by some readers who came to the book with ge
 
 ## Suggested Further Reading
 
-- ***The Essays of Warren Buffett* edited by Lawrence Cunningham (1997)** — The most direct companion to Munger's own writings. Buffett's shareholder letters, curated thematically, develop many of the same investment and business philosophy ideas that Munger articulates in *Poor Charlie's Almanack*, and reading both together provides a complete picture of the Berkshire intellectual framework.
+- <a href="https://www.goodreads.com/book/show/145565.The_Essays_of_Warren_Buffett" target="_blank" rel="noopener noreferrer"><strong>The Essays of Warren Buffett edited by Lawrence Cunningham (1997)</strong></a> — The most direct companion to Munger's own writings. Buffett's shareholder letters, curated thematically, develop many of the same investment and business philosophy ideas that Munger articulates in *Poor Charlie's Almanack*, and reading both together provides a complete picture of the Berkshire intellectual framework.
 
-- ***Seeking Wisdom: From Darwin to Munger* by Peter Bevelin (2007)** — Perhaps the most thorough attempt to systematise Munger's mental models framework into a reference work. Bevelin catalogues the key ideas from physics, biology, psychology, and economics that Munger draws on, providing more detail and more citations than Munger himself offers in the Almanack.
+- <a href="https://www.goodreads.com/book/show/2076598.Seeking_Wisdom" target="_blank" rel="noopener noreferrer"><strong>Seeking Wisdom: From Darwin to Munger by Peter Bevelin (2007)</strong></a> — Perhaps the most thorough attempt to systematise Munger's mental models framework into a reference work. Bevelin catalogues the key ideas from physics, biology, psychology, and economics that Munger draws on, providing more detail and more citations than Munger himself offers in the Almanack.
 
-- ***Thinking, Fast and Slow* by Daniel Kahneman (2011)** — The academic counterpart to Munger's psychology of misjudgement section. Kahneman, who shared the Nobel Prize in Economics for his work on cognitive biases, provides the rigorous empirical foundation for many of the patterns Munger describes from a practitioner's perspective.
+- <a href="https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow" target="_blank" rel="noopener noreferrer"><strong>Thinking, Fast and Slow by Daniel Kahneman (2011)</strong></a> — The academic counterpart to Munger's psychology of misjudgement section. Kahneman, who shared the Nobel Prize in Economics for his work on cognitive biases, provides the rigorous empirical foundation for many of the patterns Munger describes from a practitioner's perspective.
 
-- ***The Intelligent Investor* by Benjamin Graham (1949)** — Munger's intellectual lineage runs through Graham, whose concept of margin of safety and whose insistence on analysing businesses rather than stock price movements form the foundation of Berkshire's approach. Reading Graham alongside Munger illuminates how Munger extended and in some ways transcended his mentor's framework.
+- <a href="https://www.goodreads.com/book/show/106835.The_Intelligent_Investor" target="_blank" rel="noopener noreferrer"><strong>The Intelligent Investor by Benjamin Graham (1949)</strong></a> — Munger's intellectual lineage runs through Graham, whose concept of margin of safety and whose insistence on analysing businesses rather than stock price movements form the foundation of Berkshire's approach. Reading Graham alongside Munger illuminates how Munger extended and in some ways transcended his mentor's framework.
 
-- ***Influence: The Psychology of Persuasion* by Robert Cialdini (1984)** — The book Munger has recommended more often than almost any other. Cialdini's analysis of the six principles of persuasion maps almost perfectly onto the social-proof, commitment-consistency, and liking-tendency biases that Munger identifies in his psychology of misjudgement lecture.
+- <a href="https://www.goodreads.com/book/show/28815.Influence" target="_blank" rel="noopener noreferrer"><strong>Influence: The Psychology of Persuasion by Robert Cialdini (1984)</strong></a> — The book Munger has recommended more often than almost any other. Cialdini's analysis of the six principles of persuasion maps almost perfectly onto the social-proof, commitment-consistency, and liking-tendency biases that Munger identifies in his psychology of misjudgement lecture.
 
-- ***The Art of Thinking Clearly* by Rolf Dobelli (2013)** — A more systematically organised catalogue of cognitive biases, covering much of the same territory as Munger's psychological misjudgement lecture in a format designed as a practical reference. A useful companion for readers who want the Munger ideas in a more structured form.
+- <a href="https://www.goodreads.com/book/show/16248196-the-art-of-thinking-clearly" target="_blank" rel="noopener noreferrer"><strong>The Art of Thinking Clearly by Rolf Dobelli (2013)</strong></a> — A more systematically organised catalogue of cognitive biases, covering much of the same territory as Munger's psychological misjudgement lecture in a format designed as a practical reference. A useful companion for readers who want the Munger ideas in a more structured form.

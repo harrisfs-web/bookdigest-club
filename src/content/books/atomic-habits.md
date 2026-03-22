@@ -1,6 +1,7 @@
 ---
 title: "Atomic Habits"
 author: "James Clear"
+goodreadsUrl: "https://www.goodreads.com/book/show/40121378-atomic-habits"
 summary: "A concise synthesis of habit-forming psychology with actionable frameworks."
 tags: ["Productivity", "Psychology"]
 isbn: "9780735211292"
@@ -107,19 +108,19 @@ Clear’s principles in *Atomic Habits* have resonated widely, and we can see th
 
 If *Atomic Habits* piqued your interest in habits and behavior change, there are several excellent books and resources that delve deeper or offer complementary perspectives:
 
-* ***The Power of Habit* by Charles Duhigg (2012)** – A seminal book that predates *Atomic Habits*, Duhigg’s work explores the habit loop of cue-routine-reward in depth. He illustrates how companies and individuals have leveraged habit science (from Febreze’s marketing to personal habit transformations) and offers a framework for changing habits by identifying cues and rewards.
+* <a href="https://www.goodreads.com/book/show/12609433-the-power-of-habit" target="_blank" rel="noopener noreferrer"><strong>The Power of Habit by Charles Duhigg (2012)</strong></a> – A seminal book that predates *Atomic Habits*, Duhigg’s work explores the habit loop of cue-routine-reward in depth. He illustrates how companies and individuals have leveraged habit science (from Febreze’s marketing to personal habit transformations) and offers a framework for changing habits by identifying cues and rewards.
 
-* ***Tiny Habits* by B.J. Fogg (2019)** – Behavior scientist B.J. Fogg offers a approach very much in harmony with *Atomic Habits*, but with extra emphasis on **starting extremely small** and celebrating immediately.
+* <a href="https://www.goodreads.com/book/show/43261127-tiny-habits" target="_blank" rel="noopener noreferrer"><strong>Tiny Habits by B.J. Fogg (2019)</strong></a> – Behavior scientist B.J. Fogg offers a approach very much in harmony with *Atomic Habits*, but with extra emphasis on **starting extremely small** and celebrating immediately.
 
-* ***Better Than Before* by Gretchen Rubin (2015)** – Rubin’s book focuses on how to form habits based on your personality tendency. She identifies four “tendencies” (Upholders, Questioners, Obligers, Rebels) that describe how different people respond to expectations, and she tailors habit strategies to each.
+* <a href="https://www.goodreads.com/book/show/22779352-better-than-before" target="_blank" rel="noopener noreferrer"><strong>Better Than Before by Gretchen Rubin (2015)</strong></a> – Rubin’s book focuses on how to form habits based on your personality tendency. She identifies four “tendencies” (Upholders, Questioners, Obligers, Rebels) that describe how different people respond to expectations, and she tailors habit strategies to each.
 
-* ***Good Habits, Bad Habits* by Wendy Wood (2019)** – Written by a psychology professor who is one of the leading researchers on habits, this book gives a **science-based yet accessible** overview of how habits work in the brain and in our daily lives.
+* <a href="https://www.goodreads.com/book/show/43612872-good-habits-bad-habits" target="_blank" rel="noopener noreferrer"><strong>Good Habits, Bad Habits by Wendy Wood (2019)</strong></a> – Written by a psychology professor who is one of the leading researchers on habits, this book gives a **science-based yet accessible** overview of how habits work in the brain and in our daily lives.
 
-* ***Mindset* by Carol Dweck (2006)** – While not about habits per se, this classic book on **growth mindset vs. fixed mindset** is a great companion because *Atomic Habits* heavily implies a growth mindset (the belief that you can improve through effort). Dweck’s research shows that adopting a growth mindset leads to persistence and embracing challenges – qualities that will supercharge your habit-building journey.
+* <a href="https://www.goodreads.com/book/show/40745.Mindset" target="_blank" rel="noopener noreferrer"><strong>Mindset by Carol Dweck (2006)</strong></a> – While not about habits per se, this classic book on **growth mindset vs. fixed mindset** is a great companion because *Atomic Habits* heavily implies a growth mindset (the belief that you can improve through effort). Dweck’s research shows that adopting a growth mindset leads to persistence and embracing challenges – qualities that will supercharge your habit-building journey.
 
-* ***Willpower: Rediscovering the Greatest Human Strength* by Roy Baumeister and John Tierney (2011)** – This book explores the science of self-control and willpower. Interestingly, Clear suggests designing habits to minimize reliance on willpower, but it can still be illuminating to understand willpower’s role and limits.
+* <a href="https://www.goodreads.com/book/show/11104933-willpower" target="_blank" rel="noopener noreferrer"><strong>Willpower: Rediscovering the Greatest Human Strength by Roy Baumeister and John Tierney (2011)</strong></a> – This book explores the science of self-control and willpower. Interestingly, Clear suggests designing habits to minimize reliance on willpower, but it can still be illuminating to understand willpower’s role and limits.
 
-* ***Nudge: Improving Decisions About Health, Wealth, and Happiness* by Richard Thaler and Cass Sunstein (2008)** – This is more about public policy and decision-making, but it dovetails with *Atomic Habits* on the concept of **choice architecture** (designing environments to influence behavior). Thaler and Sunstein discuss how small changes in how choices are presented (nudges) can lead people to better decisions without removing freedom of choice.
+* <a href="https://www.goodreads.com/book/show/3450744.Nudge" target="_blank" rel="noopener noreferrer"><strong>Nudge: Improving Decisions About Health, Wealth, and Happiness by Richard Thaler and Cass Sunstein (2008)</strong></a> – This is more about public policy and decision-making, but it dovetails with *Atomic Habits* on the concept of **choice architecture** (designing environments to influence behavior). Thaler and Sunstein discuss how small changes in how choices are presented (nudges) can lead people to better decisions without removing freedom of choice.
 
 * **Research articles on habit formation and behavior change:** If you want to go straight to the scientific source, consider reading Phillippa Lally’s 2009 study on habit formation (published in the *European Journal of Social Psychology*), which famously found it takes on average **66 days** to form a habit (with wide variation). 
 

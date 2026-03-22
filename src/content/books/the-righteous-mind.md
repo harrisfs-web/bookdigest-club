@@ -1,6 +1,7 @@
 ---
 title: "The Righteous Mind"
 author: "Jonathan Haidt"
+goodreadsUrl: "https://www.goodreads.com/book/show/11324722-the-righteous-mind"
 summary: "Why good people are divided by politics and religion — a moral psychologist's investigation into the foundations of human morality."
 tags: ["Psychology", "Politics", "Morality", "Philosophy"]
 isbn: "9780307455772"
@@ -110,12 +111,12 @@ Perhaps the most interesting criticism comes from those who argue that Haidt's t
 
 ## Suggested Further Reading
 
-- ***Thinking, Fast and Slow* by Daniel Kahneman (2011)** — The comprehensive account of the System 1/System 2 distinction that underlies Haidt's elephant-and-rider metaphor. Kahneman's book provides the cognitive science foundation for the claim that intuition precedes and dominates deliberate reasoning.
+- <a href="https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow" target="_blank" rel="noopener noreferrer"><strong>Thinking, Fast and Slow by Daniel Kahneman (2011)</strong></a> — The comprehensive account of the System 1/System 2 distinction that underlies Haidt's elephant-and-rider metaphor. Kahneman's book provides the cognitive science foundation for the claim that intuition precedes and dominates deliberate reasoning.
 
-- ***The Lessons of History* by Will & Ariel Durant (1968)** — A complementary perspective on the recurring structures of human political and moral life across civilisations, providing historical context for Haidt's evolutionary account of moral foundations.
+- <a href="https://www.goodreads.com/book/show/174141.The_Lessons_of_History" target="_blank" rel="noopener noreferrer"><strong>The Lessons of History by Will & Ariel Durant (1968)</strong></a> — A complementary perspective on the recurring structures of human political and moral life across civilisations, providing historical context for Haidt's evolutionary account of moral foundations.
 
-- ***Man's Search for Meaning* by Viktor Frankl (1946)** — Frankl's account of how human beings construct meaning in extreme conditions provides a different but compatible perspective on the non-rational foundations of moral experience and the limits of purely cognitive approaches to ethics.
+- <a href="https://www.goodreads.com/book/show/4069.Man_s_Search_for_Meaning" target="_blank" rel="noopener noreferrer"><strong>Man's Search for Meaning by Viktor Frankl (1946)</strong></a> — Frankl's account of how human beings construct meaning in extreme conditions provides a different but compatible perspective on the non-rational foundations of moral experience and the limits of purely cognitive approaches to ethics.
 
-- ***Meditations* by Marcus Aurelius (circa 170 AD)** — A practical engagement with the challenge of acting ethically in a world of competing interests and imperfect information, by a philosopher who understood that moral behaviour is a practice rather than a conclusion.
+- <a href="https://www.goodreads.com/book/show/30659.Meditations" target="_blank" rel="noopener noreferrer"><strong>Meditations by Marcus Aurelius (circa 170 AD)</strong></a> — A practical engagement with the challenge of acting ethically in a world of competing interests and imperfect information, by a philosopher who understood that moral behaviour is a practice rather than a conclusion.
 
-- ***Sapiens* by Yuval Noah Harari (2011)** — Harari's account of how shared myths and collective beliefs have enabled human cooperation at scale provides a civilisational-level parallel to Haidt's evolutionary account of how moral psychology enables cooperation at the group level.
+- <a href="https://www.goodreads.com/book/show/23692271-sapiens" target="_blank" rel="noopener noreferrer"><strong>Sapiens by Yuval Noah Harari (2011)</strong></a> — Harari's account of how shared myths and collective beliefs have enabled human cooperation at scale provides a civilisational-level parallel to Haidt's evolutionary account of how moral psychology enables cooperation at the group level.

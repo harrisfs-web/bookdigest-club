@@ -1,6 +1,7 @@
 ---
 title: "The Power of Habit"
 author: "Charles Duhigg"
+goodreadsUrl: "https://www.goodreads.com/book/show/12609433-the-power-of-habit"
 summary: "How habits work in our brains, our lives, and our organizations — and how to change them."
 tags: ["Psychology", "Productivity", "Behavior"]
 isbn: "9780812981605"
@@ -119,14 +120,14 @@ Nevertheless, even sceptical readers tend to concede that *The Power of Habit* i
 
 ## Suggested Further Reading
 
-- ***Atomic Habits* by James Clear (2018)** — The most direct successor to *The Power of Habit*, offering a more prescriptive four-law framework and extending Duhigg's ideas into a practical system. Particularly strong on environment design and identity-based change.
+- <a href="https://www.goodreads.com/book/show/40121378-atomic-habits" target="_blank" rel="noopener noreferrer"><strong>Atomic Habits by James Clear (2018)</strong></a> — The most direct successor to *The Power of Habit*, offering a more prescriptive four-law framework and extending Duhigg's ideas into a practical system. Particularly strong on environment design and identity-based change.
 
-- ***Thinking, Fast and Slow* by Daniel Kahneman (2011)** — Provides the broader cognitive framework within which habit science sits. Kahneman's System 1 (fast, automatic) and System 2 (slow, deliberate) map closely onto the habitual and conscious minds Duhigg describes.
+- <a href="https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow" target="_blank" rel="noopener noreferrer"><strong>Thinking, Fast and Slow by Daniel Kahneman (2011)</strong></a> — Provides the broader cognitive framework within which habit science sits. Kahneman's System 1 (fast, automatic) and System 2 (slow, deliberate) map closely onto the habitual and conscious minds Duhigg describes.
 
-- ***Good Habits, Bad Habits* by Wendy Wood (2019)** — Written by one of the world's leading habit researchers, this is the most scientifically rigorous of the popular habit books. More technical than Duhigg but highly recommended for readers who want to go deeper.
+- <a href="https://www.goodreads.com/book/show/43612872-good-habits-bad-habits" target="_blank" rel="noopener noreferrer"><strong>Good Habits, Bad Habits by Wendy Wood (2019)</strong></a> — Written by one of the world's leading habit researchers, this is the most scientifically rigorous of the popular habit books. More technical than Duhigg but highly recommended for readers who want to go deeper.
 
-- ***Hooked: How to Build Habit-Forming Products* by Nir Eyal (2014)** — Applies Duhigg's framework to product design. Essential reading for anyone building digital products, and a useful (if occasionally uncomfortable) illustration of how habit science can be used to engineer engagement.
+- <a href="https://www.goodreads.com/book/show/22668729-hooked" target="_blank" rel="noopener noreferrer"><strong>Hooked: How to Build Habit-Forming Products by Nir Eyal (2014)</strong></a> — Applies Duhigg's framework to product design. Essential reading for anyone building digital products, and a useful (if occasionally uncomfortable) illustration of how habit science can be used to engineer engagement.
 
-- ***Switch: How to Change Things When Change Is Hard* by Chip & Dan Heath (2010)** — A complementary read on behaviour change that emphasises the role of emotion, environment, and social influence alongside the rational analysis that Duhigg foregrounds.
+- <a href="https://www.goodreads.com/book/show/6570502-switch" target="_blank" rel="noopener noreferrer"><strong>Switch: How to Change Things When Change Is Hard by Chip & Dan Heath (2010)</strong></a> — A complementary read on behaviour change that emphasises the role of emotion, environment, and social influence alongside the rational analysis that Duhigg foregrounds.
 
-- ***The Willpower Instinct* by Kelly McGonigal (2011)** — A Stanford psychologist's course-turned-book on self-control. Engages directly with the ego depletion research that Duhigg draws on and provides a more nuanced and up-to-date account of what the science actually says.
+- <a href="https://www.goodreads.com/book/show/10865206-the-willpower-instinct" target="_blank" rel="noopener noreferrer"><strong>The Willpower Instinct by Kelly McGonigal (2011)</strong></a> — A Stanford psychologist's course-turned-book on self-control. Engages directly with the ego depletion research that Duhigg draws on and provides a more nuanced and up-to-date account of what the science actually says.

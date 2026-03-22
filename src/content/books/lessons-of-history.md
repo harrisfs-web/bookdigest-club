@@ -1,6 +1,7 @@
 ---
 title: "The Lessons of History"
 author: "Will & Ariel Durant"
+goodreadsUrl: "https://www.goodreads.com/book/show/174141.The_Lessons_of_History"
 summary: "A masterful distillation of 5,000 years of human civilisation into the enduring patterns that shape societies."
 tags: ["History", "Philosophy", "Civilization", "Politics"]
 isbn: "9781439149959"
@@ -102,12 +103,12 @@ Third, and most interestingly, the book's political philosophy is genuinely hard
 
 ## Suggested Further Reading
 
-- ***Sapiens: A Brief History of Humankind* by Yuval Noah Harari (2011)** — The closest modern equivalent to the Durants' synthesis project: a single narrative encompassing the full sweep of human history, with particular attention to the role of shared myths, institutions, and cognitive capacities.
+- <a href="https://www.goodreads.com/book/show/23692271-sapiens" target="_blank" rel="noopener noreferrer"><strong>Sapiens: A Brief History of Humankind by Yuval Noah Harari (2011)</strong></a> — The closest modern equivalent to the Durants' synthesis project: a single narrative encompassing the full sweep of human history, with particular attention to the role of shared myths, institutions, and cognitive capacities.
 
-- ***The Changing World Order* by Ray Dalio (2021)** — Applies the Durants' pattern-recognition approach to the specific dynamics of empires, reserve currencies, and geopolitical transition, with detailed data on the cycles of rise and decline the Durants described qualitatively.
+- <a href="https://www.goodreads.com/book/show/52962238-principles-for-dealing-with-the-changing-world-order" target="_blank" rel="noopener noreferrer"><strong>The Changing World Order by Ray Dalio (2021)</strong></a> — Applies the Durants' pattern-recognition approach to the specific dynamics of empires, reserve currencies, and geopolitical transition, with detailed data on the cycles of rise and decline the Durants described qualitatively.
 
-- ***Guns, Germs, and Steel* by Jared Diamond (1997)** — Develops the geographic determinism thread of *The Lessons of History* into a full-length argument about why different civilisations developed at different rates, drawing on archaeology, ecology, and linguistics.
+- <a href="https://www.goodreads.com/book/show/1842.Guns_Germs_and_Steel" target="_blank" rel="noopener noreferrer"><strong>Guns, Germs, and Steel by Jared Diamond (1997)</strong></a> — Develops the geographic determinism thread of *The Lessons of History* into a full-length argument about why different civilisations developed at different rates, drawing on archaeology, ecology, and linguistics.
 
-- ***The Decline of the West* by Oswald Spengler (1918)** — The most famous predecessor to the Durants' civilisational-pattern argument, more deterministic and more pessimistic. Reading Spengler alongside the Durants illuminates the range of ways the same historical evidence can be interpreted.
+- <a href="https://www.goodreads.com/book/show/36546.The_Decline_of_the_West" target="_blank" rel="noopener noreferrer"><strong>The Decline of the West by Oswald Spengler (1918)</strong></a> — The most famous predecessor to the Durants' civilisational-pattern argument, more deterministic and more pessimistic. Reading Spengler alongside the Durants illuminates the range of ways the same historical evidence can be interpreted.
 
-- ***Thinking, Fast and Slow* by Daniel Kahneman (2011)** — Provides the psychological framework for understanding why the "character is constant" argument the Durants make is supported by cognitive science: the systematic biases and heuristics Kahneman documents are as old as the brain that generates them.
+- <a href="https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow" target="_blank" rel="noopener noreferrer"><strong>Thinking, Fast and Slow by Daniel Kahneman (2011)</strong></a> — Provides the psychological framework for understanding why the "character is constant" argument the Durants make is supported by cognitive science: the systematic biases and heuristics Kahneman documents are as old as the brain that generates them.

@@ -10,6 +10,7 @@ const books = defineCollection({
     isbn: z.string().regex(/^\d{9}[\dXx]|\d{13}$/), // 10- or 13-digit ISBN
     rating: z.number().min(0).max(5),
     cover: z.string().startsWith("/covers/"),
+    goodreadsUrl: z.string().url().optional(),
     date: z.date(),
     readMinutes: z.object({
       min: z.number(),

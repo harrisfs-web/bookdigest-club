@@ -21,7 +21,7 @@ const book = await getEntryBySlug("books", slug);
 if (!book) throw new Error(`Book not found: ${slug}`);
 
 const {
-  data: { title, author, summary, rating, cover, date, readMinutes, isbn, keywords },
+  data: { title, author, summary, rating, cover, date, readMinutes, isbn, keywords, goodreadsUrl },
   render,
 } = book;
 
@@ -99,6 +99,21 @@ const recommendationSubtitle = relatedBooks.some((entry) => entry.score > 0)
               {title}
             </h1>
             <p class="text-xl text-primary-300 font-medium mb-2 author">by {author}</p>
+            {goodreadsUrl && (
+              <p class="mb-4">
+                <a
+                  href={goodreadsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-300 hover:text-emerald-200 transition-colors"
+                  data-gtm-event="external_link_click"
+                  data-click-content="Goodreads"
+                >
+                  <span aria-hidden="true">↗</span>
+                  View on Goodreads
+                </a>
+              </p>
+            )}
             
             <!-- Rating -->
             <div class="flex items-center space-x-2 mb-4">

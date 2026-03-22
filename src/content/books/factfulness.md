@@ -2,6 +2,7 @@
 ## title: "Factfulness: Ten Reasons We're Wrong About the World"
 title: "Factfulness"
 author: "Hans Rosling, Ola Rosling, Anna Rosling Rönnlund"
+goodreadsUrl: "https://www.goodreads.com/book/show/34890015-factfulness"
 summary: "A data-driven guide to fighting global misconceptions, revealing why the world is better than you think and how to replace dramatic instincts with facts."
 tags: ["Psychology", "Economics", "Non-fiction", "Global Health", "Data Science"]
 isbn: "9781250107817"
@@ -149,16 +150,11 @@ How do Rosling's insights translate to daily life and business?
 
 ## Suggested Further Reading
 
-* **[Enlightenment Now](https://en.wikipedia.org/wiki/Enlightenment_Now)** by Steven Pinker
-* *Why:* A deeper historical dive into why reason, science, and humanism have led to the greatest era of human flourishing.
+* <a href="https://www.goodreads.com/book/show/35696171-enlightenment-now" target="_blank" rel="noopener noreferrer"><strong>Enlightenment Now by Steven Pinker</strong></a> - A deeper historical dive into why reason, science, and humanism have led to the greatest era of human flourishing.
 
+* <a href="https://www.goodreads.com/book/show/7776209-the-rational-optimist" target="_blank" rel="noopener noreferrer"><strong>The Rational Optimist by Matt Ridley</strong></a> - Focuses on how trade and specialization have driven prosperity and why human exchange makes innovation inevitable.
 
-* **[The Rational Optimist](https://en.wikipedia.org/wiki/The_Rational_Optimist)** by Matt Ridley
-* *Why:* Focuses on how trade and specialization have driven prosperity and why human exchange makes innovation inevitable.
-
-
-* **[Thinking, Fast and Slow](https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow)** by Daniel Kahneman
-* *Why:* The foundational text on *why* our brains rely on the cognitive biases (instincts) that Rosling describes.
+* <a href="https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow" target="_blank" rel="noopener noreferrer"><strong>Thinking, Fast and Slow by Daniel Kahneman</strong></a> - The foundational text on why our brains rely on the cognitive biases (instincts) that Rosling describes.
 
 
 

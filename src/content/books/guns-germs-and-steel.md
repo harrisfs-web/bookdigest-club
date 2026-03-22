@@ -1,6 +1,7 @@
 ---
 title: "Guns, Germs, and Steel"
 author: "Jared Diamond"
+goodreadsUrl: "https://www.goodreads.com/book/show/1842.Guns_Germs_and_Steel"
 summary: "A grand synthesis arguing that geographic luck—not innate differences—drove the unequal distribution of power, technology, and wealth across human societies."
 tags: ["History", "Geography", "Anthropology"]
 isbn: "9780393317558"
@@ -75,11 +76,11 @@ The book was widely praised for its **synthetic reach** and for challenging raci
 
 ## Suggested Further Reading
 
-* ***Collapse* (Jared Diamond, 2005)** – Ecological and societal breakdowns; complement to GGS.
-* ***Why Nations Fail* (Acemoglu & Robinson, 2012)** – An institutionalist counterpoint centered on political incentives.
-* ***Against the Grain* (James C. Scott, 2017)** – A critical view of early states and the costs of grain-based agriculture.
-* ***The Horse, the Wheel, and Language* (David W. Anthony, 2007)** – Steppe migrations, horses, and Indo-European diffusion.
-* ***The Fate of Rome* (Kyle Harper, 2017)** – Climate, disease, and the fall of the Roman Empire.
-* ***1491* (Charles C. Mann, 2005)** – Pre-Columbian Americas and indigenous innovations.
-* ***Plagues and Peoples* (William H. McNeill, 1976)** – Classic on disease and the course of history.
+* <a href="https://www.goodreads.com/book/show/475.Collapse" target="_blank" rel="noopener noreferrer"><strong>Collapse (Jared Diamond, 2005)</strong></a> – Ecological and societal breakdowns; complement to GGS.
+* <a href="https://www.goodreads.com/book/show/12158480-why-nations-fail" target="_blank" rel="noopener noreferrer"><strong>Why Nations Fail (Acemoglu & Robinson, 2012)</strong></a> – An institutionalist counterpoint centered on political incentives.
+* <a href="https://www.goodreads.com/book/show/34324157-against-the-grain" target="_blank" rel="noopener noreferrer"><strong>Against the Grain (James C. Scott, 2017)</strong></a> – A critical view of early states and the costs of grain-based agriculture.
+* <a href="https://www.goodreads.com/book/show/72164.The_Horse_the_Wheel_and_Language" target="_blank" rel="noopener noreferrer"><strong>The Horse, the Wheel, and Language (David W. Anthony, 2007)</strong></a> – Steppe migrations, horses, and Indo-European diffusion.
+* <a href="https://www.goodreads.com/book/show/32580788-the-fate-of-rome" target="_blank" rel="noopener noreferrer"><strong>The Fate of Rome (Kyle Harper, 2017)</strong></a> – Climate, disease, and the fall of the Roman Empire.
+* <a href="https://www.goodreads.com/book/show/39020.1491" target="_blank" rel="noopener noreferrer"><strong>1491 (Charles C. Mann, 2005)</strong></a> – Pre-Columbian Americas and indigenous innovations.
+* <a href="https://www.goodreads.com/book/show/46725.Plagues_and_Peoples" target="_blank" rel="noopener noreferrer"><strong>Plagues and Peoples (William H. McNeill, 1976)</strong></a> – Classic on disease and the course of history.
 

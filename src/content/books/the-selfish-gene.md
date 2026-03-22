@@ -6,6 +6,7 @@ tags: ["Evolution", "Biology", "Genetics"]
 isbn: "9780192860927"
 rating: 4.5
 cover: "/covers/the-selfish-gene.jpg"
+goodreadsUrl: "https://www.goodreads.com/book/show/61535.The_Selfish_Gene"
 date: 1976-01-01
 readMinutes: { min: 10, max: 14 }
 keywords: ["selfish gene summary", "richard dawkins book review", "gene-centric evolution", "meme concept origin", "evolutionary biology book", "selfish gene key insights"]
@@ -77,11 +78,11 @@ Celebrated for lucid exposition, the book helped popularize **kin selection** an
 
 ## Suggested Further Reading
 
-* ***The Extended Phenotype* (Richard Dawkins, 1982)** – Genes’ effects reach beyond bodies (nests, webs, manipulated hosts).
-* ***Sociobiology* (E. O. Wilson, 1975)** – Broad survey linking evolution and behavior; controversial but foundational.
-* ***Evolution and the Theory of Games* (John Maynard Smith, 1982)** – Primary source on ESS and biological game theory.
-* ***The Evolution of Cooperation* (Robert Axelrod, 1984)** – Iterated Prisoner’s Dilemma and Tit‑for‑Tat findings.
-* ***Unto Others* (Sober & D. S. Wilson, 1998)** – Group selection and altruism; a counterpoint and synthesis attempts.
-* ***The Red Queen* (Matt Ridley, 1993)** – Sexual selection, parasites, and the evolution of sex.
-* ***Germs, Genes, & Civilization* (W. H. McNeill & others)** – Disease and human history; complements gene‑centric views.
+* <a href="https://www.goodreads.com/book/show/61538.The_Extended_Phenotype" target="_blank" rel="noopener noreferrer"><strong><em>The Extended Phenotype</em> (Richard Dawkins, 1982)</strong></a> – Genes’ effects reach beyond bodies (nests, webs, manipulated hosts).
+* <a href="https://www.goodreads.com/book/show/183819.Sociobiology" target="_blank" rel="noopener noreferrer"><strong><em>Sociobiology: The New Synthesis</em> (E. O. Wilson, 1975)</strong></a> – Broad survey linking evolution and behavior; controversial but foundational.
+* <a href="https://www.goodreads.com/book/show/41862.Evolution_and_the_Theory_of_Games" target="_blank" rel="noopener noreferrer"><strong><em>Evolution and the Theory of Games</em> (John Maynard Smith, 1982)</strong></a> – Primary source on ESS and biological game theory.
+* <a href="https://www.goodreads.com/book/show/366821.The_Evolution_of_Cooperation" target="_blank" rel="noopener noreferrer"><strong><em>The Evolution of Cooperation</em> (Robert Axelrod, 1984)</strong></a> – Iterated Prisoner’s Dilemma and Tit-for-Tat findings.
+* <a href="https://www.goodreads.com/book/show/134244.Unto_Others" target="_blank" rel="noopener noreferrer"><strong><em>Unto Others</em> (Elliott Sober & David Sloan Wilson, 1998)</strong></a> – Group selection and altruism; a counterpoint and synthesis attempts.
+* <a href="https://www.goodreads.com/book/show/16176.The_Red_Queen" target="_blank" rel="noopener noreferrer"><strong><em>The Red Queen</em> (Matt Ridley, 1993)</strong></a> – Sexual selection, parasites, and the evolution of sex.
+* <a href="https://www.goodreads.com/book/show/46725.Plagues_and_Peoples" target="_blank" rel="noopener noreferrer"><strong><em>Plagues and Peoples</em> (William H. McNeill, 1976)</strong></a> – Disease and human history; complements gene-centric views.
 

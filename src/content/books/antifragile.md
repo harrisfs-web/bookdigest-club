@@ -1,6 +1,7 @@
 ---
 title: "Antifragile"
 author: "Nassim Nicholas Taleb"
+goodreadsUrl: "https://www.goodreads.com/book/show/13530973-antifragile"
 summary: "Things that gain from disorder — why some systems thrive on volatility, stress, and uncertainty."
 tags: ["Philosophy", "Risk", "Systems Thinking", "Economics"]
 isbn: "9780812979688"
@@ -105,12 +106,12 @@ A more substantive methodological criticism is that the concept of antifragility
 
 ## Suggested Further Reading
 
-- ***The Black Swan* by Nassim Nicholas Taleb (2007)** — The intellectual predecessor to *Antifragile*, developing Taleb's theory of rare, high-impact events and the systematic human failure to anticipate them. Essential reading for the full Taleb framework.
+- <a href="https://www.goodreads.com/book/show/242472.The_Black_Swan" target="_blank" rel="noopener noreferrer"><strong>The Black Swan by Nassim Nicholas Taleb (2007)</strong></a> — The intellectual predecessor to *Antifragile*, developing Taleb's theory of rare, high-impact events and the systematic human failure to anticipate them. Essential reading for the full Taleb framework.
 
-- ***Thinking, Fast and Slow* by Daniel Kahneman (2011)** — Provides the cognitive science foundation for many of Taleb's observations about human irrationality, particularly the underweighting of tail events and the overconfidence of forecasters.
+- <a href="https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow" target="_blank" rel="noopener noreferrer"><strong>Thinking, Fast and Slow by Daniel Kahneman (2011)</strong></a> — Provides the cognitive science foundation for many of Taleb's observations about human irrationality, particularly the underweighting of tail events and the overconfidence of forecasters.
 
-- ***The Psychology of Money* by Morgan Housel (2020)** — A complementary perspective on investment philosophy and risk, sharing Taleb's scepticism of financial modelling but arriving at practical conclusions through storytelling rather than polemic.
+- <a href="https://www.goodreads.com/book/show/41881472-the-psychology-of-money" target="_blank" rel="noopener noreferrer"><strong>The Psychology of Money by Morgan Housel (2020)</strong></a> — A complementary perspective on investment philosophy and risk, sharing Taleb's scepticism of financial modelling but arriving at practical conclusions through storytelling rather than polemic.
 
-- ***Sapiens* by Yuval Noah Harari (2011)** — Offers a civilisational-scale context for Taleb's arguments about the volatility of human systems and the recurring failure of centralised planning and prediction.
+- <a href="https://www.goodreads.com/book/show/23692271-sapiens" target="_blank" rel="noopener noreferrer"><strong>Sapiens by Yuval Noah Harari (2011)</strong></a> — Offers a civilisational-scale context for Taleb's arguments about the volatility of human systems and the recurring failure of centralised planning and prediction.
 
-- ***Poor Charlie's Almanack* by Charlie Munger (2005)** — Munger and Taleb share a deep scepticism of conventional financial wisdom and a commitment to reasoning from first principles. Munger's inversion principle is a practical expression of the via negativa.
+- <a href="https://www.goodreads.com/book/show/944947.Poor_Charlie_s_Almanack" target="_blank" rel="noopener noreferrer"><strong>Poor Charlie's Almanack by Charlie Munger (2005)</strong></a> — Munger and Taleb share a deep scepticism of conventional financial wisdom and a commitment to reasoning from first principles. Munger's inversion principle is a practical expression of the via negativa.

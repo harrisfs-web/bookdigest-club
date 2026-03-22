@@ -1,6 +1,7 @@
 ---
 title: "Meditations"
 author: "Marcus Aurelius"
+goodreadsUrl: "https://www.goodreads.com/book/show/30659.Meditations"
 summary: "A personal notebook of Stoic exercises and reminders from a Roman emperor, focused on virtue, reason, and accepting what lies beyond our control."
 tags: ["Stoicism", "Philosophy", "Ethics"]
 isbn: "9780812968255"
@@ -71,11 +72,11 @@ keywords: ["meditations summary", "marcus aurelius stoicism", "stoic philosophy 
 
 ## Suggested Further Reading
 
-* ***Discourses* & *Enchiridion* (Epictetus)** – Stoic practice as taught by a former slave; action-forward and rigorous.
-* ***Letters from a Stoic* (Seneca)** – Practical moral essays on time, fear, and friendship.
-* ***The Inner Citadel* (Pierre Hadot)** – Scholarly analysis of *Meditations* as **spiritual exercise**.
-* ***How to Think Like a Roman Emperor* (Donald Robertson)** – Stoicism through CBT and biography.
-* ***A Guide to the Good Life* (William B. Irvine)** – Modern Stoic toolkit; exercises and pitfalls.
-* ***On the Shortness of Life* (Seneca)** – A concise meditation on the use of time.
+* <a href="https://www.goodreads.com/book/show/4143812-the-discourses" target="_blank" rel="noopener noreferrer"><strong>Discourses & Enchiridion (Epictetus)</strong></a> – Stoic practice as taught by a former slave; action-forward and rigorous.
+* <a href="https://www.goodreads.com/book/show/97411.Letters_from_a_Stoic" target="_blank" rel="noopener noreferrer"><strong>Letters from a Stoic (Seneca)</strong></a> – Practical moral essays on time, fear, and friendship.
+* <a href="https://www.goodreads.com/book/show/341805.The_Inner_Citadel" target="_blank" rel="noopener noreferrer"><strong>The Inner Citadel (Pierre Hadot)</strong></a> – Scholarly analysis of *Meditations* as **spiritual exercise**.
+* <a href="https://www.goodreads.com/book/show/39863499-how-to-think-like-a-roman-emperor" target="_blank" rel="noopener noreferrer"><strong>How to Think Like a Roman Emperor (Donald Robertson)</strong></a> – Stoicism through CBT and biography.
+* <a href="https://www.goodreads.com/book/show/5617966-a-guide-to-the-good-life" target="_blank" rel="noopener noreferrer"><strong>A Guide to the Good Life (William B. Irvine)</strong></a> – Modern Stoic toolkit; exercises and pitfalls.
+* <a href="https://www.goodreads.com/book/show/97412.On_the_Shortness_of_Life" target="_blank" rel="noopener noreferrer"><strong>On the Shortness of Life (Seneca)</strong></a> – A concise meditation on the use of time.
 
 
