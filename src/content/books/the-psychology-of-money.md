@@ -129,16 +129,16 @@ Housel’s principles in *The Psychology of Money* have resonated widely, with r
 
 If *The Psychology of Money* sparked your interest, consider these related books:
 
-* <a href="https://www.goodreads.com/book/show/78428.Your_Money_or_Your_Life" target="_blank" rel="noopener noreferrer"><strong>Your Money or Your Life by Vicki Robin and Joe Dominguez (2008)</strong></a> – A classic on transforming your relationship with money and achieving financial independence.
+* **Your Money or Your Life by Vicki Robin and Joe Dominguez (2008)** A classic on transforming your relationship with money and achieving financial independence. [View on Goodreads](https://www.goodreads.com/book/show/78428.Your_Money_or_Your_Life)
 
-* <a href="https://www.goodreads.com/book/show/998.The_Millionaire_Next_Door" target="_blank" rel="noopener noreferrer"><strong>The Millionaire Next Door by Thomas J. Stanley and William D. Danko (1996)</strong></a> – Explores the habits and behaviors of America’s wealthy, emphasizing frugality and discipline.
+* **The Millionaire Next Door by Thomas J. Stanley and William D. Danko (1996)** Explores the habits and behaviors of America’s wealthy, emphasizing frugality and discipline. [View on Goodreads](https://www.goodreads.com/book/show/998.The_Millionaire_Next_Door)
 
-* <a href="https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow" target="_blank" rel="noopener noreferrer"><strong>Thinking, Fast and Slow by Daniel Kahneman (2011)</strong></a> – A deep dive into the psychology of decision-making, including financial choices.
+* **Thinking, Fast and Slow by Daniel Kahneman (2011)** A deep dive into the psychology of decision-making, including financial choices. [View on Goodreads](https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow) | [Read our summary](/books/thinking-fast-and-slow/)
 
-* <a href="https://www.goodreads.com/book/show/69571.Rich_Dad_Poor_Dad" target="_blank" rel="noopener noreferrer"><strong>Rich Dad Poor Dad by Robert Kiyosaki (1997)</strong></a> – A popular book on financial education and mindset.
+* **Rich Dad Poor Dad by Robert Kiyosaki (1997)** A popular book on financial education and mindset. [View on Goodreads](https://www.goodreads.com/book/show/69571.Rich_Dad_Poor_Dad)
 
-* <a href="https://www.goodreads.com/book/show/30646587-the-simple-path-to-wealth" target="_blank" rel="noopener noreferrer"><strong>The Simple Path to Wealth by JL Collins (2016)</strong></a> – A straightforward guide to investing and financial independence.
+* **The Simple Path to Wealth by JL Collins (2016)** A straightforward guide to investing and financial independence. [View on Goodreads](https://www.goodreads.com/book/show/30646587-the-simple-path-to-wealth)
 
-* <a href="https://www.goodreads.com/book/show/25816810-misbehaving" target="_blank" rel="noopener noreferrer"><strong>Misbehaving: The Making of Behavioral Economics by Richard H. Thaler (2015)</strong></a> – Chronicles the rise of behavioral economics and its impact on finance.
+* **Misbehaving: The Making of Behavioral Economics by Richard H. Thaler (2015)** Chronicles the rise of behavioral economics and its impact on finance. [View on Goodreads](https://www.goodreads.com/book/show/25816810-misbehaving)
 
 * **Research articles on behavioral finance and decision-making:** For a scientific perspective, explore work by Daniel Kahneman, Amos Tversky, and Richard Thaler on how psychology shapes economic choices.

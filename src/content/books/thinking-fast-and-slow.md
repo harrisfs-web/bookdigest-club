@@ -103,11 +103,11 @@ Critiques focus on several fronts. **Dual-process oversimplification:** Some cog
 
 ## Suggested Further Reading
 
-* <a href="https://www.goodreads.com/book/show/251239.Judgment_Under_Uncertainty" target="_blank" rel="noopener noreferrer"><strong>Judgment Under Uncertainty: Heuristics and Biases (Kahneman, Slovic, Tversky, 1982)</strong></a> – The foundational academic collection.
-* <a href="https://www.goodreads.com/book/show/55338982-noise" target="_blank" rel="noopener noreferrer"><strong>Noise (Kahneman, Sibony, Sunstein, 2021)</strong></a> – How unwanted variability (noise) corrupts judgment and how to reduce it.
-* <a href="https://www.goodreads.com/book/show/1713426.Predictably_Irrational" target="_blank" rel="noopener noreferrer"><strong>Predictably Irrational (Dan Ariely, 2008)</strong></a> – Engaging experiments on systematic departures from rationality.
-* <a href="https://www.goodreads.com/book/show/3450744.Nudge" target="_blank" rel="noopener noreferrer"><strong>Nudge (Thaler & Sunstein, 2008)</strong></a> – Choice architecture for better decisions in health, wealth, and happiness.
-* <a href="https://www.goodreads.com/book/show/23995360-superforecasting" target="_blank" rel="noopener noreferrer"><strong>Superforecasting (Tetlock & Gardner, 2015)</strong></a> – Evidence-based techniques for more accurate probabilistic prediction.
-* <a href="https://www.goodreads.com/book/show/35957157-thinking-in-bets" target="_blank" rel="noopener noreferrer"><strong>Thinking in Bets (Annie Duke, 2018)</strong></a> – Decision-making under uncertainty, separating process from outcomes.
-* <a href="https://www.goodreads.com/book/show/23158207-risk-savvy" target="_blank" rel="noopener noreferrer"><strong>Risk Savvy (Gerd Gigerenzer, 2014)</strong></a> – A critique and complement: when heuristics are smart, and how to communicate risk.
-* <a href="https://www.goodreads.com/book/show/28110451-the-undoing-project" target="_blank" rel="noopener noreferrer"><strong>The Undoing Project (Michael Lewis, 2016)</strong></a> – Narrative history of the Kahneman–Tversky collaboration and its impact.
+* **Judgment Under Uncertainty: Heuristics and Biases (Kahneman, Slovic, Tversky, 1982)** The foundational academic collection. [View on Goodreads](https://www.goodreads.com/book/show/251239.Judgment_Under_Uncertainty)
+* **Noise (Kahneman, Sibony, Sunstein, 2021)** How unwanted variability (noise) corrupts judgment and how to reduce it. [View on Goodreads](https://www.goodreads.com/book/show/55338982-noise)
+* **Predictably Irrational (Dan Ariely, 2008)** Engaging experiments on systematic departures from rationality. [View on Goodreads](https://www.goodreads.com/book/show/1713426.Predictably_Irrational)
+* **Nudge (Thaler & Sunstein, 2008)** Choice architecture for better decisions in health, wealth, and happiness. [View on Goodreads](https://www.goodreads.com/book/show/3450744.Nudge)
+* **Superforecasting (Tetlock & Gardner, 2015)** Evidence-based techniques for more accurate probabilistic prediction. [View on Goodreads](https://www.goodreads.com/book/show/23995360-superforecasting)
+* **Thinking in Bets (Annie Duke, 2018)** Decision-making under uncertainty, separating process from outcomes. [View on Goodreads](https://www.goodreads.com/book/show/35957157-thinking-in-bets)
+* **Risk Savvy (Gerd Gigerenzer, 2014)** A critique and complement: when heuristics are smart, and how to communicate risk. [View on Goodreads](https://www.goodreads.com/book/show/23158207-risk-savvy)
+* **The Undoing Project (Michael Lewis, 2016)** Narrative history of the Kahneman–Tversky collaboration and its impact. [View on Goodreads](https://www.goodreads.com/book/show/28110451-the-undoing-project)

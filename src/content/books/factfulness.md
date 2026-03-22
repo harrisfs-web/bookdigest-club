@@ -150,11 +150,11 @@ How do Rosling's insights translate to daily life and business?
 
 ## Suggested Further Reading
 
-* <a href="https://www.goodreads.com/book/show/35696171-enlightenment-now" target="_blank" rel="noopener noreferrer"><strong>Enlightenment Now by Steven Pinker</strong></a> - A deeper historical dive into why reason, science, and humanism have led to the greatest era of human flourishing.
+* **Enlightenment Now by Steven Pinker** - A deeper historical dive into why reason, science, and humanism have led to the greatest era of human flourishing. [View on Goodreads](https://www.goodreads.com/book/show/35696171-enlightenment-now)
 
-* <a href="https://www.goodreads.com/book/show/7776209-the-rational-optimist" target="_blank" rel="noopener noreferrer"><strong>The Rational Optimist by Matt Ridley</strong></a> - Focuses on how trade and specialization have driven prosperity and why human exchange makes innovation inevitable.
+* **The Rational Optimist by Matt Ridley** - Focuses on how trade and specialization have driven prosperity and why human exchange makes innovation inevitable. [View on Goodreads](https://www.goodreads.com/book/show/7776209-the-rational-optimist)
 
-* <a href="https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow" target="_blank" rel="noopener noreferrer"><strong>Thinking, Fast and Slow by Daniel Kahneman</strong></a> - The foundational text on why our brains rely on the cognitive biases (instincts) that Rosling describes.
+* **Thinking, Fast and Slow by Daniel Kahneman** - The foundational text on why our brains rely on the cognitive biases (instincts) that Rosling describes. [View on Goodreads](https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow) | [Read our summary](/books/thinking-fast-and-slow/)
 
 
 

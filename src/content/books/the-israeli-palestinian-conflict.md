@@ -111,10 +111,10 @@ While the international community remains committed to a **Two-State Solution**,
 
 ## Suggested Further Reading
 
-* <a href="https://www.goodreads.com/book/show/151740.The_Lemon_Tree" target="_blank" rel="noopener noreferrer"><strong>"The Lemon Tree" by Sandy Tolan</strong></a> — A powerful narrative non-fiction book that personalizes the conflict through the history of a single house and the friendship between an Israeli and a Palestinian.
-* <a href="https://www.goodreads.com/book/show/131324.Righteous_Victims" target="_blank" rel="noopener noreferrer"><strong>"Righteous Victims" by Benny Morris</strong></a> — A comprehensive, more academic history of the Zionist-Arab conflict from 1881 to 2001, providing deep archival detail.
-* <a href="https://www.goodreads.com/book/show/52960854-hundred-years-war-on-palestine" target="_blank" rel="noopener noreferrer"><strong>"The Hundred Years' War on Palestine" by Rashid Khalidi</strong></a> — Provides a crucial Palestinian perspective, framing the conflict as a struggle against settler-colonialism.
-* <a href="https://www.goodreads.com/book/show/11961982-side-by-side" target="_blank" rel="noopener noreferrer"><strong>"Side by Side: Parallel Histories of Israel-Palestine" by Sami Adwan et al.</strong></a> — An innovative book that presents Israeli and Palestinian historical narratives on the same page, allowing for direct comparison.
+* **"The Lemon Tree" by Sandy Tolan** A powerful narrative non-fiction book that personalizes the conflict through the history of a single house and the friendship between an Israeli and a Palestinian. [View on Goodreads](https://www.goodreads.com/book/show/151740.The_Lemon_Tree)
+* **"Righteous Victims" by Benny Morris** A comprehensive, more academic history of the Zionist-Arab conflict from 1881 to 2001, providing deep archival detail. [View on Goodreads](https://www.goodreads.com/book/show/131324.Righteous_Victims)
+* **"The Hundred Years' War on Palestine" by Rashid Khalidi** Provides a crucial Palestinian perspective, framing the conflict as a struggle against settler-colonialism. [View on Goodreads](https://www.goodreads.com/book/show/52960854-hundred-years-war-on-palestine)
+* **"Side by Side: Parallel Histories of Israel-Palestine" by Sami Adwan et al.** An innovative book that presents Israeli and Palestinian historical narratives on the same page, allowing for direct comparison. [View on Goodreads](https://www.goodreads.com/book/show/11961982-side-by-side)
 
 ---
 

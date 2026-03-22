@@ -252,6 +252,17 @@ body { /* Safety net for any child transforms */
   text-decoration-color: rgb(56 189 248);
 }
 
+.prose a.summary-link {
+  color: rgb(5 150 105);
+  font-weight: 700;
+  text-decoration-color: rgb(52 211 153);
+}
+
+.prose a.summary-link:hover {
+  color: rgb(4 120 87);
+  text-decoration-color: rgb(16 185 129);
+}
+
 .prose img {
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);

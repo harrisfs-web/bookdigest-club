@@ -336,5 +336,18 @@ ${contentText}
         }, 2000);
       });
     }
+
+    // Open all Goodreads links in a new tab
+    document.querySelectorAll('.book-content a[href*="goodreads.com"]').forEach(function(link) {
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+    });
+
+    // Style "Read our summary" links more prominently
+    document.querySelectorAll('.book-content a').forEach(function(link) {
+      if (link.textContent.trim() === 'Read our summary') {
+        link.classList.add('summary-link');
+      }
+    });
   });
 </script>

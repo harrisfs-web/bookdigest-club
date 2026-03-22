@@ -105,16 +105,16 @@ Harari’s ideas in *Sapiens* have had far-reaching effects across education, bu
 
 If *Sapiens* sparked your interest in the history and future of humanity, consider these related books:
 
-* <a href="https://www.goodreads.com/book/show/31138556-homo-deus" target="_blank" rel="noopener noreferrer"><strong>Homo Deus by Yuval Noah Harari (2016)</strong></a> – Harari’s follow-up explores the future of humanity, artificial intelligence, and the quest for immortality.
+* **Homo Deus by Yuval Noah Harari (2016)** Harari’s follow-up explores the future of humanity, artificial intelligence, and the quest for immortality. [View on Goodreads](https://www.goodreads.com/book/show/31138556-homo-deus)
 
-* <a href="https://www.goodreads.com/book/show/1842.Guns_Germs_and_Steel" target="_blank" rel="noopener noreferrer"><strong>Guns, Germs, and Steel by Jared Diamond (1997)</strong></a> – A Pulitzer Prize-winning book on the environmental and geographic factors that shaped human societies.
+* **Guns, Germs, and Steel by Jared Diamond (1997)** A Pulitzer Prize-winning book on the environmental and geographic factors that shaped human societies. [View on Goodreads](https://www.goodreads.com/book/show/1842.Guns_Germs_and_Steel) | [Read our summary](/books/guns-germs-and-steel/)
 
-* <a href="https://www.goodreads.com/book/show/21.A_Short_History_of_Nearly_Everything" target="_blank" rel="noopener noreferrer"><strong>A Short History of Nearly Everything by Bill Bryson (2003)</strong></a> – A witty, accessible tour of science and the universe.
+* **A Short History of Nearly Everything by Bill Bryson (2003)** A witty, accessible tour of science and the universe. [View on Goodreads](https://www.goodreads.com/book/show/21.A_Short_History_of_Nearly_Everything) | [Read our summary](/books/short-history-of-nearly-everything/)
 
-* <a href="https://www.goodreads.com/book/show/61535.The_Selfish_Gene" target="_blank" rel="noopener noreferrer"><strong>The Selfish Gene by Richard Dawkins (1976)</strong></a> – A classic on evolution, cooperation, and the role of genes in shaping behavior.
+* **The Selfish Gene by Richard Dawkins (1976)** A classic on evolution, cooperation, and the role of genes in shaping behavior. [View on Goodreads](https://www.goodreads.com/book/show/61535.The_Selfish_Gene) | [Read our summary](/books/the-selfish-gene/)
 
-* <a href="https://www.goodreads.com/book/show/17910054-the-sixth-extinction" target="_blank" rel="noopener noreferrer"><strong>The Sixth Extinction by Elizabeth Kolbert (2014)</strong></a> – An exploration of mass extinctions, climate change, and the future of life on Earth.
+* **The Sixth Extinction by Elizabeth Kolbert (2014)** An exploration of mass extinctions, climate change, and the future of life on Earth. [View on Goodreads](https://www.goodreads.com/book/show/17910054-the-sixth-extinction)
 
-* <a href="https://www.goodreads.com/book/show/61539.The_Structure_of_Scientific_Revolutions" target="_blank" rel="noopener noreferrer"><strong>The Structure of Scientific Revolutions by Thomas S. Kuhn (1962)</strong></a> – A foundational work on how scientific paradigms shift and evolve.
+* **The Structure of Scientific Revolutions by Thomas S. Kuhn (1962)** A foundational work on how scientific paradigms shift and evolve. [View on Goodreads](https://www.goodreads.com/book/show/61539.The_Structure_of_Scientific_Revolutions)
 
 * **Research articles on anthropology, evolutionary biology, and world history:** For a deeper dive, explore academic journals and essays on the origins, development, and future of Homo sapiens.

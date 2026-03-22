@@ -73,11 +73,11 @@ Praised for its ambitious synthesis and clear visuals, the book popularized a **
 <img src="/images/changing-world-order/insights.png" alt="Core insights summary" class="rounded-lg shadow-md mx-auto" width="600" />
 ## Suggested Further Reading
 
-* <a href="https://www.goodreads.com/book/show/41317431-a-template-for-understanding-big-debt-crises" target="_blank" rel="noopener noreferrer"><strong>Big Debt Crises (Ray Dalio, 2018)</strong></a> – Case templates for deleveragings, inflations, and restructurings.
-* <a href="https://www.goodreads.com/book/show/1217638.Manias_Panics_and_Crashes" target="_blank" rel="noopener noreferrer"><strong>Manias, Panics, and Crashes (Charles Kindleberger)</strong></a> – Classic narrative of credit booms and busts.
-* <a href="https://www.goodreads.com/book/show/407503.Stabilizing_an_Unstable_Economy" target="_blank" rel="noopener noreferrer"><strong>Stabilizing an Unstable Economy (Hyman Minsky)</strong></a> – Theoretical backbone of credit cycles and financial instability.
-* <a href="https://www.goodreads.com/book/show/9624198-exorbitant-privilege" target="_blank" rel="noopener noreferrer"><strong>Exorbitant Privilege (Barry Eichengreen)</strong></a> – History of the dollar and reserve currencies.
-* <a href="https://www.goodreads.com/book/show/6555597-this-time-is-different" target="_blank" rel="noopener noreferrer"><strong>This Time is Different (Reinhart & Rogoff)</strong></a> – Eight centuries of debt crises and defaults.
-* <a href="https://www.goodreads.com/book/show/34876255-destined-for-war" target="_blank" rel="noopener noreferrer"><strong>Destined for War (Graham Allison)</strong></a> – “Thucydides Trap” in U.S.–China context.
-* <a href="https://www.goodreads.com/book/show/535913.The_Rise_and_Fall_of_the_Great_Powers" target="_blank" rel="noopener noreferrer"><strong>The Rise and Fall of the Great Powers (Paul Kennedy)</strong></a> – Economic bases of military power across centuries.
+* **Big Debt Crises (Ray Dalio, 2018)** Case templates for deleveragings, inflations, and restructurings. [View on Goodreads](https://www.goodreads.com/book/show/41317431-a-template-for-understanding-big-debt-crises)
+* **Manias, Panics, and Crashes (Charles Kindleberger)** Classic narrative of credit booms and busts. [View on Goodreads](https://www.goodreads.com/book/show/1217638.Manias_Panics_and_Crashes)
+* **Stabilizing an Unstable Economy (Hyman Minsky)** Theoretical backbone of credit cycles and financial instability. [View on Goodreads](https://www.goodreads.com/book/show/407503.Stabilizing_an_Unstable_Economy)
+* **Exorbitant Privilege (Barry Eichengreen)** History of the dollar and reserve currencies. [View on Goodreads](https://www.goodreads.com/book/show/9624198-exorbitant-privilege)
+* **This Time is Different (Reinhart & Rogoff)** Eight centuries of debt crises and defaults. [View on Goodreads](https://www.goodreads.com/book/show/6555597-this-time-is-different)
+* **Destined for War (Graham Allison)** “Thucydides Trap” in U.S.–China context. [View on Goodreads](https://www.goodreads.com/book/show/34876255-destined-for-war)
+* **The Rise and Fall of the Great Powers (Paul Kennedy)** Economic bases of military power across centuries. [View on Goodreads](https://www.goodreads.com/book/show/535913.The_Rise_and_Fall_of_the_Great_Powers)
 

@@ -41,7 +41,7 @@ This section is a dense, rambling confession where the narrator introduces himse
 * **The Critique of Rational Egoism (The Crystal Palace):** This is the philosophical heart of the book. The narrator attacks the idea that man only does "dirty tricks" because he doesn't understand his true interests. He asks: What if it is sometimes in man's best interest to desire exactly what is *bad* for him? He uses the metaphor of the **Crystal Palace** (representing the perfect, rational utopian society) and the "ant-heap." In such a world, everything is calculated, and there is no free will. The narrator declares he would rather stick his tongue out at the Crystal Palace than live in a world where he is merely a "piano key" played by the laws of physics.
 * **The Caprice:** He concludes that man’s most advantageous advantage is **free will**—even if that will is destructive. We preserve our personality and individuality by acting against reason.
 
-### Part II: À Propos of the Wet Snow (The Narrative)
+### Part II: Ã€ Propos of the Wet Snow (The Narrative)
 
 The second part takes place 16 years prior, when the narrator was 24. It serves as a practical example of the philosophy described in Part I, showing the Underground Man’s interactions with the real world.
 
@@ -131,20 +131,17 @@ The book found its true appreciation in the 20th century. **Friedrich Nietzsche*
 
 ## Suggested Further Reading
 
-* <a href="https://www.goodreads.com/book/show/7144.Crime_and_Punishment" target="_blank" rel="noopener noreferrer"><strong>"Crime and Punishment" by Fyodor Dostoevsky</strong></a>
-* <strong>An expansion of the "Great Man" theory and the psychological toll of rationalizing evil, featuring a protagonist (Raskolnikov) who shares the Underground Man's isolation but attempts to act on it.</strong>
+* **"Crime and Punishment" by Fyodor Dostoevsky** [View on Goodreads](https://www.goodreads.com/book/show/7144.Crime_and_Punishment)
+  * An expansion of the "Great Man" theory and the psychological toll of rationalizing evil, featuring a protagonist (Raskolnikov) who shares the Underground Man's isolation but attempts to act on it.
 
+* **"The Stranger" (L'Etranger) by Albert Camus** [View on Goodreads](https://www.goodreads.com/book/show/49552.The_Stranger)
+  * Explores the absurd and the indifferent, offering a different take on the alienated anti-hero who, unlike the Underground Man, feels nothing rather than everything.
 
-* <a href="https://www.goodreads.com/book/show/49552.The_Stranger" target="_blank" rel="noopener noreferrer"><strong>"The Stranger" (L’Étranger) by Albert Camus</strong></a>
-* <strong>Explores the absurd and the indifferent, offering a different take on the alienated anti-hero who, unlike the Underground Man, feels nothing rather than everything.</strong>
+* **"Nausea" by Jean-Paul Sartre** [View on Goodreads](https://www.goodreads.com/book/show/298275.Nausea)
+  * A direct descendant of Notes, this diary-format novel deals with "Roquentin," a historian who is overcome by the physical sensation of existence and the absurdity of the world.
 
-
-* <a href="https://www.goodreads.com/book/show/298275.Nausea" target="_blank" rel="noopener noreferrer"><strong>"Nausea" by Jean-Paul Sartre</strong></a>
-* <strong>A direct descendant of Notes, this diary-format novel deals with "Roquentin," a historian who is overcome by the physical sensation of existence and the absurdity of the world.</strong>
-
-
-* <a href="https://www.goodreads.com/book/show/16981.Invisible_Man" target="_blank" rel="noopener noreferrer"><strong>"Invisible Man" by Ralph Ellison</strong></a>
-* <strong>Heavily influenced by Dostoevsky, this novel explores the social and racial "underground" of an African American man, dealing with similar themes of visibility, identity, and social blindness.</strong>
+* **"Invisible Man" by Ralph Ellison** [View on Goodreads](https://www.goodreads.com/book/show/16981.Invisible_Man)
+  * Heavily influenced by Dostoevsky, this novel explores the social and racial "underground" of an African American man, dealing with similar themes of visibility, identity, and social blindness.
 
 
 

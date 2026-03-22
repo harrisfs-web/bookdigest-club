@@ -76,11 +76,11 @@ The book was widely praised for its **synthetic reach** and for challenging raci
 
 ## Suggested Further Reading
 
-* <a href="https://www.goodreads.com/book/show/475.Collapse" target="_blank" rel="noopener noreferrer"><strong>Collapse (Jared Diamond, 2005)</strong></a> – Ecological and societal breakdowns; complement to GGS.
-* <a href="https://www.goodreads.com/book/show/12158480-why-nations-fail" target="_blank" rel="noopener noreferrer"><strong>Why Nations Fail (Acemoglu & Robinson, 2012)</strong></a> – An institutionalist counterpoint centered on political incentives.
-* <a href="https://www.goodreads.com/book/show/34324157-against-the-grain" target="_blank" rel="noopener noreferrer"><strong>Against the Grain (James C. Scott, 2017)</strong></a> – A critical view of early states and the costs of grain-based agriculture.
-* <a href="https://www.goodreads.com/book/show/72164.The_Horse_the_Wheel_and_Language" target="_blank" rel="noopener noreferrer"><strong>The Horse, the Wheel, and Language (David W. Anthony, 2007)</strong></a> – Steppe migrations, horses, and Indo-European diffusion.
-* <a href="https://www.goodreads.com/book/show/32580788-the-fate-of-rome" target="_blank" rel="noopener noreferrer"><strong>The Fate of Rome (Kyle Harper, 2017)</strong></a> – Climate, disease, and the fall of the Roman Empire.
-* <a href="https://www.goodreads.com/book/show/39020.1491" target="_blank" rel="noopener noreferrer"><strong>1491 (Charles C. Mann, 2005)</strong></a> – Pre-Columbian Americas and indigenous innovations.
-* <a href="https://www.goodreads.com/book/show/46725.Plagues_and_Peoples" target="_blank" rel="noopener noreferrer"><strong>Plagues and Peoples (William H. McNeill, 1976)</strong></a> – Classic on disease and the course of history.
+* **Collapse (Jared Diamond, 2005)** Ecological and societal breakdowns; complement to GGS. [View on Goodreads](https://www.goodreads.com/book/show/475.Collapse)
+* **Why Nations Fail (Acemoglu & Robinson, 2012)** An institutionalist counterpoint centered on political incentives. [View on Goodreads](https://www.goodreads.com/book/show/12158480-why-nations-fail) | [Read our summary](/books/why-nations-fail/)
+* **Against the Grain (James C. Scott, 2017)** A critical view of early states and the costs of grain-based agriculture. [View on Goodreads](https://www.goodreads.com/book/show/34324157-against-the-grain)
+* **The Horse, the Wheel, and Language (David W. Anthony, 2007)** Steppe migrations, horses, and Indo-European diffusion. [View on Goodreads](https://www.goodreads.com/book/show/72164.The_Horse_the_Wheel_and_Language)
+* **The Fate of Rome (Kyle Harper, 2017)** Climate, disease, and the fall of the Roman Empire. [View on Goodreads](https://www.goodreads.com/book/show/32580788-the-fate-of-rome)
+* **1491 (Charles C. Mann, 2005)** Pre-Columbian Americas and indigenous innovations. [View on Goodreads](https://www.goodreads.com/book/show/39020.1491)
+* **Plagues and Peoples (William H. McNeill, 1976)** Classic on disease and the course of history. [View on Goodreads](https://www.goodreads.com/book/show/46725.Plagues_and_Peoples)
 

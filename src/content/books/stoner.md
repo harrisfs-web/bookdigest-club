@@ -147,8 +147,8 @@ While *Stoner* is a work of fiction, its psychological realism offers tangible t
 
 ## Suggested Further Reading
 
-* <a href="https://www.goodreads.com/book/show/28921.The_Remains_of_the_Day" target="_blank" rel="noopener noreferrer"><strong>The Remains of the Day by Kazuo Ishiguro</strong></a> - A similar exploration of dignity, repression, and a life devoted to service, featuring a protagonist who realizes the cost of his choices late in life.
+* **The Remains of the Day by Kazuo Ishiguro** - A similar exploration of dignity, repression, and a life devoted to service, featuring a protagonist who realizes the cost of his choices late in life. [View on Goodreads](https://www.goodreads.com/book/show/28921.The_Remains_of_the_Day)
 
-* <a href="https://www.goodreads.com/book/show/40606.Revolutionary_Road" target="_blank" rel="noopener noreferrer"><strong>Revolutionary Road by Richard Yates</strong></a> - Another mid-century American classic that deals with the disintegration of a marriage and the crushing weight of disappointment, though with a much more cynical edge than Stoner.
+* **Revolutionary Road by Richard Yates** - Another mid-century American classic that deals with the disintegration of a marriage and the crushing weight of disappointment, though with a much more cynical edge than Stoner. [View on Goodreads](https://www.goodreads.com/book/show/40606.Revolutionary_Road)
 
-* <a href="https://www.goodreads.com/book/show/46199.Letters_to_a_Young_Poet" target="_blank" rel="noopener noreferrer"><strong>Letters to a Young Poet by Rainer Maria Rilke</strong></a> - Non-fiction that mirrors Stoner's philosophy. It advises a young writer to look inward and find the necessity to create, regardless of external fame - essentially the blueprint for Stoner's life.
+* **Letters to a Young Poet by Rainer Maria Rilke** - Non-fiction that mirrors Stoner's philosophy. It advises a young writer to look inward and find the necessity to create, regardless of external fame - essentially the blueprint for Stoner's life. [View on Goodreads](https://www.goodreads.com/book/show/46199.Letters_to_a_Young_Poet)
