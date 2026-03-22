@@ -1,7 +1,9 @@
 ---
 import { getCollection, getEntryBySlug } from "astro:content";
+import BookCard from "../../components/BookCard.astro";
 import Layout from "../../layouts/Layout.astro";
 import Newsletter from "../../components/Newsletter.astro";
+import { getBookCategoryLinks, getRelatedBooks, getCategoryPath } from "../../lib/bookCategories";
 
 /* 1. Build-time list of paths */
 export async function getStaticPaths() {
@@ -11,19 +13,25 @@ export async function getStaticPaths() {
 
 /* 2. Load the specific book by slug */
 const { slug } = Astro.params;
+if (!slug) throw new Error("Book slug is required");
+
 const book = await getEntryBySlug("books", slug);
 if (!book) throw new Error(`Book not found: ${slug}`);
 
 const {
-  data: { title, author, summary, tags, rating, cover, date, readMinutes },
+  data: { title, author, summary, rating, cover, date, readMinutes },
   render,
 } = book;
 
 const { Content } = await render();
+const bookCategories = getBookCategoryLinks(book);
 
 // Get other books for recommendations
 const allBooks = await getCollection("books");
-const otherBooks = allBooks.filter(b => b.slug !== slug).slice(0, 3);
+const relatedBooks = getRelatedBooks(allBooks, book, 3);
+const recommendationSubtitle = relatedBooks.some((entry) => entry.score > 0)
+  ? "Books with the strongest overlap in categories and ideas."
+  : "More great book summaries to expand your knowledge.";
 ---
 
 <Layout
@@ -115,12 +123,17 @@ const otherBooks = allBooks.filter(b => b.slug !== slug).slice(0, 3);
             <!-- Summary -->
             <p class="text-lg text-gray-300 leading-relaxed mb-6 summary">{summary}</p>
             
-            <!-- Tags -->
+            <!-- Categories -->
             <div class="flex flex-wrap gap-2 mb-6 book-tags">
-              {tags.map(tag => (
-                <span class="bg-primary-600/30 text-primary-200 px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm">
-                  {tag}
-                </span>
+              {bookCategories.map((category) => (
+                <a
+                  href={getCategoryPath(category.slug)}
+                  class="bg-primary-600/30 text-primary-200 px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm transition-colors hover:bg-primary-500/40"
+                  data-gtm-event="category_click"
+                  data-click-content={category.name}
+                >
+                  {category.name}
+                </a>
               ))}
             </div>
             
@@ -168,36 +181,17 @@ const otherBooks = allBooks.filter(b => b.slug !== slug).slice(0, 3);
   </article>
 
   <!-- Recommendations Section -->
-  {otherBooks.length > 0 && (
+  {relatedBooks.length > 0 && (
     <section class="py-16 bg-gray-50">
       <div class="max-w-6xl mx-auto px-4 page-container">
         <div class="text-center mb-8 md:mb-12">
           <h2 class="text-3xl font-bold text-gray-900 mb-4">You Might Also Like</h2>
-          <p class="text-lg text-gray-600">More great book summaries to expand your knowledge</p>
+          <p class="text-lg text-gray-600">{recommendationSubtitle}</p>
         </div>
         
         <div class="grid md:grid-cols-3 gap-8 recommendations-grid">
-          {otherBooks.map(({ slug: otherSlug, data: { title: otherTitle, author: otherAuthor, summary: otherSummary, cover: otherCover } }) => (
-            <article class="book-card group">
-              <a href={`/books/${otherSlug}/`} class="block" data-gtm-event="book_click" data-click-content={otherTitle}>
-                <div class="relative overflow-hidden">
-                  <img 
-                    src={otherCover} 
-                    alt={`Cover of ${otherTitle}`} 
-                    class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" 
-                    loading="lazy" 
-                  />
-                  <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
-                    {otherTitle}
-                  </h3>
-                  <p class="text-sm text-primary-600 font-medium mb-3">by {otherAuthor}</p>
-                  <p class="text-gray-600 text-sm line-clamp-3">{otherSummary}</p>
-                </div>
-              </a>
-            </article>
+          {relatedBooks.map(({ book: relatedBook, sharedCategories }) => (
+            <BookCard book={relatedBook} variant="compact" highlightCategories={sharedCategories} />
           ))}
         </div>
       </div>
@@ -212,14 +206,23 @@ const otherBooks = allBooks.filter(b => b.slug !== slug).slice(0, 3);
     if (saveButton) {
       saveButton.addEventListener('click', function() {
         // Get book data from the page
-        const bookTitle = document.querySelector('h1').textContent.trim();
-        const author = document.querySelector('.author').textContent.replace('by ', '').trim();
-        const summary = document.querySelector('.summary').textContent.trim();
-        const rating = document.querySelector('.text-gray-300.font-medium').textContent.trim();
+        const titleElement = document.querySelector('h1');
+        const authorElement = document.querySelector('.author');
+        const summaryElement = document.querySelector('.summary');
+        const ratingElement = document.querySelector('.text-gray-300.font-medium');
+
+        if (!titleElement || !authorElement || !summaryElement || !ratingElement) {
+          return;
+        }
+
+        const bookTitle = titleElement.textContent?.trim() || '';
+        const author = authorElement.textContent?.replace('by ', '').trim() || '';
+        const summary = summaryElement.textContent?.trim() || '';
+        const rating = ratingElement.textContent?.trim() || '';
         
         // Get tags
-        const tagElements = document.querySelectorAll('.book-tags span');
-        const tags = Array.from(tagElements).map(tag => tag.textContent.trim());
+        const tagElements = document.querySelectorAll('.book-tags a, .book-tags span');
+        const tags = Array.from(tagElements).map(tag => tag.textContent?.trim() || '').filter(Boolean);
         
         // Get the main content (the rendered markdown content)
         const contentElement = document.querySelector('.book-content');

@@ -1,9 +1,13 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import BookCard from "../../components/BookCard.astro";
 import Newsletter from "../../components/Newsletter.astro";
+import { getBookCategories, getCategoryPath, getTopBookCategories } from "../../lib/bookCategories";
 
 const books = await getCollection("books");
+const categories = getBookCategories(books);
+const topCategories = getTopBookCategories(books, 6);
 ---
 
 <Layout title="Book Digest – All Summaries" description="Browse all our book summaries with key insights you can read in minutes.">
@@ -48,11 +52,14 @@ const books = await getCollection("books");
       <div class="text-center">
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 mobile-large-heading">All Book Summaries</h1>
         <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4 sm:px-0 mobile-large-text">
-          Explore our complete collection of AI-powered book summaries. Find your next great read in minutes, not hours.
+          Explore our complete collection of AI-powered book summaries and browse the ideas that connect them.
         </p>
-        <div class="mt-6 sm:mt-8">
+        <div class="mt-6 sm:mt-8 flex flex-wrap justify-center gap-3">
           <span class="bg-primary-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-sm font-medium mobile-medium-text">
             {books.length} Books Available
+          </span>
+          <span class="bg-white/10 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-sm font-medium mobile-medium-text backdrop-blur-sm">
+            {categories.length} Categories to Explore
           </span>
         </div>
       </div>
@@ -62,6 +69,55 @@ const books = await getCollection("books");
   <!-- Books Grid -->
   <section class="py-12 sm:py-16 bg-gray-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {topCategories.length > 0 && (
+        <div class="mb-10 sm:mb-12 rounded-3xl border border-gray-200 bg-white p-6 sm:p-8 shadow-sm">
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-[0.24em] text-primary-600">Browse by Category</p>
+              <h2 class="mt-2 text-2xl sm:text-3xl font-bold text-gray-900">Start with the themes readers return to most</h2>
+              <p class="mt-2 max-w-2xl text-sm sm:text-base text-gray-600">
+                These top-level categories are curated from the underlying book tags, so you can browse broader themes without getting stuck in overly specific labels.
+              </p>
+            </div>
+            <a href="#all-books" class="btn-secondary text-sm sm:text-base" data-gtm-event="cta_click" data-click-content="Jump to All Books">
+              Jump to All Books
+            </a>
+          </div>
+
+          <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {topCategories.map((category) => (
+              <a
+                href={getCategoryPath(category.slug)}
+                class="group rounded-2xl border border-gray-200 bg-gray-50 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary-200 hover:bg-primary-50 hover:shadow-lg"
+                data-gtm-event="category_click"
+                data-click-content={category.name}
+              >
+                <div class="flex items-start justify-between gap-3">
+                  <div>
+                    <p class="text-xs font-semibold uppercase tracking-[0.22em] text-gray-500">Category</p>
+                    <h3 class="mt-2 text-xl font-semibold text-gray-900 group-hover:text-primary-700">{category.name}</h3>
+                  </div>
+                  <span class="rounded-full bg-white px-3 py-1 text-sm font-semibold text-primary-700 shadow-sm">
+                    {category.count}
+                  </span>
+                </div>
+
+                <p class="mt-4 text-sm text-gray-600 line-clamp-2">
+                  Explore {category.count} summary{category.count === 1 ? "" : "ies"} connected by {category.name.toLowerCase()}.
+                </p>
+
+                <div class="mt-5 flex items-center text-sm font-semibold text-primary-600 group-hover:text-primary-700">
+                  <span>View category</span>
+                  <svg class="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
       {books.length === 0 ? (
         <div class="text-center py-16 sm:py-20">
           <div class="w-20 h-20 sm:w-24 sm:h-24 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
@@ -73,42 +129,19 @@ const books = await getCollection("books");
           <p class="text-gray-600">Check back soon for new book summaries!</p>
         </div>
       ) : (
+        <div id="all-books" class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.22em] text-primary-600">All Summaries</p>
+            <h2 class="mt-2 text-2xl sm:text-3xl font-bold text-gray-900">Browse every book across every category</h2>
+          </div>
+          <p class="max-w-xl text-sm sm:text-base text-gray-600">
+            Each card now carries its category tags, so you can jump from an individual book to broader subject clusters.
+          </p>
+        </div>
+
         <div class="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {books.map(({ slug, data: { title, author, summary, cover } }) => (
-            <article class="book-card group h-full mobile-book-card">
-              <a href={`/books/${slug}/`} class="block h-full" data-gtm-event="book_click" data-click-content={title}>
-                <div class="relative overflow-hidden">
-                  <img 
-                    src={cover} 
-                    alt={`Cover of ${title}`} 
-                    class="w-full h-56 sm:h-64 object-cover group-hover:scale-105 transition-transform duration-300" 
-                    loading="lazy" 
-                  />
-                  <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
-                  <!-- Quick preview badge -->
-                  <div class="absolute top-2 right-2 sm:top-3 sm:right-3 bg-white/90 backdrop-blur-sm text-gray-800 px-2 py-1 rounded-lg text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    Quick Read
-                  </div>
-                </div>
-                
-                <div class="p-4 sm:p-5 flex flex-col flex-1 mobile-card">
-                  <h2 class="text-base sm:text-lg font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors line-clamp-2">
-                    {title}
-                  </h2>
-                  <p class="text-sm text-primary-600 font-medium mb-2 sm:mb-3 author">by {author}</p>
-                  <p class="text-gray-600 text-sm line-clamp-3 flex-1 description">{summary}</p>
-                  
-                  <!-- Read more indicator -->
-                  <div class="mt-3 sm:mt-4 flex items-center text-primary-600 font-medium text-sm group-hover:text-primary-700 transition-colors mobile-medium-text">
-                    <span>Read Summary</span>
-                    <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                    </svg>
-                  </div>
-                </div>
-              </a>
-            </article>
+          {books.map((book) => (
+            <BookCard book={book} variant="catalog" showTags={true} tagLimit={3} />
           ))}
         </div>
       )}

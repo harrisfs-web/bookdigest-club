@@ -1,0 +1,107 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getBookCategoryLinks, getBookPath, getCategoryPath, type BookCategoryLink } from "../lib/bookCategories";
+
+type BookEntry = CollectionEntry<"books">;
+
+type Variant = "catalog" | "compact";
+
+interface Props {
+  book: BookEntry;
+  variant?: Variant;
+  showTags?: boolean;
+  tagLimit?: number;
+  highlightCategories?: BookCategoryLink[];
+}
+
+const {
+  book,
+  variant = "compact",
+  showTags = false,
+  tagLimit = 3,
+  highlightCategories = [],
+} = Astro.props as Props;
+
+const {
+  slug,
+  data: { title, author, summary, cover },
+} = book;
+
+const HeadingTag = variant === "catalog" ? "h2" : "h3";
+const categories = getBookCategoryLinks(book);
+const visibleCategories = (highlightCategories.length > 0 ? highlightCategories : categories).slice(0, tagLimit);
+const imageHeightClass = variant === "catalog" ? "h-56 sm:h-64" : "h-48";
+const contentPaddingClass = variant === "catalog" ? "p-4 sm:p-5 mobile-card" : "p-6 mobile-card";
+const cardClass = variant === "catalog" ? "book-card group h-full mobile-book-card" : "book-card group mobile-book-card";
+const showQuickRead = variant === "catalog";
+const showReadMore = variant === "catalog";
+---
+
+<article class={cardClass}>
+  <div class="flex h-full flex-col">
+    <a href={getBookPath(slug)} class="block" data-gtm-event="book_click" data-click-content={title}>
+      <div class="relative overflow-hidden">
+        <img
+          src={cover}
+          alt={`Cover of ${title}`}
+          class={`book-cover w-full ${imageHeightClass} object-cover group-hover:scale-105 transition-transform duration-300`}
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+        {showQuickRead && (
+          <div class="absolute top-2 right-2 sm:top-3 sm:right-3 bg-white/90 backdrop-blur-sm text-gray-800 px-2 py-1 rounded-lg text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Quick Read
+          </div>
+        )}
+      </div>
+
+      <div class={`${contentPaddingClass} flex flex-col flex-1`}>
+        <HeadingTag class="text-base sm:text-lg xl:text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors line-clamp-2">
+          {title}
+        </HeadingTag>
+        <p class="text-sm text-primary-600 font-medium mb-2 sm:mb-3 author">by {author}</p>
+        <p class="text-gray-600 text-sm line-clamp-3 flex-1 description">{summary}</p>
+
+        {showReadMore && (
+          <div class="mt-3 sm:mt-4 flex items-center text-primary-600 font-medium text-sm group-hover:text-primary-700 transition-colors mobile-medium-text">
+            <span>Read Summary</span>
+            <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </div>
+        )}
+      </div>
+    </a>
+
+    {(showTags || highlightCategories.length > 0) && visibleCategories.length > 0 && (
+      <div class="px-4 pb-4 sm:px-5 sm:pb-5 md:px-6 md:pb-6 -mt-1">
+        {highlightCategories.length > 0 && (
+          <p class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary-700">
+            Shared categories
+          </p>
+        )}
+
+        <div class="flex flex-wrap gap-2">
+          {visibleCategories.map((category) => (
+            <a
+              href={getCategoryPath(category.slug)}
+              class={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium transition-colors ${highlightCategories.length > 0 ? "bg-primary-100 text-primary-700 hover:bg-primary-200" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
+              data-gtm-event="category_click"
+              data-click-content={category.name}
+            >
+              <span>{category.name}</span>
+            </a>
+          ))}
+        </div>
+
+        {showTags && categories.length > visibleCategories.length && (
+          <p class="mt-3 text-xs font-medium uppercase tracking-[0.18em] text-gray-400">
+            +{categories.length - visibleCategories.length} more categories
+          </p>
+        )}
+      </div>
+    )}
+  </div>
+
+</article>
